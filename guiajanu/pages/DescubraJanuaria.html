@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra Januária</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="/assets/css/DescubraJanuaria.css" rel="stylesheet" />
+</head>
+<body>
+
+    <header class="site-header">
+        <img src="/assets/img/Logo/TauriLogo2.png" alt="Logo GuiaJanu" class="logo-header">
+        
+        <nav class="main-nav">
+            <button class="menu-close" aria-label="Fechar menu">
+                × 
+            </button>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#oqfzr">O que fazer</a></li>
+                <li><a href="#ondecomer">Onde comer</a></li>
+                <li><a href="#ondeficar">Onde ficar</a></li>
+                <li><a href="#contato">Contato</a></li>
+                <li><a href="#mais">Mais</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <a href="https://www.instagram.com/guia.janu" class="social-icon" target="_blank">
+                <img src="/assets/img/Social Icons/insta_logo.png" alt="Instagram">
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menu">
+                ☰ </button>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="hero-section">
+            <video id="hero-video" autoplay loop playsinline muted>
+                <source src="/assets/videos/Clipe Januária Pronto_1.mp4" type="video/mp4">
+            </video>
+
+            <div class="hero-content">
+                <h1 class="section-title">Cavernas Peruaçu</h1>
+                <p class="section-subtitle">Patrimônio da UNESCO com mais de 100 cavernas e sítios arqueológicos.</p>
+                <div class="hero-image-placeholder">
+                    <img src="/assets/img/Gruta Janelão/GrutaJanelão.webp" alt="Gruta Janelão">
+                </div>
+                <button id="open-modal-btn" class="saiba-mais-btn">Saiba mais</button>
+            </div>
+
+            <div class="video-controls">
+                <button id="volume-toggle" class="video-btn">
+                    <img id="volume-icon" src="/assets/img/Social Icons/volume-mute.png" alt="Mudo">
+                </button>
+                
+                <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0">
+            </div>
+            
+            <div class="video-copyright">© Prefeitura Municipal de Januária</div>
+        </section>
+        
+        <section class="card-grid-section">
+            
+    <div class="cards-container">
+        
+        <div class="card">
+            <div class="card-image-carousel" 
+                 data-path="/assets/img/Gruta Janelão/"
+                 data-images='["GrutaJanelão.webp", "GrutaJanelão2.webp", "GrutaJanelão3.webp"]'>
+            </div>
+            <a href="#" class="card-link">Saiba mais</a>
+        </div>
+
+        <div class="card">
+            <div class="card-image-carousel"
+                 data-path="/assets/img/Gruta Bonita/"
+                 data-images='["Cópia de gruta bonita 2.webp", "Cópia de gruta bonita 4.webp", "Cópia de gruta bonita 5.webp", "Cópia de gruta bonita 6.webp", "Cópia de gruta bonita 7.webp", "Cópia de gruta bonita 8.webp"]'>
+            </div>
+            <a href="#" class="card-link">Saiba mais</a>
+        </div>
+
+        <div class="card">
+            <div class="card-image-carousel"
+                 data-path="/assets/img/Gruta do Carlúcio/"
+                 data-images='["Cópia de gruta do carlucio 1.png", "Cópia de gruta do carlucio 2.jpg", "Cópia de gruta do carlucio.png", "Cópia de lapa do carlucio.jpg"]'>
+            </div>
+            <a href="#" class="card-link">Saiba mais</a>
+        </div>
+
+        <div class="card">
+            <div class="card-image-carousel"
+                 data-path="/assets/img/Praia/"
+                 data-images='["praia-do-rio.jpg"]'>
+            </div>
+            <a href="#" class="card-link">Saiba mais</a>
+        </div>
+
+        <div class="card">
+            <div class="card-image-carousel"
+                 data-path="/assets/img/Mirante/"
+                 data-images='["vista-da-cidade.jpg", "por-do-sol.jpg"]'>
+            </div>
+            <a href="#" class="card-link">Saiba mais</a>
+        </div>
+
+        <div class="card">
+            <div class="card-image-carousel"
+                 data-path="/assets/img/Rota Cachaça/"
+                 data-images='["alambique1.jpg", "barril.jpg"]'>
+            </div>
+            <a href="#" class="card-link">Saiba mais</a>
+        </div>
+
+        </div>
+        </section>
+
+        <div id="info-modal" class="modal-overlay">
+            <div class="modal-content">
+                <button class="modal-close-btn">&times;</button>
+                
+                <div class="modal-carousel">
+                    <div class="carousel-slide">
+                        <img src="/assets/img/Gruta Janelão/GrutaJanelão.webp" alt="Gruta Janelão" class="carousel-image">
+                        <img src="/assets/img/Gruta Janelão/GrutaJanelão2.webp" alt="Gruta Janelão" class="carousel-image">
+                        <img src="/assets/img/Gruta Janelão/GrutaJanelão3.webp" alt="Gruta Janelão" class="carousel-image">
+                    </div>
+                    <button class="carousel-btn prev" id="prev-btn">&#10094;</button>
+                    <button class="carousel-btn next" id="next-btn">&#10095;</button>
+                </div>
+                
+                <div class="modal-description">
+                    <h3>O Cânion do Peruaçu</h3>
+                    <p>Localizado no Parque Nacional Cavernas do Peruaçu e reconhecido em 2025 como Patrimônio Natural da Humanidade pela Unesco, encanta pela imponência de sua formação geológica, resultado do raro desabamento de uma caverna de 25 quilômetros de extensão.</p>
+                    <p>O parque abriga mais de uma centena de cavernas, grandiosas paisagens e sítios arqueológicos que preservam preciosas manifestações de arte rupestre. A visita oferece uma experiência completa, que combina natureza, aventura e cultura.</p>
+                    
+                    <h4>Informações Importantes:</h4>
+                    <ul>
+                        <li>Atualmente, nove atrativos estão abertos, exigindo mais de um dia para conhecer todos.</li>
+                        <li>O acesso exige <strong>agendamento prévio</strong> junto ao ICMBio.</li>
+                        <li>É <strong>obrigatória</strong> a contratação de condutor ambiental credenciado.</li>
+                        <li>O parque está localizado a cerca de 45 km de Januária, com pousadas e restaurantes nas proximidades.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer id="contato" class="site-footer">
+        
+        <div class="footer-main">
+            
+            <div class="footer-left-column">
+                
+                <div class="footer-col contact-info">
+                    <a href="https://www.google.com/maps/place/Janu%C3%A1ria,+MG" class="location-link" target="_blank">
+                        
+                        <div class="location-text">
+                            <p>Januária - MG</p>
+                            <p>Rua Padre Henrique - Centro</p>
+                        </div>
+
+                        <img src="/assets/img/Social Icons/ponteiro.png" alt="Icone de localização" class="location-icon">
+                    </a>
+                    
+                    <br> 
+                    
+                    <p>(11) 4002-8922</p>
+                    <p>turismo@guiajanu.com</p>
+                </div>
+                
+                <div class="footer-col links-col">
+                    <h4>O que fazer</h4>
+                    <ul>
+                        <li><a href="#">Como Chegar</a></li>
+                        <li><a href="#">Atendimento ao Turista</a></li>
+                        <li><a href="#">Calendário de Eventos</a></li>
+                        <li><a href="#">Meios de Transporte</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-right-column">
+                <div class="footer-col links-col">
+                    <h4>Descubra Januária</h4>
+                    <ul>
+                        <li><a href="#">Passeios</a></li>
+                        <li><a href="#">Praia</a></li>
+                        <li><a href="#">Praças</a></li>
+                        <li><a href="#">Hospedagem</a></li>
+                        <li><a href="#">Igrejas</a></li>
+                        <li><a href="#">Mirante</a></li>
+                        <li><a href="#">Rota da Cachaça</a></li>
+                        <li><a href="#">Feira</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 GuiaJanu - Todos os direitos reservados.</p>
+                <!--
+                Desenvolvido por:
+                <a href="https://www.instagram.com/eric_lopes01" target="_blank">Eric L. Guimarães</a>, 
+                <a href="https://www.instagram.com/c.daniel7" target="_blank">Carlos D. Araujo</a>, 
+                <a href="https://www.instagram.com/felipemeireles.1" target="_blank">Felipe Gonçalves</a>, 
+                <a href="https://www.instagram.com/_jmarcos.gc" target="_blank">João M. Guimarães</a>, 
+                <a href="https://www.instagram.com/pfmella" target="_blank">Pâmella Ferreira</a>, 
+                <a href="https://www.instagram.com/tkmaia" target="_blank">Thalles K. Maia</a>-->
+                <div class="footer-extra-info">
+                
+                <div class="developed-by-section">
+                    <h4>Desenvolvido por</h4>
+                    <div class="developed-logos">
+                        <div class="logo-item">
+                            <a href="https://www.ifnmg.edu.br/januaria" target="_blank" class="logo-link">
+                                <p>IFNMG</p>
+                                <img src="/assets/img/Logo/IFNMG.png" alt="Logo IFNMG Campus Januária" class="partner-logo">
+                            </a>
+                        </div>
+                        <div class="logo-item">
+                            <a href="https://www.instagram.com/guia.janu" target="_blank" class="logo-link">
+                                <p>UCE-BSI</p>
+                                <img src="/assets/img//Social Icons/insta_logo.png" alt="Logo UCE-BSI" class="partner-logo logo-insta">
+                            </a>
+                        </div>
+                        <div class="logo-item">
+                            <a href="https://www.instagram.com/petadmifnmg" target="_blank" class="logo-link">
+                                <p>PET-ADM</p>
+                                <img src="/assets/img/Parcerias/PETADM.png" alt="Logo PET-ADM" class="partner-logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-partners">
+                    <h4>Nossos Parceiros</h4>
+                    <div class="partners-logos">
+                        <div class="logo-item">
+                            <a href="https://www.januaria.mg.gov.br/portal/secretarias/26/setur--secretaria-municipal-de-turismo-cultura-meio-ambiente-e-desenvolvimento-economico" target="_blank" class="logo-link">
+                                <p>SETUR</p>
+                                <img src="/assets/img/Parcerias/SETUR.png" alt="Setur" class="partner-logo">
+                            </a>
+                        </div>
+                        <div class="logo-item">
+                            <a href="https://www.instagram.com/la_belle_janu" target="_blank" class="logo-link">
+                                <p>La Belle Janu</p>
+                                <img src="/assets/img/Social Icons/insta_logo.png" alt="La Belle Janu" class="partner-logo logo-insta">
+                            </a>
+                        </div>
+                        <div class="logo-item">
+                            <a href="LINK_CANAL" target="_blank" class="logo-link">
+                                <p>Canal Sertão Mineiro</p>
+                                <img src="/assets/img/Parceiros/logo_parceiro4.png" alt="Canal Sertão Mineiro" class="partner-logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <p>As imagens nesse site são de inteira responsabilidade dos proprietários dos estabelecimentos cadastrados em nosso banco de dados.</p>
+        </div>
+
+    </footer>
+<script src="/assets/js/MenuToggle.js"></script>
+<script src="/assets/js/PopUp.js"></script>
+<script src="/assets/js/CardCarousel.js"></script>
+</body>
+</html>
