@@ -216,3 +216,77 @@ body {
   }
 }
 
+.sobre-local-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* <— AQUI centraliza verticalmente */
+  gap: 40px;
+}
+
+
+.texto-sobre {
+  flex: 1.5;
+}
+
+.mapa-box {
+  flex: 1;
+  height: 280px;
+  min-width: 260px;
+  background: #ddd;
+  border: 3px solid #aaa;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.mapa-box iframe {
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .sobre-local-wrapper {
+    flex-direction: column;
+  }
+
+  .mapa-box {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+/* Rodapé simples — cole no final do seu CSS */
+.rodape {
+  background: #222222;       /* preto */
+  color: #ffffff;            /* texto branco */
+  padding: 20px 16px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+}
+
+.rodape-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.rodape p {
+  margin: 6px 0;
+  line-height: 1.4;
+}
+
+.rodape-note {
+  font-size: 12px;
+  opacity: 0.95;
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 480px) {
+  .rodape {
+    padding: 16px 12px;
+    font-size: 13px;
+  }
+  .rodape-note {
+    font-size: 11px;
+  }
+}
