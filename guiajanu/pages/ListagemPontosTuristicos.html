@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuiaJanu - Pontos Turísticos</title>
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="../assets/css/GuiaJanu.css" rel="stylesheet" /> 
+    <style>
+        /* Estilos específicos para esta página */
+
+        /* Container do título sobre o vídeo */
+        .hero-title-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center; /* Centraliza verticalmente */
+            justify-content: center; /* Centraliza horizontalmente */
+            z-index: 10; /* Garante que fique acima do vídeo */
+            pointer-events: none; /* Permite clicar nos controles do vídeo atrás do título */
+        }
+        
+        /* Estilo do Título "Vazado e Sombreado" */
+        .hero-title-discover {
+            font-family: 'Arial', sans-serif;
+            font-size: 5vw; /* Tamanho responsivo */
+            font-weight: 900;
+            text-align: center;
+            color: transparent; /* Torna o interior do texto transparente (Efeito Vazado) */
+            
+            /* Efeito Vazado (Contorno) */
+            -webkit-text-stroke: 3px #FFFFFF; /* Largura e cor do contorno */
+            text-stroke: 3px #FFFFFF;
+            
+            
+           /* text-shadow: 
+                0 0 10px rgba(0, 0, 0, 0.7), 
+                0 0 20px rgba(0, 0, 0, 0.5); 
+            */
+            padding: 20px;
+            line-height: 1.1;
+        }
+            
+        /* Ajuste do layout para a seção da lista */
+        .list-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #FDD8A4; /* Cor de fundo para dar continuidade à onda */
+        }
+        .list-section .section-title {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #000000;
+        }
+        .list-cards-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .list-cards-container .card {
+            background-color: #282828; /* Cor escura atualizada para contraste */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .list-cards-container .card:hover {
+            transform: translateY(-5px);
+        }
+        .list-cards-container .card-title {
+            color: #fff;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        .list-cards-container .circle-placeholder {
+            /* Placeholder simples para simular a área da imagem */
+            width: 100%;
+            height: 150px;
+            background-color: #555;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ddd;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .list-cards-container .card-link {
+            display: inline-block;
+            background-color: rgba(143, 35, 23, 0.9);
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .list-cards-container .card-link:hover {
+            background-color: rgba(180, 50, 30, 0.9);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="site-header">
+        <img src="../assets/img/Logo/TauriLogo2.png" alt="Logo GuiaJanu" class="logo-header">
+        
+        <nav class="main-nav">
+            <button class="menu-close" aria-label="Fechar menu">
+                ×
+            </button>
+            <ul>
+                <li><a href="DescubraJanuaria.html">🏠︎</a></li>
+              <!--  <li><a href="../index.html#oqfzr">O que fazer</a></li>
+                <li><a href="../index.html#eventos">Onde comer</a></li>
+                <li><a href="../index.html#contato">Onde ficar</a></li>
+                <li><a href="../index.html#contato">Mais</a></li>-->
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <a href="https://www.instagram.com/guia.janu" class="social-icon" target="_blank">
+                <img src="../assets/img/Social Icons/insta_logo.png" alt="Instagram">
+            </a>
+            
+            <button class="menu-toggle" aria-label="Abrir menu">
+                ☰ 
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+             <div class="hero-title-container">
+                <h1 class="hero-title-discover">PONTOS TURÍSTICOS</h1>
+            </div>
+
+            <video id="hero-video" autoplay muted playsinline>
+                <source src="../assets/videos/Clipe Januária Pronto_1.mp4" type="video/mp4">
+            </video>
+
+            <div class="video-controls">
+                <button id="volume-toggle" class="video-btn">
+                    <img id="volume-icon" src="../assets/img/Social Icons/volume-mute.png" alt="Mudo">
+                </button>
+                <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0">
+            </div>
+
+            <div class="video-copyright">© Prefeitura Municipal de Januária</div>
+        </section>
+
+        <div class="wave-separator" style="--wave-color: #FDD8A4;">
+            <div class="wave-layer wave-1">
+                <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <path d="M-500,50 Q-375,0 -250,50 T0,50 Q125,0 250,50 T500,50 Q625,0 750,50 T1000,50 Q1125,0 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path>
+                </svg>
+            </div>
+            <div class="wave-layer wave-2">
+                <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <path d="M-500,50 Q-375,100 -250,50 T0,50 Q125,100 250,50 T500,50 Q625,100 750,50 T1000,50 Q1125,100 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path>
+                </svg>
+            </div>
+            <div class="wave-layer wave-3">
+                <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <path d="M-500,50 Q-375,0 -250,50 T0,50 Q125,0 250,50 T500,50 Q625,0 750,50 T1000,50 Q1125,0 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path>
+                </svg>
+            </div>
+        </div>
+
+        <section id="lista-pontos" class="list-section">
+            <h2 class="section-title">Destinos Turísticos</h2>
+            
+            <div class="list-cards-container">
+                
+                <div class="card">
+                    <div class="circle-placeholder">Pântano Mineiro</div>
+                    <h3 class="card-title">Pântano Mineiro</h3>
+                    <a href="pontos/pantano-mineiro.html" class="card-link">Saiba mais</a>
+                </div>
+                
+                <div class="card">
+                    <div class="circle-placeholder">Rio Pandeiros</div>
+                    <h3 class="card-title">Cachoeiras do rio Pandeiros</h3>
+                    <a href="pontos/cachoeiras-pandeiros.html" class="card-link">Saiba mais</a>
+                </div>
+                
+                <div class="card">
+                    <div class="circle-placeholder">Igreja Rosário</div>
+                    <h3 class="card-title">Igreja Nossa Senhora do Rosário</h3>
+                    <a href="pontos/igreja-rosario.html" class="card-link">Saiba mais</a>
+                </div>
+
+                <div class="card">
+                    <div class="circle-placeholder">Mirante Brejo do Amparo</div>
+                    <h3 class="card-title">Mirante do Brejo do Amparo</h3>
+                    <a href="pontos/mirante-brejo-amparo.html" class="card-link">Saiba mais</a>
+                </div>
+                
+                <div class="card">
+                    <div class="circle-placeholder">Distrito Histórico</div>
+                    <h3 class="card-title">Brejo do Amparo - Distrito Histórico</h3>
+                    <a href="pontos/brejo-amparo.html" class="card-link">Saiba mais</a>
+                </div>
+                
+                <div class="card">
+                    <div class="circle-placeholder">Praia de Minas</div>
+                    <h3 class="card-title">Praia de Minas</h3>
+                    <a href="pontos/praia-de-minas.html" class="card-link">Saiba mais</a>
+                </div>
+                
+                <div class="card">
+                    <div class="circle-placeholder">Praça Getúlio Vargas</div>
+                    <h3 class="card-title">Praça Getúlio Vargas</h3>
+                    <a href="pontos/praca-getulio-vargas.html" class="card-link">Saiba mais</a>
+                </div>
+                
+                <div class="card">
+                    <div class="circle-placeholder">Praça Tiradentes</div>
+                    <h3 class="card-title">Praça Tiradentes</h3>
+                    <a href="pontos/praca-tiradentes.html" class="card-link">Saiba mais</a>
+                </div>
+                
+                <div class="card">
+                    <div class="circle-placeholder">Rio São Francisco</div>
+                    <h3 class="card-title">Rio São Francisco</h3>
+                    <a href="pontos/rio-sao-francisco.html" class="card-link">Saiba mais</a>
+                </div>
+                
+                <div class="card">
+                    <div class="circle-placeholder">Rua da Cultura</div>
+                    <h3 class="card-title">Rua da Cultura</h3>
+                    <a href="pontos/rua-da-cultura.html" class="card-link">Saiba mais</a>
+                </div>
+                
+                <div class="card">
+                    <div class="circle-placeholder">Cais de Januária</div>
+                    <h3 class="card-title">Cais de Januária</h3>
+                    <a href="pontos/cais-januaria.html" class="card-link">Saiba mais</a>
+                </div>
+                
+                <div class="card">
+                    <div class="circle-placeholder">Parque Peruaçu</div>
+                    <h3 class="card-title">Parque Nacional Cavernas do Peruaçu</h3>
+                    <a href="pontos/parque-peruacu.html" class="card-link">Saiba mais</a>
+                </div>
+            </div>
+        </section>
+        
+        <div class="wave-separator" style="--wave-color: #222;">
+           <div class="wave-layer wave-1">
+                <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <path d="M-500,50 Q-375,0 -250,50 T0,50 Q125,0 250,50 T500,50 Q625,0 750,50 T1000,50 Q1125,0 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path>
+                </svg>
+            </div>
+            <div class="wave-layer wave-2">
+                <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <path d="M-500,50 Q-375,100 -250,50 T0,50 Q125,100 250,50 T500,50 Q625,100 750,50 T1000,50 Q1125,100 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path>
+                </svg>
+            </div>
+            <div class="wave-layer wave-3">
+                <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+                    <path d="M-500,50 Q-375,0 -250,50 T0,50 Q125,0 250,50 T500,50 Q625,0 750,50 T1000,50 Q1125,0 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path>
+                </svg>
+            </div>
+        </div>
+
+    </main>
+
+    <footer id="contato" class="site-footer">
+        <div class="footer-main">
+            <div class="footer-left-column">
+                <div class="footer-col contact-info">
+                    <a href="https://www.google.com/maps/place/Janu%C3%A1ria,+MG" class="location-link" target="_blank">
+                        <div class="location-text">
+                            <p>Januária - MG</p>
+                            <p>Rua Padre Henrique - Centro</p>
+                        </div>
+                        <img src="../assets/img/Social Icons/ponteiro.png" alt="Icone de localização" class="location-icon">
+                    </a>
+                    <br> 
+                    <p>(11) 4002-8922</p>
+                    <p>turismo@guiajanu.com</p>
+                </div>
+                <div class="footer-col links-col">
+                    <h4>O que fazer</h4>
+                    <ul>
+                        <li><a href="../index.html#oqfzr">Como Chegar</a></li>
+                        <li><a href="../index.html#oqfzr">Atendimento ao Turista</a></li>
+                        <li><a href="../index.html#oqfzr">Calendário de Eventos</a></li>
+                        <li><a href="../index.html#oqfzr">Meios de Transporte</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-right-column">
+                <div class="footer-col links-col">
+                    <h4>Descubra Januária</h4>
+                    <ul>
+                        <li><a href="DescubraJanuaria.html">Passeios</a></li> 
+                        <li><a href="pontos/praia-de-minas.html">Praia</a></li>
+                        <li><a href="pontos/praca-getulio-vargas.html">Praças</a></li>
+                        <li><a href="../index.html#eventos">Hospedagem</a></li>
+                        <li><a href="pontos/igreja-rosario.html">Igrejas</a></li>
+                        <li><a href="pontos/mirante-brejo-amparo.html">Mirante</a></li>
+                        <li><a href="#">Rota da Cachaça</a></li>
+                        <li><a href="#">Feira</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 GuiaJanu - Todos os direitos reservados.</p>
+            <div class="footer-extra-info">
+                <div class="developed-by-section">
+                    <h4>Desenvolvido por</h4>
+                    <div class="developed-logos">
+                        <div class="logo-item">
+                            <a href="https://www.ifnmg.edu.br/januaria" target="_blank" class="logo-link">
+                                <p>IFNMG</p>
+                                <img src="../assets/img/Logo/IFNMG.png" alt="Logo IFNMG Campus Januária" class="partner-logo">
+                            </a>
+                        </div>
+                        <div class="logo-item">
+                            <a href="https://www.instagram.com/guia.janu" target="_blank" class="logo-link">
+                                <p>UCE-BSI</p>
+                                <img src="../assets/img/Social Icons/insta_logo.png" alt="Logo UCE-BSI" class="partner-logo logo-insta">
+                            </a>
+                        </div>
+                        <div class="logo-item">
+                            <a href="https://www.instagram.com/petadmifnmg" target="_blank" class="logo-link">
+                                <p>PET-ADM</p>
+                                <img src="../assets/img/Parcerias/PETADM.png" alt="Logo PET-ADM" class="partner-logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-partners">
+                    <h4>Nossos Parceiros</h4>
+                    <div class="partners-logos">
+                        <div class="logo-item">
+                            <a href="https://www.januaria.mg.gov.br/portal/secretarias/26/setur--secretaria-municipal-de-turismo-cultura-meio-ambiente-e-desenvolvimento-economico" target="_blank" class="logo-link">
+                                <p>SETUR</p>
+                                <img src="../assets/img/Parcerias/SETUR.png" alt="Setur" class="partner-logo">
+                            </a>
+                        </div>
+                        <div class="logo-item">
+                            <a href="https://www.instagram.com/la_belle_janu" target="_blank" class="logo-link">
+                                <p>La Belle Janu</p>
+                                <img src="../assets/img/Social Icons/insta_logo.png" alt="La Belle Janu" class="partner-logo logo-insta">
+                            </a>
+                        </div>
+                        <div class="logo-item">
+                            <a href="LINK_CANAL" target="_blank" class="logo-link">
+                                <p>Canal Sertão Mineiro</p>
+                                <img src="../assets/img/Parcerias/logo_parceiro4.png" alt="Canal Sertão Mineiro" class="partner-logo">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p>As imagens nesse site são de inteira responsabilidade dos proprietários dos estabelecimentos cadastrados em nosso banco de dados.</p>
+        </div>
+    </footer>
+    <script src="../assets/js/MenuToggle.js"> </script>
+</body>
+</html>
