@@ -5,107 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GuiaJanu - Pontos Turísticos</title>
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" /> 
     <link href="../assets/css/GuiaJanu.css" rel="stylesheet" /> 
-    <style>
-        /* Estilos específicos para esta página */
-
-        /* Container do título sobre o vídeo */
-        .hero-title-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center; /* Centraliza verticalmente */
-            justify-content: center; /* Centraliza horizontalmente */
-            z-index: 10; /* Garante que fique acima do vídeo */
-            pointer-events: none; /* Permite clicar nos controles do vídeo atrás do título */
-        }
-        
-        /* Estilo do Título "Vazado e Sombreado" */
-        .hero-title-discover {
-            font-family: 'Arial', sans-serif;
-            font-size: 5vw; /* Tamanho responsivo */
-            font-weight: 900;
-            text-align: center;
-            color: transparent; /* Torna o interior do texto transparente (Efeito Vazado) */
-            
-            /* Efeito Vazado (Contorno) */
-            -webkit-text-stroke: 3px #FFFFFF; /* Largura e cor do contorno */
-            text-stroke: 3px #FFFFFF;
-            
-            
-           /* text-shadow: 
-                0 0 10px rgba(0, 0, 0, 0.7), 
-                0 0 20px rgba(0, 0, 0, 0.5); 
-            */
-            padding: 20px;
-            line-height: 1.1;
-        }
-            
-        /* Ajuste do layout para a seção da lista */
-        .list-section {
-            padding: 60px 20px;
-            text-align: center;
-            background-color: #FDD8A4; /* Cor de fundo para dar continuidade à onda */
-        }
-        .list-section .section-title {
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            color: #000000;
-        }
-        .list-cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .list-cards-container .card {
-            background-color: #282828; /* Cor escura atualizada para contraste */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        .list-cards-container .card:hover {
-            transform: translateY(-5px);
-        }
-        .list-cards-container .card-title {
-            color: #fff;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-        .list-cards-container .circle-placeholder {
-            /* Placeholder simples para simular a área da imagem */
-            width: 100%;
-            height: 150px;
-            background-color: #555;
-            border-radius: 4px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ddd;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-        .list-cards-container .card-link {
-            display: inline-block;
-            background-color: rgba(143, 35, 23, 0.9);
-            color: #fff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: background-color 0.3s;
-        }
-        .list-cards-container .card-link:hover {
-            background-color: rgba(180, 50, 30, 0.9);
-        }
-    </style>
+    <link href="../pages/pontos-turisticos.css" rel="stylesheet" /> 
 </head>
 <body>
 
@@ -118,10 +20,6 @@
             </button>
             <ul>
                 <li><a href="DescubraJanuaria.html">🏠︎</a></li>
-              <!--  <li><a href="../index.html#oqfzr">O que fazer</a></li>
-                <li><a href="../index.html#eventos">Onde comer</a></li>
-                <li><a href="../index.html#contato">Onde ficar</a></li>
-                <li><a href="../index.html#contato">Mais</a></li>-->
             </ul>
         </nav>
 
@@ -139,8 +37,8 @@
     <main>
         <section class="hero-section">
              <div class="hero-title-container">
-                <h1 class="hero-title-discover">PONTOS TURÍSTICOS</h1>
-            </div>
+                 <h1 class="hero-title-discover">PONTOS TURÍSTICOS</h1>
+             </div>
 
             <video id="hero-video" autoplay muted playsinline>
                 <source src="../assets/videos/Clipe Januária Pronto_1.mp4" type="video/mp4">
@@ -180,75 +78,76 @@
             <div class="list-cards-container">
                 
                 <div class="card">
-                    <div class="circle-placeholder">Pântano Mineiro</div>
+                    <img src="img principais/pantano mineiro.jpeg" alt="Pântano Mineiro - Imagem" class="card-image"/>
+                    
                     <h3 class="card-title">Pântano Mineiro</h3>
-                    <a href="pontos/pantano-mineiro.html" class="card-link">Saiba mais</a>
+                    <a href="" class="card-link">Saiba mais</a>
                 </div>
                 
                 <div class="card">
-                    <div class="circle-placeholder">Rio Pandeiros</div>
+                    <img src="img principais/Cachoeira do rio pandeiros (1).jpg" alt="Rio Pandeiros - Imagem" class="card-image" style="background-color: #DDD;"/>
                     <h3 class="card-title">Cachoeiras do rio Pandeiros</h3>
-                    <a href="pontos/cachoeiras-pandeiros.html" class="card-link">Saiba mais</a>
+                    <a href="" class="card-link">Saiba mais</a>
                 </div>
                 
                 <div class="card">
-                    <div class="circle-placeholder">Igreja Rosário</div>
+                    <img src="img principais/igreja.jpg" alt="Igreja Nossa Senhora do Rosário - Imagem" class="card-image" style="background-color: #DDD;"/>
                     <h3 class="card-title">Igreja Nossa Senhora do Rosário</h3>
-                    <a href="pontos/igreja-rosario.html" class="card-link">Saiba mais</a>
+                    <a href="" class="card-link">Saiba mais</a>
                 </div>
 
                 <div class="card">
-                    <div class="circle-placeholder">Mirante Brejo do Amparo</div>
+                    <img src="img principais/Mirante do brejo.jpg" alt="Mirante do Brejo do Amparo - Imagem" class="card-image" style="background-color: #DDD;"/>
                     <h3 class="card-title">Mirante do Brejo do Amparo</h3>
-                    <a href="pontos/mirante-brejo-amparo.html" class="card-link">Saiba mais</a>
+                    <a href="ponto_morro_brejo.html" class="card-link">Saiba mais</a>
                 </div>
                 
                 <div class="card">
-                    <div class="circle-placeholder">Distrito Histórico</div>
+                    <img src="img principais/brejo.jpg" alt="Brejo do Amparo - Distrito Histórico - Imagem" class="card-image" style="background-color: #DDD;"/>
                     <h3 class="card-title">Brejo do Amparo - Distrito Histórico</h3>
-                    <a href="pontos/brejo-amparo.html" class="card-link">Saiba mais</a>
+                    <a href="" class="card-link">Saiba mais</a>
                 </div>
                 
                 <div class="card">
-                    <div class="circle-placeholder">Praia de Minas</div>
+                    <img src="img principais/praia .jpg" alt="Praia de Minas - Imagem" class="card-image" style="background-color: #DDD;"/>
                     <h3 class="card-title">Praia de Minas</h3>
-                    <a href="pontos/praia-de-minas.html" class="card-link">Saiba mais</a>
+                    <a href="" class="card-link">Saiba mais</a>
                 </div>
                 
                 <div class="card">
-                    <div class="circle-placeholder">Praça Getúlio Vargas</div>
+                    <img src="img principais/praça getulio 6.jpg" alt="Praça Getúlio Vargas - Imagem" class="card-image" style="background-color: #DDD;"/>
                     <h3 class="card-title">Praça Getúlio Vargas</h3>
-                    <a href="pontos/praca-getulio-vargas.html" class="card-link">Saiba mais</a>
+                    <a href="" class="card-link">Saiba mais</a>
                 </div>
                 
                 <div class="card">
-                    <div class="circle-placeholder">Praça Tiradentes</div>
+                    <img src="img principais/tiradentes.jpg" alt="Praça Tiradentes - Imagem" class="card-image" style="background-color: #DDD;"/>
                     <h3 class="card-title">Praça Tiradentes</h3>
-                    <a href="pontos/praca-tiradentes.html" class="card-link">Saiba mais</a>
+                    <a href="" class="card-link">Saiba mais</a>
                 </div>
                 
                 <div class="card">
-                    <div class="circle-placeholder">Rio São Francisco</div>
+                    <img src="img principais/rio sao francisco.jpg" alt="Rio São Francisco - Imagem" class="card-image" style="background-color: #DDD;"/>
                     <h3 class="card-title">Rio São Francisco</h3>
-                    <a href="pontos/rio-sao-francisco.html" class="card-link">Saiba mais</a>
+                    <a href="" class="card-link">Saiba mais</a>
                 </div>
                 
                 <div class="card">
-                    <div class="circle-placeholder">Rua da Cultura</div>
+                    <img src="img principais/rua da cultura.jpg" alt="Rua da Cultura - Imagem" class="card-image" style="background-color: #DDD;"/>
                     <h3 class="card-title">Rua da Cultura</h3>
-                    <a href="pontos/rua-da-cultura.html" class="card-link">Saiba mais</a>
+                    <a href="" class="card-link">Saiba mais</a>
                 </div>
                 
                 <div class="card">
-                    <div class="circle-placeholder">Cais de Januária</div>
+                    <img src="img principais/cais.jpg" alt="Cais de Januária - Imagem" class="card-image" style="background-color: #DDD;"/>
                     <h3 class="card-title">Cais de Januária</h3>
-                    <a href="pontos/cais-januaria.html" class="card-link">Saiba mais</a>
+                    <a href="" class="card-link">Saiba mais</a>
                 </div>
                 
                 <div class="card">
-                    <div class="circle-placeholder">Parque Peruaçu</div>
+                    <img src="img principais/Peruaçu .webp" alt="Parque Nacional Cavernas do Peruaçu - Imagem" class="card-image" style="background-color: #DDD;"/>
                     <h3 class="card-title">Parque Nacional Cavernas do Peruaçu</h3>
-                    <a href="pontos/parque-peruacu.html" class="card-link">Saiba mais</a>
+                    <a href="" class="card-link">Saiba mais</a>
                 </div>
             </div>
         </section>
