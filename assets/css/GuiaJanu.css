@@ -639,3 +639,97 @@ input[type=range]::-webkit-slider-thumb {
         padding-right: 15px;
     }
 }
+
+
+.circle-image {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    background-size: cover;
+    background-position: center;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+}
+
+.card:hover .circle-image {
+    transform: scale(1.1);
+}
+
+.peruacu {
+    background-image: url('../img/img principais/Peruaçu .webp');
+}
+
+.praia {
+    background-image: url('../img/img principais/praia .jpg');
+}
+
+.pantanal {
+    background-image: url('../img/img principais/pantano mineiro.jpeg');
+}
+
+.mais-mosaico {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+
+    background-image: 
+        url("../img/img principais/praça getulio 6.jpg"),
+        url("../img/img principais/rio sao francisco.jpg"),
+        url("../img/img principais/cais.jpg"),
+        url("../img/img principais/tiradentes.jpg");
+
+    background-size: 50% 50%;
+    background-position: 
+        top left,
+        top right,
+        bottom left,
+        bottom right;
+
+    background-repeat: no-repeat;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card-mais:hover .mais-mosaico {
+    transform: scale(1.1);
+}
+
+.plan-section .card-title {
+    color: #ffffff;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.plan-section .card-link {
+    color: #fdd8a4;
+    text-decoration: none;
+    font-size: 1.50em;
+    font-weight: bold;
+}
+
+.plan-section .card-link:hover {
+    text-decoration: underline;
+}
+
+.section-title {
+    color: #ffffff;
+}
+
+.section-subtitle {
+    color: #ffffff;
+}
+
+.card-mais {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-mais:hover {
+    cursor: pointer;
+}
