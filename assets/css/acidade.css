@@ -192,13 +192,8 @@ a:hover {
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     border: 3px solid rgba(255,255,255,0.2);
-    transform: rotate(-2deg);
-    transition: transform 0.3s ease;
 }
 
-.img-destaque:hover {
-    transform: rotate(0deg) scale(1.02);
-}
 
 .col-texto strong { color: #fdd8a4; }
 .col-texto p { margin-bottom: 15px; }
@@ -262,12 +257,9 @@ details[open] .icone-seta { transform: rotate(180deg); }
 
 /* Ajustes Específicos para a seção História */
 .historia-ajuste .img-destaque {
-    transform: rotate(2deg);
     border-color: rgba(255, 255, 255, 0.4);
 }
-.historia-ajuste .img-destaque:hover {
-    transform: rotate(0deg) scale(1.02);
-}
+
 
 
 /* =========================================
