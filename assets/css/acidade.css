@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
+
+/* =========================================
+   1. RESET E ESTILOS GERAIS
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #000;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================
+   2. CABEÇALHO (HEADER)
+   ========================================= */
+.site-header {
+    width: 100%;
+    padding: 20px 40px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    
+    /* CORREÇÃO DO ALINHAMENTO:
+       Isso garante que o Logo fique na esquerda e o Ícone na direita */
+    justify-content: space-between; 
+}
+
+.logo-header {
+    width: 200px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* Container do ícone na direita */
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.social-icon {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    /* CORREÇÃO DA COR:
+       Removemos o filtro que deixava o ícone preto invisível (branco) */
+    /* filter: brightness(0) invert(1); */
+}
+
+/* =========================================
+   3. HERO SECTION (Imagem Principal)
+   ========================================= */
+.hero-section {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Usamos uma imagem aqui, se fosse vídeo, o CSS seria similar */
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* =========================================
+   4. ONDAS DECORATIVAS (WAVES)
+   ========================================= */
+@keyframes move-wave {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.wave-separator {
+    width: 100%;
+    height: 100px;
+    position: relative; 
+    overflow: hidden; 
+    margin-top: -50px; 
+    z-index: 2; 
+}
+
+/* Quando a onda vem logo após o Hero, ela precisa ficar acima */
+.hero-section + .wave-separator {
+    z-index: 3;
+}
+
+.wave-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; 
+    height: 100px; 
+    animation: move-wave linear infinite;
+}
+
+.wave-layer svg {
+    width: 100%; 
+    height: 100px;
+    display: block;
+}
+
+.wave-layer.wave-1 { opacity: 0.9; animation-duration: 7s; animation-delay: -1s; }
+.wave-layer.wave-2 { opacity: 0.8; animation-duration: 10s; }
+.wave-layer.wave-3 { opacity: 0.7; animation-duration: 13s; }
+
+
+/* =========================================
+   5. SEÇÕES DE CONTEÚDO (VERDE E VERMELHO)
+   ========================================= */
+
+/* Configuração Geral das Seções */
+.discover-section,
+.plan-section { 
+    width: 100%;
+    min-height: 90vh;
+    padding: 60px 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Cores de Fundo */
+.discover-section { background: rgba(4, 52, 26, 0.9); } /* Verde */
+.plan-section     { background: rgba(143, 35, 23, 0.9); } /* Vermelho */
+
+/* Estilos de Texto e Container */
+.apresentacao-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.titulo-apresentacao {
+    font-size: 42px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fdd8a4;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.apresentacao-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    text-align: left;
+}
+
+/* Colunas */
+.col-imagem { flex: 1; min-width: 300px; }
+.col-texto { 
+    flex: 1.2; 
+    font-size: 18px; 
+    line-height: 1.6; 
+}
+
+/* Estilo da Imagem em destaque */
+.img-destaque {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    border: 3px solid rgba(255,255,255,0.2);
+    transform: rotate(-2deg); /* Charme inclinado padrão */
+    transition: transform 0.3s ease;
+}
+
+.img-destaque:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.col-texto strong { color: #fdd8a4; }
+/* Espaçamento entre parágrafos (Substitui os <br>) */
+.col-texto p { margin-bottom: 15px; }
+
+
+/* =========================================
+   6. ACCORDION (BOTÃO DO GOOGLE)
+   ========================================= */
+details.google-accordion {
+    margin-top: 15px;
+    border: none;
+    display: flex; 
+    flex-direction: column;
+}
+
+/* O Conteúdo que expande */
+.conteudo-extra {
+    order: 1; /* Aparece ANTES do botão */
+    animation: fadeIn 0.5s ease;
+    margin-bottom: 20px;
+}
+
+/* O Botão (Summary) */
+summary {
+    order: 2; /* Aparece DEPOIS do conteúdo */
+    list-style: none;
+    cursor: pointer;
+    background-color: #303134;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 24px;
+    height: 40px;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #e8eaed;
+    user-select: none;
+    transition: background 0.2s;
+    border: 1px solid rgba(255,255,255,0.1);
+    align-self: flex-start; 
+}
+
+summary:hover { background-color: #3c4043; }
+summary::-webkit-details-marker { display: none; }
+
+/* Ícone da Seta */
+.icone-seta {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+    width: 16px;
+    height: 16px;
+    fill: #9aa0a6;
+}
+
+/* Lógica Mostrar/Ocultar Texto */
+.texto-ocultar { display: none; }
+details[open] .texto-mostrar { display: none; }
+details[open] .texto-ocultar { display: inline; }
+details[open] .icone-seta { transform: rotate(180deg); }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================
+   7. AJUSTES ESPECÍFICOS POR SEÇÃO
+   ========================================= */
+
+/* Ajustes da Seção HISTÓRIA e CARACTERÍSTICAS
+   Adiciona padding embaixo para o botão não bater na onda */
+.historia-ajuste,
+.caracteristicas-ajuste {
+    padding-bottom: 80px;
+}
+
+/* Na história, queremos a imagem inclinada para a direita para variar */
+.historia-ajuste .img-destaque {
+    transform: rotate(2deg);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+.historia-ajuste .img-destaque:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+
+/* =========================================
+   8. RODAPÉ (FOOTER)
+   ========================================= */
+.site-footer {
+    width: 100%;
+    padding: 60px 50px;
+    background: #222;
+    color: #f0f0f0;
+    text-align: left;
+    text-shadow: none; 
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-left-column, .footer-right-column {
+    min-width: 250px;
+}
+.footer-left-column { display: flex; flex-direction: column; gap: 30px; }
+
+.footer-col h4 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.links-col ul { list-style: none; }
+.links-col li { margin-bottom: 12px; }
+.links-col a { color: #89cff0; font-size: 16px; }
+
+.footer-bottom {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}
+
+.location-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: inherit;
+    text-decoration: none;
+}
+.location-icon { width: 50px; height: 50px; object-fit: contain; }
+
+/* Logos e Parceiros no Footer */
+.footer-extra-info {
+    display: flex;
+    justify-content: space-around; 
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1000px; 
+    margin: 30px auto;
+    gap: 40px;
+    padding: 20px 0;
+    border-top: 1px solid #555; 
+    border-bottom: 1px solid #555; 
+}
+
+.developed-by-section, .footer-partners {
+    flex: 1; min-width: 200px; text-align: center;
+}
+
+.partners-logos, .developed-logos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.logo-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 8px; 
+}
+.partner-logo { max-height: 50px; width: auto; opacity: 0.8; transition: 0.3s; }
+.logo-insta { max-height: 35px !important; }
+.logo-item:hover .partner-logo { opacity: 1; }
+.logo-item p { color: #f0f0f0; font-weight: 600; margin: 0; }
+.logo-item:hover p { color: #89cff0; }
+
+
+/* =========================================
+   9. RESPONSIVIDADE (CELULAR)
+   ========================================= */
+@media (max-width: 768px) {
+
+    /* Cabeçalho no Mobile */
+    .site-header {
+        height: 80px;
+        padding: 0 20px;
+    }
+    .logo-header { width: 150px; }
+
+    /* Força o ícone a ficar na direita */
+    .header-right { margin-left: auto; width: auto; }
+    
+    /* Layout das Seções em Coluna */
+    .apresentacao-content {
+        flex-direction: column;
+    }
+    
+    /* Na história, inverte para texto ficar embaixo da imagem, se desejar */
+    .historia-ajuste .apresentacao-content {
+        flex-direction: column-reverse;
+    }
+
+    .col-imagem, .col-texto { width: 100%; }
+    
+    .img-destaque { transform: rotate(0deg); } /* Remove inclinação no mobile */
+
+    .footer-extra-info { flex-direction: column; align-items: stretch; }
+    
+    /* Ajuste dos paddings para não sobrar muito espaço */
+    .historia-ajuste, .caracteristicas-ajuste { padding-bottom: 40px; }
+}
+
+@media (max-width: 374px) {
+    .site-header { padding: 0; }
+    .logo-header { width: 120px; }
+}
