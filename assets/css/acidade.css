@@ -39,9 +39,6 @@ a:hover {
     top: 0;
     left: 0;
     z-index: 10;
-    
-    /* CORREÇÃO DO ALINHAMENTO:
-       Isso garante que o Logo fique na esquerda e o Ícone na direita */
     justify-content: space-between; 
 }
 
@@ -51,7 +48,6 @@ a:hover {
     flex-shrink: 0;
 }
 
-/* Container do ícone na direita */
 .header-right {
     display: flex;
     align-items: center;
@@ -71,9 +67,6 @@ a:hover {
 .social-icon img {
     width: 30px;
     height: 30px;
-    /* CORREÇÃO DA COR:
-       Removemos o filtro que deixava o ícone preto invisível (branco) */
-    /* filter: brightness(0) invert(1); */
 }
 
 /* =========================================
@@ -81,7 +74,7 @@ a:hover {
    ========================================= */
 .hero-section {
     width: 100%;
-    height: 80vh;
+    height: 80vh; /* Altura padrão para PC */
     position: relative;
     overflow: hidden;
     display: flex;
@@ -89,7 +82,6 @@ a:hover {
     align-items: center;
 }
 
-/* Usamos uma imagem aqui, se fosse vídeo, o CSS seria similar */
 .hero-image {
     position: absolute;
     top: 0;
@@ -117,7 +109,6 @@ a:hover {
     z-index: 2; 
 }
 
-/* Quando a onda vem logo após o Hero, ela precisa ficar acima */
 .hero-section + .wave-separator {
     z-index: 3;
 }
@@ -143,10 +134,8 @@ a:hover {
 
 
 /* =========================================
-   5. SEÇÕES DE CONTEÚDO (VERDE E VERMELHO)
+   5. SEÇÕES DE CONTEÚDO
    ========================================= */
-
-/* Configuração Geral das Seções */
 .discover-section,
 .plan-section { 
     width: 100%;
@@ -159,16 +148,19 @@ a:hover {
     gap: 40px;
 }
 
-/* Cores de Fundo */
-.discover-section { background: rgba(4, 52, 26, 0.9); } /* Verde */
-.plan-section     { background: rgba(143, 35, 23, 0.9); } /* Vermelho */
+.discover-section { background: rgba(4, 52, 26, 0.9); }
+.plan-section     { background: rgba(143, 35, 23, 0.9); }
 
-/* Estilos de Texto e Container */
 .apresentacao-container {
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     color: #fff;
+    
+    /* CORREÇÃO DO BOTÃO INCLICÁVEL:
+       Aplicamos o padding aqui para TODOS os containers.
+       Isso garante que o botão "Ocultar" nunca fique escondido atrás da onda. */
+    padding-bottom: 80px;
 }
 
 .titulo-apresentacao {
@@ -187,7 +179,6 @@ a:hover {
     text-align: left;
 }
 
-/* Colunas */
 .col-imagem { flex: 1; min-width: 300px; }
 .col-texto { 
     flex: 1.2; 
@@ -195,14 +186,13 @@ a:hover {
     line-height: 1.6; 
 }
 
-/* Estilo da Imagem em destaque */
 .img-destaque {
     width: 100%;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
     border: 3px solid rgba(255,255,255,0.2);
-    transform: rotate(-2deg); /* Charme inclinado padrão */
+    transform: rotate(-2deg);
     transition: transform 0.3s ease;
 }
 
@@ -211,12 +201,11 @@ a:hover {
 }
 
 .col-texto strong { color: #fdd8a4; }
-/* Espaçamento entre parágrafos (Substitui os <br>) */
 .col-texto p { margin-bottom: 15px; }
 
 
 /* =========================================
-   6. ACCORDION (BOTÃO DO GOOGLE)
+   6. ACCORDION (BOTÃO)
    ========================================= */
 details.google-accordion {
     margin-top: 15px;
@@ -225,16 +214,14 @@ details.google-accordion {
     flex-direction: column;
 }
 
-/* O Conteúdo que expande */
 .conteudo-extra {
-    order: 1; /* Aparece ANTES do botão */
+    order: 1;
     animation: fadeIn 0.5s ease;
     margin-bottom: 20px;
 }
 
-/* O Botão (Summary) */
 summary {
-    order: 2; /* Aparece DEPOIS do conteúdo */
+    order: 2;
     list-style: none;
     cursor: pointer;
     background-color: #303134;
@@ -255,7 +242,6 @@ summary {
 summary:hover { background-color: #3c4043; }
 summary::-webkit-details-marker { display: none; }
 
-/* Ícone da Seta */
 .icone-seta {
     margin-left: 8px;
     transition: transform 0.3s ease;
@@ -264,7 +250,6 @@ summary::-webkit-details-marker { display: none; }
     fill: #9aa0a6;
 }
 
-/* Lógica Mostrar/Ocultar Texto */
 .texto-ocultar { display: none; }
 details[open] .texto-mostrar { display: none; }
 details[open] .texto-ocultar { display: inline; }
@@ -275,18 +260,7 @@ details[open] .icone-seta { transform: rotate(180deg); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* =========================================
-   7. AJUSTES ESPECÍFICOS POR SEÇÃO
-   ========================================= */
-
-/* Ajustes da Seção HISTÓRIA e CARACTERÍSTICAS
-   Adiciona padding embaixo para o botão não bater na onda */
-.historia-ajuste,
-.caracteristicas-ajuste {
-    padding-bottom: 80px;
-}
-
-/* Na história, queremos a imagem inclinada para a direita para variar */
+/* Ajustes Específicos para a seção História */
 .historia-ajuste .img-destaque {
     transform: rotate(2deg);
     border-color: rgba(255, 255, 255, 0.4);
@@ -297,7 +271,7 @@ details[open] .icone-seta { transform: rotate(180deg); }
 
 
 /* =========================================
-   8. RODAPÉ (FOOTER)
+   7. RODAPÉ (FOOTER)
    ========================================= */
 .site-footer {
     width: 100%;
@@ -349,7 +323,6 @@ details[open] .icone-seta { transform: rotate(180deg); }
 }
 .location-icon { width: 50px; height: 50px; object-fit: contain; }
 
-/* Logos e Parceiros no Footer */
 .footer-extra-info {
     display: flex;
     justify-content: space-around; 
@@ -389,7 +362,7 @@ details[open] .icone-seta { transform: rotate(180deg); }
 
 
 /* =========================================
-   9. RESPONSIVIDADE (CELULAR)
+   8. RESPONSIVIDADE (CELULAR)
    ========================================= */
 @media (max-width: 768px) {
 
@@ -399,28 +372,33 @@ details[open] .icone-seta { transform: rotate(180deg); }
         padding: 0 20px;
     }
     .logo-header { width: 150px; }
-
-    /* Força o ícone a ficar na direita */
     .header-right { margin-left: auto; width: auto; }
     
+    /* CORREÇÃO DA IMAGEM CORTADA:
+       Reduzimos a altura da seção no celular para 40vh (antes era 80vh).
+       Assim, a imagem "Januária" fica mais larga e menos cortada. */
+    .hero-section {
+        height: 40vh; 
+        min-height: 300px;
+    }
+
     /* Layout das Seções em Coluna */
     .apresentacao-content {
         flex-direction: column;
     }
     
-    /* Na história, inverte para texto ficar embaixo da imagem, se desejar */
+    /* Na história, inverte ordem (texto embaixo) */
     .historia-ajuste .apresentacao-content {
         flex-direction: column-reverse;
     }
 
     .col-imagem, .col-texto { width: 100%; }
-    
-    .img-destaque { transform: rotate(0deg); } /* Remove inclinação no mobile */
+    .img-destaque { transform: rotate(0deg); }
 
     .footer-extra-info { flex-direction: column; align-items: stretch; }
     
-    /* Ajuste dos paddings para não sobrar muito espaço */
-    .historia-ajuste, .caracteristicas-ajuste { padding-bottom: 40px; }
+    /* Ajuste fino do padding no mobile */
+    .apresentacao-container { padding-bottom: 40px; }
 }
 
 @media (max-width: 374px) {
