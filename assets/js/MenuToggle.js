@@ -43,9 +43,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const volumeToggle = document.getElementById('volume-toggle');
     const volumeIcon = document.getElementById('volume-icon');
     const volumeSlider = document.getElementById('volume-slider');
-
-    const MUTE_ICON_SRC = '/assets/img/Social Icons/volume-mute.png';
-    const UNMUTE_ICON_SRC = '/assets/img/Social Icons/volume-up.png';
+    
+    const MUTE_ICON_SRC = '/${BASE_PATH}/assets/img/Social Icons/volume-mute.png';
+    const UNMUTE_ICON_SRC = '/${BASE_PATH}/assets/img/Social Icons/volume-up.png';
     
     const TARGET_VOLUME = 0.20;
 
