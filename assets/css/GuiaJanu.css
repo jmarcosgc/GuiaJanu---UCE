@@ -281,7 +281,11 @@ a:hover {
 }
 
 .footer-bottom p a:hover {
-    color: #fff;
+    color: #ffffff;
+}
+
+.footer-bottom a[href*="instagram.com"] {
+    color: #ffffff;
 }
 
 .location-link {
@@ -479,6 +483,10 @@ input[type=range]::-webkit-slider-thumb {
     align-items: center;
     text-align: center;
     gap: 8px; 
+}
+
+.logo-insta {
+    filter: brightness(0) invert(1);
 }
 
 .logo-item .logo-link {
