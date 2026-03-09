@@ -1,4 +1,4 @@
-Guia de Uso do Git - Projeto GuiaJanu
+1Guia de Uso do Git - Projeto GuiaJanu
 Este documento define o fluxo básico de trabalho com o Git para a nossa equipe. Seguir esses passos garante que o código de todos fique sincronizado e evita conflitos no repositório.
 
 1. Baixando o Projeto (Apenas na primeira vez)
