@@ -183,9 +183,9 @@ a:hover {
   height: 100px;
   position: relative;
   overflow: hidden;
-  margin-top: -1px;
+  margin-top: -80px; /* sobe a onda */
   margin-bottom: -1px;
-  z-index: 2;
+  z-index: 5;
   background: transparent;
 }
 
@@ -237,7 +237,7 @@ a:hover {
 }
 
 .footer-wave {
-  margin-top: -1px;
+  margin-top: -80px;
   margin-bottom: -1px;
 }
 
