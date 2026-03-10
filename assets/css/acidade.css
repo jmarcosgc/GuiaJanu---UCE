@@ -67,7 +67,7 @@ a:hover {
 .social-icon img {
     width: 30px;
     height: 30px;
-    filter: invert(1);
+    filter: brightness(0) invert(1); /* Ícone branco no desktop e mobile */
 }
 
 /* =========================================
@@ -364,7 +364,12 @@ details[open] .icone-seta { transform: rotate(180deg); }
         height: 80px;
         padding: 0 20px;
     }
-    .logo-header { width: 150px; }
+    
+    .logo-header { 
+        width: 150px; 
+        margin-left: -31px; /* <-- ADICIONADO PARA EMPURRAR A LOGO MAIS PARA A ESQUERDA */
+    }
+    
     .header-right { margin-left: auto; width: auto; }
     
     /* CORREÇÃO DA IMAGEM CORTADA:
@@ -501,7 +506,7 @@ details[open] .icone-seta { transform: rotate(180deg); }
         width: auto !important; 
         gap: 20px !important; 
         margin-left: auto;
-        margin-right: -10px; /* <-- ADICIONADO PARA EMPURRAR MAIS PARA A DIREITA */
+        margin-right: -10px; /* Mantido o recuo para a direita */
     }
     
     .social-icon { 
@@ -511,7 +516,6 @@ details[open] .icone-seta { transform: rotate(180deg); }
     .social-icon img {
         width: 26px;
         height: 26px;
-        filter: brightness(0) invert(1); /* <-- ADICIONADO PARA DEIXAR O ÍCONE BRANCO */
     }
     
     .menu-toggle {
