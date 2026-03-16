@@ -267,6 +267,9 @@ a:hover {
   width: 28px;
   height: 28px;
   object-fit: contain;
+
+  /* transforma o ícone preto na cor creme #ffd9a8 */
+  filter: brightness(0) saturate(100%) invert(88%) sepia(21%) saturate(457%) hue-rotate(338deg) brightness(101%) contrast(102%);
 }
 
 .titulo-info h3 {
@@ -286,13 +289,13 @@ a:hover {
 }
 
 .info-extra a {
-  color: #0047b3;
+  color: #6ec1ff;
   font-weight: 700;
   text-decoration: underline;
 }
 
 .info-extra a:hover {
-  color: #003380;
+  color: #9fd7ff;
 }
 
 .mapa-box {
@@ -805,4 +808,69 @@ a:hover {
   .logo-header {
     width: 130px;
   }
+}
+
+/* =====================================
+   MELHORIAS TIPOGRAFIA SOBRE O LOCAL
+   ===================================== */
+
+.texto-sobre {
+  max-width: 640px;
+}
+
+.texto-sobre p {
+  margin-bottom: 22px;
+  font-size: 18px;
+  line-height: 1.75;
+  letter-spacing: 0.2px;
+}
+
+.texto-sobre strong {
+  color: #ffd9a8;
+  font-weight: 700;
+}
+
+/* Destaque visual para bloco de informações */
+
+.info-extra {
+  margin-top: 30px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255,255,255,0.35);
+}
+
+.info-extra p {
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.info-extra strong {
+  color: #ffd9a8;
+}
+
+
+/* =====================================
+   MELHORIAS GALERIA
+   ===================================== */
+
+.carrossel-container h2 {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  letter-spacing: 0.5px;
+}
+
+.carrossel-container {
+  max-width: 1100px;
+}
+
+/* melhora sombra das imagens */
+
+.slide img {
+  box-shadow: 0 30px 60px rgba(0,0,0,0.45);
+}
+
+/* animação mais suave */
+
+.slide {
+  transition: all 0.65s cubic-bezier(.22,.61,.36,1);
 }
