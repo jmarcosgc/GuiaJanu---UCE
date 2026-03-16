@@ -284,10 +284,6 @@ a:hover {
     color: #ffffff;
 }
 
-.footer-bottom a[href*="instagram.com"] {
-    color: #ffffff;
-}
-
 .location-link {
     display: flex;
     align-items: center;
