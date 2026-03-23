@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const volumeIcon = document.getElementById('volume-icon');
     const volumeSlider = document.getElementById('volume-slider');
     
-    const MUTE_ICON_SRC = '../assets/img/Social Icons/volume-mute.png';
-    const UNMUTE_ICON_SRC = '../assets/img/Social Icons/volume-up.png';
+    const MUTE_ICON_SRC = '../assets/img/Social Icons/sem_som.png';
+    const UNMUTE_ICON_SRC = '../assets/img/Social Icons/com_som.png';
     
     const TARGET_VOLUME = 0.20;
 
@@ -99,5 +99,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         
         syncVolumeState();
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.site-header');
+    const footer = document.querySelector('.content-wrapper');
+
+    if (header && footer) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    header.classList.add('header-hidden');
+                } else {
+                    header.classList.remove('header-hidden');
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.15 
+        });
+
+        observer.observe(footer);
     }
 });
