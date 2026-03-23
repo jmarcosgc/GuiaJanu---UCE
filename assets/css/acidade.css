@@ -27,7 +27,7 @@ a:hover {
 }
 
 /* =========================================
-   2. CABEÇALHO (HEADER) - PADRÃO
+   2. CABEÇALHO (HEADER)
    ========================================= */
 .site-header {
     width: 100%;
@@ -46,25 +46,6 @@ a:hover {
     width: 200px;
     height: auto;
     flex-shrink: 0;
-}
-
-.main-nav {
-    flex-grow: 1;
-    overflow: hidden;
-}
-
-.main-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-}
-
-.main-nav a {
-    font-size: 30px;
-    font-weight: 700;
-    color: #ffffff;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .header-right {
@@ -86,26 +67,15 @@ a:hover {
 .social-icon img {
     width: 30px;
     height: 30px;
-    filter: brightness(0) invert(1);
-}
-
-.menu-toggle,
-.menu-close {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 28px;
-    color: #ffffff; 
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    filter: brightness(0) invert(1); /* Ícone branco no desktop e mobile */
 }
 
 /* =========================================
-   3. HERO SECTION E ONDAS
+   3. HERO SECTION (Imagem Principal)
    ========================================= */
 .hero-section {
     width: 100%;
-    height: 80vh; 
+    height: 80vh; /* Altura padrão para PC */
     position: relative;
     overflow: hidden;
     display: flex;
@@ -123,6 +93,9 @@ a:hover {
     z-index: 1;
 }
 
+/* =========================================
+   4. ONDAS DECORATIVAS (WAVES)
+   ========================================= */
 @keyframes move-wave {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -162,7 +135,7 @@ a:hover {
 
 
 /* =========================================
-   4. SEÇÕES DE CONTEÚDO (ACIDADE)
+   5. SEÇÕES DE CONTEÚDO
    ========================================= */
 .discover-section,
 .plan-section { 
@@ -184,6 +157,10 @@ a:hover {
     max-width: 1100px;
     margin: 0 auto;
     color: #fff;
+    
+    /* CORREÇÃO DO BOTÃO INCLICÁVEL:
+       Aplicamos o padding aqui para TODOS os containers.
+       Isso garante que o botão "Ocultar" nunca fique escondido atrás da onda. */
     padding-bottom: 80px;
 }
 
@@ -203,14 +180,14 @@ a:hover {
     text-align: left;
 }
 
-.col-imagem { 
-    flex: 1; 
-    min-width: 300px; 
-    position: relative;
+.col-imagem { flex: 1; min-width: 300px; }
+.col-texto { 
+    flex: 1.2; 
+    font-size: 18px; 
+    line-height: 1.6; 
 }
 
 .img-destaque {
-    display: block;
     width: 100%;
     height: auto;
     border-radius: 12px;
@@ -218,35 +195,13 @@ a:hover {
     border: 3px solid rgba(255,255,255,0.2);
 }
 
-.copyright {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #ffffff;
-    padding: 5px 10px;
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-    border-radius: 4px;
-    pointer-events: none;
-}
-
-.col-texto { 
-    flex: 1.2; 
-    font-size: 18px; 
-    line-height: 1.6; 
-}
 
 .col-texto strong { color: #fdd8a4; }
 .col-texto p { margin-bottom: 15px; }
 
-/* Ajustes Específicos para a seção História */
-.historia-ajuste .img-destaque {
-    border-color: rgba(255, 255, 255, 0.4);
-}
 
 /* =========================================
-   5. ACCORDION (BOTÃO)
+   6. ACCORDION (BOTÃO)
    ========================================= */
 details.google-accordion {
     margin-top: 15px;
@@ -301,9 +256,15 @@ details[open] .icone-seta { transform: rotate(180deg); }
     to { opacity: 1; transform: translateY(0); }
 }
 
+/* Ajustes Específicos para a seção História */
+.historia-ajuste .img-destaque {
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+
 
 /* =========================================
-   6. RODAPÉ (FOOTER)
+   7. RODAPÉ (FOOTER)
    ========================================= */
 .site-footer {
     width: 100%;
@@ -394,9 +355,10 @@ details[open] .icone-seta { transform: rotate(180deg); }
 
 
 /* =========================================
-   7. RESPONSIVIDADE (CELULAR E TABLETS)
+   8. RESPONSIVIDADE (CELULAR)
    ========================================= */
 @media (max-width: 768px) {
+
     /* Cabeçalho no Mobile */
     .site-header {
         height: 80px;
@@ -405,17 +367,156 @@ details[open] .icone-seta { transform: rotate(180deg); }
     
     .logo-header { 
         width: 150px; 
+        margin-left: -31px; /* <-- ADICIONADO PARA EMPURRAR A LOGO MAIS PARA A ESQUERDA */
     }
     
+    .header-right { margin-left: auto; width: auto; }
+    
+    /* CORREÇÃO DA IMAGEM CORTADA:
+       Reduzimos a altura da seção no celular para 40vh (antes era 80vh).
+       Assim, a imagem "Januária" fica mais larga e menos cortada. */
+    .hero-section {
+        height: 40vh; 
+        min-height: 300px;
+    }
+
+    /* Layout das Seções em Coluna */
+    .apresentacao-content {
+        flex-direction: column;
+    }
+    
+    /* Na história, inverte ordem (texto embaixo) */
+    .historia-ajuste .apresentacao-content {
+        flex-direction: column-reverse;
+    }
+
+    .col-imagem, .col-texto { width: 100%; }
+    .img-destaque { transform: rotate(0deg); }
+
+    .footer-extra-info { flex-direction: column; align-items: stretch; }
+    
+    /* Ajuste fino do padding no mobile */
+    .apresentacao-container { padding-bottom: 40px; }
+}
+
+@media (max-width: 374px) {
+    .site-header { padding: 0; }
+    .logo-header { width: 120px; }
+}
+
+
+
+/* Seu código original mantido */
+.apresentacao-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    text-align: left;
+}
+
+.col-imagem { 
+    flex: 1; 
+    min-width: 300px; 
+    /* ADICIONADO: Define o limite para o copyright não vazar da coluna */
+    position: relative; 
+}
+
+/* Opcional, mas recomendado: garante que a imagem preencha a coluna corretamente */
+.img-destaque {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* Dá um leve arredondamento nas bordas da foto */
+}
+
+.col-texto { 
+    flex: 1.2; 
+    font-size: 18px; 
+    line-height: 1.6; 
+}
+
+/* ADICIONADO: O estilo da etiqueta de copyright */
+.copyright {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    padding: 5px 10px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    border-radius: 4px;
+    pointer-events: none;
+}
+
+.site-header {
+    width: 100%;
+    padding: 20px 40px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo-header {
+    width: 200px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.main-nav a {
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main-nav {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.menu-toggle,
+.menu-close {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: #ffffff; 
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* =========================================
+   ADICIONADO: FIX DO MENU MOBILE + INSTAGRAM
+   Fica aqui no final para sobrescrever o código duplicado acima
+   ========================================= */
+@media (max-width: 768px) {
     .header-right { 
         width: auto !important; 
         gap: 20px !important; 
         margin-left: auto;
-        margin-right: -10px;
+        margin-right: -10px; /* Mantido o recuo para a direita */
     }
     
-    .social-icon { display: flex !important; }
-    .social-icon img { width: 26px; height: 26px; }
+    .social-icon { 
+        display: flex !important; 
+    }
+    
+    .social-icon img {
+        width: 26px;
+        height: 26px;
+    }
     
     .menu-toggle {
         display: block !important;
@@ -432,6 +533,7 @@ details[open] .icone-seta { transform: rotate(180deg); }
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        
         position: fixed;
         top: 80px;
         left: 0;
@@ -439,6 +541,7 @@ details[open] .icone-seta { transform: rotate(180deg); }
         height: calc(100vh - 80px);
         background: rgba(0, 0, 0, 0.95); 
         z-index: 100;
+        
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
     }
@@ -468,30 +571,4 @@ details[open] .icone-seta { transform: rotate(180deg); }
         color: white;
         text-shadow: none; 
     }
-
-    /* Imagem da Januária e Ajustes das Seções */
-    .hero-section {
-        height: 40vh; 
-        min-height: 300px;
-    }
-
-    .apresentacao-content {
-        flex-direction: column;
-    }
-    
-    .historia-ajuste .apresentacao-content {
-        flex-direction: column-reverse;
-    }
-
-    .col-imagem, .col-texto { width: 100%; }
-    .img-destaque { transform: rotate(0deg); }
-
-    .footer-extra-info { flex-direction: column; align-items: stretch; }
-    
-    .apresentacao-container { padding-bottom: 40px; }
-}
-
-@media (max-width: 374px) {
-    .site-header { padding: 0; }
-    .logo-header { width: 120px; }
 }

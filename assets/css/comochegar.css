@@ -415,3 +415,28 @@ a:hover {
     .site-header { padding: 0; }
     .logo-header { width: 120px; }
 }
+
+.copyright-tag {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  left: auto;
+  background: rgba(41, 42, 43, 0.88);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 7px 10px;
+  border-radius: 6px;
+  z-index: 4;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.28);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.hero-copyright {
+  right: 14px;
+  bottom: 48px;
+  left: auto;
+  z-index: 3;
+}
