@@ -164,7 +164,7 @@ a:hover {
    4. SEÇÃO DE CONTEÚDO (FUNDO BRANCO)
    ========================================= */
 .white-section {
-    background-color: #ffffff;
+    background-color: #084222;
     width: 100%;
     min-height: 90vh;
     padding: 60px 20px 80px;
@@ -176,7 +176,7 @@ a:hover {
 .text-container {
     width: 100%;
     max-width: 900px; /* Largura ideal para leitura de textos longos */
-    color: #333;
+    color: #ffffff;
     font-size: 18px;
     line-height: 1.7;
 }
@@ -185,7 +185,7 @@ a:hover {
     font-size: 42px;
     font-weight: 800;
     text-align: center;
-    color: #04341a; /* Verde escuro do tema para manter identidade */
+    color: #e99931; /* Verde escuro do tema para manter identidade */
     margin-bottom: 10px;
 }
 
@@ -193,13 +193,13 @@ a:hover {
     font-size: 20px;
     font-weight: 600;
     text-align: center;
-    color: #555;
+    color: #f0f0f0;
     margin-bottom: 50px;
 }
 
 .text-container h3 {
     font-size: 26px;
-    color: #8f2317; /* Vinho da seção "Plan" da página acidade para padronizar */
+    color: #e99931; /* Vinho da seção "Plan" da página acidade para padronizar */
     margin-top: 40px;
     margin-bottom: 20px;
     border-bottom: 2px solid #eee;
@@ -222,7 +222,7 @@ a:hover {
 }
 
 .text-container strong {
-    color: #04341a; /* Destaque leve em negrito com a cor tema */
+    color: #e99931; /* Destaque leve em negrito com a cor tema */
 }
 
 /* =========================================
@@ -416,27 +416,3 @@ a:hover {
     .logo-header { width: 120px; }
 }
 
-.copyright-tag {
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  left: auto;
-  background: rgba(41, 42, 43, 0.88);
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  padding: 7px 10px;
-  border-radius: 6px;
-  z-index: 4;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.28);
-  pointer-events: none;
-  white-space: nowrap;
-}
-
-.hero-copyright {
-  right: 14px;
-  bottom: 48px;
-  left: auto;
-  z-index: 3;
-}
