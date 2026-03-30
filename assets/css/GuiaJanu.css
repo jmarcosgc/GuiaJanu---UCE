@@ -1,3 +1,6 @@
+/* ==========================================================================
+   01. RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -21,6 +24,9 @@ a:hover {
     text-decoration: underline;
 }
 
+/* ==========================================================================
+   02. HEADER E NAVEGAÇÃO PRINCIPAL
+   ========================================================================== */
 .site-header {
     width: 100%;
     padding: 20px 40px;
@@ -46,33 +52,12 @@ a:hover {
     flex-shrink: 0;
 }
 
-.main-nav ul {
-    list-style: none;
+.header-right {
     display: flex;
+    align-items: center;
+    justify-content: flex-end;
     gap: 30px;
-    justify-content: center;
-}
-
-.main-nav a {
-    font-size: 27px;
-    font-weight: 700;
-    color: #ffffff;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.main-nav {
-    flex-grow: 1;
-    overflow: hidden;
-}
-
-.menu-toggle,
-.menu-close {
-    display: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 28px;
-    color: #ffffff;
+    flex-shrink: 0;
 }
 
 .social-icon {
@@ -88,14 +73,125 @@ a:hover {
     filter: brightness(0) invert(1);
 }
 
-.header-right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 30px;
-    flex-shrink: 0;
+.menu-toggle,
+.menu-close {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: #ffffff;
 }
 
+/* --- Menu Principal (Nav) --- */
+.main-nav {
+    flex-grow: 1;
+    overflow: visible;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center; /* Mantém todos os itens na mesma linha reta */
+    margin: 0; /* Remove margens automáticas do Bootstrap que causam desnível */
+    padding: 0;
+}
+
+.main-nav a {
+    font-size: 27px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.main-nav .nav-link {
+    padding: 10px 20px !important;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    color: #ffffff !important; /* Força a cor branca */
+    text-decoration: none !important; /* Tira o sublinhado */
+}
+
+/* Efeito ao passar o mouse em qualquer item do menu principal */
+.main-nav .nav-link:hover {
+    color: none !important; /* Fica azul claro ao passar o mouse */
+}
+
+/* ==========================================================================
+   03. SUBMENU (DROPDOWN BOOTSTRAP CUSTOMIZADO)
+   ========================================================================== */
+.nav-item.dropdown {
+    position: relative;
+}
+
+/* Submenu transparente e sem bordas/sombras */
+/* Submenu transparente e alinhado */
+.dropdown-menu {
+    background-color: transparent !important;
+    border: none !important; 
+    padding: 0;
+    
+    /* Alterações para centralizar o submenu certinho debaixo do texto */
+    min-width: max-content; /* Garante que a caixa se adapte ao tamanho do texto interno */
+    left: 50% !important; 
+    transform: translateX(-50%) !important; 
+    
+    box-shadow: none !important;
+    top: 100%;
+    margin-top: 0 !important; 
+}
+
+/* Textos do submenu */
+.dropdown-item {
+    color: white !important;
+    font-size: 18px;
+    font-weight: 700;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 12px 20px;
+    text-align: center;
+    transition: all 0.2s ease;
+    
+    /* Impede que o texto "Sobre Nós" quebre em duas linhas */
+    white-space: nowrap !important; 
+}
+
+/* Efeito ao passar o mouse num item do submenu (Sem azul, sem fundo) */
+.dropdown-item:hover {
+    background-color: transparent !important;
+    color: white !important; /* Mantém o texto branco */
+    text-decoration: underline !important; /* Apenas um sublinhado para indicar o mouse */
+}
+
+.dropdown-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+/* Hover no Desktop para o Dropdown */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-toggle + .dropdown-menu,
+    .nav-item.dropdown:hover .dropdown-menu,
+    .dropdown-menu:hover {
+        display: block !important;
+        margin-top: 0;
+    }
+
+    /* Efeito ao passar o mouse no texto principal "Descubra Januária" */
+    .nav-item.dropdown:hover .nav-link {
+        background-color: transparent !important; /* Sem fundo preto */
+        color: white !important; /* Sem texto azul */
+    }
+}
+
+/* ==========================================================================
+   04. HERO SECTION (VÍDEO DE FUNDO PRINCIPAL)
+   ========================================================================== */
 .hero-section {
     width: 100%;
     height: 100vh;
@@ -125,324 +221,7 @@ a:hover {
     text-align: center;
 }
 
-.content-wrapper {
-    position: relative;
-    z-index: 10;
-    margin-top: 100vh;
-    background: transparent;
-}
-
-.discover-section,
-.plan-section,
-.events-section {
-    width: 100%;
-    min-height: 90vh;
-    padding: 60px 20px 120px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    position: relative;
-    z-index: 10;
-}
-
-.section-title {
-    font-family: 'Ubuntu', sans-serif;
-    font-size: 52px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.section-subtitle {
-    font-size: 30px;
-    text-align: center;
-}
-
-.discover-section {
-    background: rgba(4, 52, 26, 1);
-}
-
-.plan-section {
-    background: rgba(143, 35, 23, 1);
-}
-
-.events-section {
-    background: rgba(253, 216, 164, 1);
-}
-
-.cards-container {
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-}
-
-.circle-image {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    margin: 0 auto 0px;
-    background-size: cover;
-    background-position: center;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
-}
-
-.mais-mosaico {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.mais-mosaico img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card:hover .circle-image {
-    transform: scale(1.1);
-}
-
-.card-title {
-    font-size: 38px;
-    font-weight: regular;
-    text-align: center;
-    line-height: 1.2;
-    min-height: 2.4em;
-}
-
-.card-link {
-    font-size: 23px;
-    font-weight: bold;
-}
-
-.card-date {
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.site-footer {
-    width: 100%;
-    padding: 60px 50px;
-    background: #222;
-    color: #f0f0f0;
-    position: relative;
-    z-index: 15;
-}
-
-.footer-main {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-}
-
-.footer-left-column {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    min-width: 250px;
-}
-
-.footer-right-column {
-    min-width: 250px;
-}
-
-.footer-col.contact-info p {
-    margin-bottom: 5px;
-    line-height: 1.5;
-}
-
-.footer-col h4 {
-    font-family: 'ubuntu', sans-serif;
-    font-size: 20px;
-    font-weight: bold;
-    color: #fff;
-    margin-bottom: 20px;
-}
-
-.links-col ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.links-col li {
-    margin-bottom: 12px;
-}
-
-.links-col a {
-    color: #89cff0;
-    text-shadow: none;
-    font-size: 16px;
-}
-
-.links-col a:hover {
-    text-decoration: underline;
-}
-
-.footer-bottom {
-    font-family: 'ubuntu', sans-serif;
-    padding-top: 30px;
-    text-align: center;
-    font-size: 13px;
-    color: #aaa;
-}
-
-.footer-bottom p {
-    margin-bottom: 8px;
-}
-
-.footer-bottom a {
-    color: #fff;
-}
-
-.footer-bottom p a {
-    color: inherit;
-}
-
-.footer-bottom p a:hover {
-    color: #fff;
-}
-
-.ifnmg {
-    line-height: 1.1;
-}
-
-.ifnmg span {
-    display: block;
-}
-
-.ifnmg .linha1 {
-    font-size: 12px;
-}
-
-.ifnmg .linha2 {
-    font-size: 10px;
-}
-
-.ifnmg .linha3 {
-    font-size: 10px;
-}
-
-.logo-link:hover .ifnmg {
-    color: #f0f0f0 !important;
-}
-
-.location-link {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: inherit;
-    text-decoration: none;
-}
-
-.location-icon {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-    flex-shrink: 0;
-}
-
-.location-text p {
-    margin-bottom: 2px;
-}
-
-.location-link:hover {
-    text-decoration: none;
-}
-
-@keyframes move-wave {
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-.wave-separator {
-    width: 100%;
-    height: 100px;
-    position: relative;
-    overflow: hidden;
-    margin-top: -99px;
-    z-index: 11;
-}
-
-.wave-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 100px;
-    animation: move-wave linear infinite;
-}
-
-.wave-layer svg {
-    width: 100%;
-    height: 100px;
-    display: block;
-    background: transparent;
-}
-
-.wave-layer.wave-1 {
-    opacity: 0.9;
-    animation-duration: 7s;
-    animation-delay: -1s;
-}
-
-.wave-layer.wave-2 {
-    opacity: 0.8;
-    animation-duration: 10s;
-}
-
-.wave-layer.wave-3 {
-    opacity: 0.7;
-    animation-duration: 13s;
-}
-
-.video-copyright {
-    position: absolute;
-    bottom: 120px;
-    right: 20px;
-    z-index: 5;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 12px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    pointer-events: none;
-}
-
+/* --- Controles do Vídeo --- */
 .video-controls {
     position: absolute;
     bottom: 120px;
@@ -496,14 +275,349 @@ input[type=range]::-webkit-slider-thumb {
     margin-top: -4px;
 }
 
-.resize-transition-stopper .main-nav {
-    transition: none !important;
+.video-copyright {
+    position: absolute;
+    bottom: 120px;
+    right: 20px;
+    z-index: 5;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
 }
 
-.resize-transition-stopper .header-right {
-    transition: none !important;
+/* ==========================================================================
+   05. ESTRUTURA DAS SEÇÕES (CONTEÚDO ROLÁVEL)
+   ========================================================================== */
+.content-wrapper {
+    position: relative;
+    z-index: 10;
+    margin-top: 100vh;
+    background: transparent;
 }
 
+.discover-section,
+.plan-section,
+.events-section {
+    width: 100%;
+    min-height: 90vh;
+    padding: 60px 20px 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+/* Cores de Fundo das Seções */
+.discover-section {
+    background: rgba(4, 52, 26, 1);
+}
+
+.plan-section {
+    background: rgba(143, 35, 23, 1);
+}
+
+.events-section {
+    background: rgba(253, 216, 164, 1);
+}
+
+/* Títulos das Seções */
+.section-title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 52px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+}
+
+.section-subtitle {
+    font-size: 30px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   06. COMPONENTES: CARDS E MOSAICOS
+   ========================================================================== */
+.cards-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Container do card (Corrigido para remover o fundo branco do Bootstrap) */
+.card,
+.card-mais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-decoration: none;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* Anula o azul padrão do Bootstrap no link inteiro */
+a.card,
+a.card-mais,
+a.card:hover,
+a.card-mais:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+/* Imagens Circulares */
+.circle-image {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin: 0 auto 0px;
+    background-size: cover;
+    background-position: center;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.card:hover .circle-image {
+    transform: scale(1.1);
+}
+
+/* Mosaico do Card "Mais" */
+.mais-mosaico {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.mais-mosaico img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-mais:hover .mais-mosaico {
+    transform: scale(1.1);
+}
+
+/* ==========================================================================
+   Textos dos Cards (Corrigido para arrumar as cores azuis)
+   ========================================================================== */
+
+/* Título principal dos cards (Padrão/Cima) */
+.card-title {
+    font-size: 38px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.2;
+    min-height: 2.4em;
+    color: #ffffff !important;
+    /* Força o branco */
+}
+
+/* Link "Saiba Mais" (Padrão/Cima) */
+.card-link {
+    font-size: 23px;
+    font-weight: bold;
+    color: #ffffff !important;
+    /* Força o branco inicial */
+    transition: color 0.3s ease;
+}
+
+/* Hover do "Saiba Mais" - Só ele fica azul */
+.card-link:hover {
+    color: #87CEFA !important;
+    text-decoration: none !important;
+}
+
+/* Cores específicas do card da seção debaixo (Plan Section) */
+.plan-section .card-title {
+    color: #ffffff !important;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.plan-section .card-link {
+    color: #fdd8a4 !important;
+    /* Cor laranjinha inicial */
+    font-size: 1.50em;
+}
+
+.plan-section .card-link:hover {
+    color: #87CEFA !important;
+    /* Azul no hover */
+}
+
+.card-date {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   07. COMPONENTES: EFEITOS DE ONDA (WAVES)
+   ========================================================================== */
+@keyframes move-wave {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.wave-separator {
+    width: 100%;
+    height: 100px;
+    position: relative;
+    overflow: hidden;
+    margin-top: -99px;
+    z-index: 11;
+}
+
+.wave-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    animation: move-wave linear infinite;
+}
+
+.wave-layer svg {
+    width: 100%;
+    height: 100px;
+    display: block;
+    background: transparent;
+}
+
+.wave-layer.wave-1 {
+    opacity: 0.9;
+    animation-duration: 7s;
+    animation-delay: -1s;
+}
+
+.wave-layer.wave-2 {
+    opacity: 0.8;
+    animation-duration: 10s;
+}
+
+.wave-layer.wave-3 {
+    opacity: 0.7;
+    animation-duration: 13s;
+}
+
+/* ==========================================================================
+   08. FOOTER (RODAPÉ E CONTATOS)
+   ========================================================================== */
+.site-footer {
+    width: 100%;
+    padding: 60px 50px;
+    background: #222;
+    color: #f0f0f0;
+    position: relative;
+    z-index: 15;
+}
+
+.footer-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    min-width: 250px;
+}
+
+.footer-right-column {
+    min-width: 250px;
+}
+
+.footer-col h4 {
+    font-family: 'ubuntu', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Links do Rodapé */
+.links-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-col li {
+    margin-bottom: 12px;
+}
+
+.links-col a {
+    color: #89cff0;
+    text-shadow: none;
+    font-size: 16px;
+}
+
+.links-col a:hover {
+    text-decoration: underline;
+}
+
+/* Informações de Contato */
+.contact-info p {
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+.location-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: inherit;
+    text-decoration: none;
+}
+
+.location-link:hover {
+    text-decoration: none;
+}
+
+.location-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.location-text p {
+    margin-bottom: 2px;
+}
+
+/* --- Informações Extras e Parceiros --- */
 .footer-extra-info {
     display: flex;
     justify-content: space-around;
@@ -558,10 +672,6 @@ input[type=range]::-webkit-slider-thumb {
     text-decoration: none;
 }
 
-.logo-item .logo-link:hover {
-    text-decoration: none;
-}
-
 .logo-item p {
     font-size: 14px;
     color: #f0f0f0;
@@ -590,54 +700,70 @@ input[type=range]::-webkit-slider-thumb {
     opacity: 1;
 }
 
-.card-mais:hover .mais-mosaico {
-    transform: scale(1.1);
+/* Texto Específico do IFNMG */
+.ifnmg {
+    line-height: 1.1;
 }
 
-.plan-section .card-title {
-    color: #ffffff;
-    font-weight: bold;
-    margin-top: 10px;
+.ifnmg span {
+    display: block;
 }
 
-.plan-section .card-link {
-    color: #fdd8a4;
-    text-decoration: none;
-    font-size: 1.50em;
-    font-weight: bold;
+.ifnmg .linha1 {
+    font-size: 12px;
 }
 
-a.card:hover,
-a.card-mais:hover {
-    text-decoration: none !important;
+.ifnmg .linha2 {
+    font-size: 10px;
 }
 
-.card-link:hover {
-    color: #87CEFA !important;
-    text-decoration: none !important;
+.ifnmg .linha3 {
+    font-size: 10px;
 }
 
-.section-title {
-    color: #ffffff;
+.logo-link:hover .ifnmg {
+    color: #f0f0f0 !important;
 }
 
-.section-subtitle {
-    color: #ffffff;
+/* Base do Footer */
+.footer-bottom {
+    font-family: 'ubuntu', sans-serif;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
 }
 
-.card-mais {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.footer-bottom p {
+    margin-bottom: 8px;
 }
 
-.card-mais:hover {
-    cursor: pointer;
+.footer-bottom a {
+    color: #fff;
 }
 
+.footer-bottom p a {
+    color: inherit;
+}
+
+.footer-bottom p a:hover {
+    color: #fff;
+}
+
+/* ==========================================================================
+   09. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+
+/* Bloqueio de transições ao redimensionar (Javascript) */
+.resize-transition-stopper .main-nav,
+.resize-transition-stopper .header-right {
+    transition: none !important;
+}
+
+/* --- TABLET E CELULAR (Até 768px) --- */
 @media (max-width: 768px) {
 
+    /* Header Mobile */
     .site-header {
         height: 80px;
         background: transparent;
@@ -651,8 +777,48 @@ a.card-mais:hover {
         width: 150px;
     }
 
-    .main-nav {
-        display: none;
+    .header-right {
+        width: auto !important;
+        gap: 20px !important;
+        margin-left: auto;
+        margin-right: -10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    }
+
+    .header-right.header-right-hidden {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    .header-right img {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+    }
+
+    .header-right a,
+    .header-right button {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: none;
+        background: none;
+    }
+
+    /* Ícones e Botões Mobile */
+    .social-icon {
+        display: flex !important;
+    }
+
+    .social-icon img {
+        width: 26px;
+        height: 26px;
     }
 
     .menu-toggle {
@@ -668,63 +834,9 @@ a.card-mais:hover {
         width: 30px;
         height: 30px;
         object-fit: contain;
-
     }
 
-    .header-right {
-        width: auto;
-        gap: 0;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    }
-
-    .header-right {
-        width: auto !important;
-        gap: 20px !important;
-        margin-left: auto;
-        margin-right: -10px;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    }
-
-    .social-icon {
-        display: flex !important;
-    }
-
-    .social-icon img {
-        width: 26px;
-        height: 26px;
-    }
-
-    .header-right img {
-        width: 24px;
-        height: 24px;
-        object-fit: contain;
-    }
-
-    .header-right a,
-    .header-right button {
-        width: 40px;
-        height: 40px;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        padding: 0;
-        border: none;
-        background: none;
-    }
-
-    .header-right.header-right-hidden {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-
+    /* Menu Lateral Mobile (Escondido por padrão) */
     .main-nav {
         display: flex;
         flex-direction: column;
@@ -745,15 +857,6 @@ a.card-mais:hover {
         transform: translateX(0);
     }
 
-    .menu-close {
-        display: block;
-        position: absolute;
-        top: 20px;
-        right: 40px;
-        color: white;
-        font-size: 40px;
-    }
-
     .main-nav ul {
         flex-direction: column;
         text-align: center;
@@ -767,6 +870,16 @@ a.card-mais:hover {
         text-shadow: none;
     }
 
+    .menu-close {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 40px;
+        color: white;
+        font-size: 40px;
+    }
+
+    /* Ajustes da Hero Section no Mobile */
     .video-controls {
         display: flex;
     }
@@ -775,6 +888,9 @@ a.card-mais:hover {
         display: none;
     }
 
+    /* Oculta slider no celular */
+
+    /* Ajustes do Footer no Mobile */
     .footer-extra-info {
         flex-direction: column;
         gap: 30px;
@@ -782,8 +898,8 @@ a.card-mais:hover {
     }
 }
 
+/* --- CELULAR PEQUENO (Até 374px) --- */
 @media (max-width: 374px) {
-
     .site-header {
         padding: 0 0px;
     }
