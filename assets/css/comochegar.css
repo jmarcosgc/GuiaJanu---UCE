@@ -173,6 +173,19 @@ a:hover {
     align-items: flex-start;
 }
 
+.hero-copyright {
+    position: absolute;
+    bottom: 40px; /* Sobe o texto para ficar acima das ondas (que têm margem negativa de 50px) */
+    right: 20px; /* Alinha no canto direito */
+    z-index: 5; /* Garante que fique por cima da imagem e das ondas */
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escurinho levemente transparente para dar leitura */
+    padding: 5px 5px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
 .text-container {
     width: 100%;
     max-width: 900px; /* Largura ideal para leitura de textos longos */
@@ -185,7 +198,7 @@ a:hover {
     font-size: 42px;
     font-weight: 800;
     text-align: center;
-    color: #e99931; /* Verde escuro do tema para manter identidade */
+    color: #ffd9a8; /* Verde escuro do tema para manter identidade */
     margin-bottom: 10px;
 }
 
@@ -199,7 +212,7 @@ a:hover {
 
 .text-container h3 {
     font-size: 26px;
-    color: #e99931; /* Vinho da seção "Plan" da página acidade para padronizar */
+    color: #ffd9a8; /* Vinho da seção "Plan" da página acidade para padronizar */
     margin-top: 40px;
     margin-bottom: 20px;
     border-bottom: 2px solid #eee;
@@ -222,7 +235,7 @@ a:hover {
 }
 
 .text-container strong {
-    color: #e99931; /* Destaque leve em negrito com a cor tema */
+    color: #ffd9a8; /* Destaque leve em negrito com a cor tema */
 }
 
 /* =========================================
@@ -332,6 +345,12 @@ a:hover {
         width: 150px; 
     }
     
+    .hero-copyright {
+        bottom: 60px;
+        right: 15px;
+        font-size: 10px;
+    }
+
     .header-right { 
         width: auto !important; 
         gap: 20px !important; 
