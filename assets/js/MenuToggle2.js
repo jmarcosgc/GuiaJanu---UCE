@@ -4,28 +4,60 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainNav = document.querySelector('.main-nav');
 
     if (menuToggle && mainNav) {
+
+        // NOVO: Função central para fechar a tela preta e RESETAR as sanfonas
+        const fecharMenuEResetar = () => {
+            mainNav.classList.remove('nav-active'); // Fecha a tela preta
+
+            // Procura todos os submenus e remove a classe que deixa eles abertos
+            const submenus = mainNav.querySelectorAll('.dropdown-menu');
+            submenus.forEach(submenu => {
+                submenu.classList.remove('mostrar-mobile');
+            });
+        };
+
+        // Abre o menu principal
         menuToggle.addEventListener('click', () => {
             mainNav.classList.add('nav-active');
         });
-        
+
+        // Fecha pelo botão "X"
         if (menuClose) {
-             menuClose.addEventListener('click', () => {
-                mainNav.classList.remove('nav-active');
-            });
+            menuClose.addEventListener('click', fecharMenuEResetar);
         }
-        
+
         const navLinks = mainNav.querySelectorAll('a');
         navLinks.forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', (e) => {
+
+                // 1. REGRA EXCLUSIVA PARA CELULAR
+                if (link.classList.contains('dropdown-toggle') && window.innerWidth <= 991) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const submenu = link.nextElementSibling;
+                    if (submenu) {
+                        submenu.classList.toggle('mostrar-mobile');
+                    }
+                    return;
+                }
+
+                // 2. SE FOR NO COMPUTADOR
+                if (link.classList.contains('dropdown-toggle') && window.innerWidth > 991) {
+                    return;
+                }
+
+                // 3. LINKS NORMAIS (Fecha tudo e reseta)
                 setTimeout(() => {
-                    mainNav.classList.remove('nav-active');
-                }, 100); 
+                    fecharMenuEResetar();
+                }, 100);
             });
         });
-        
+
+        // Fecha ao clicar na área preta vazia (fora dos links)
         mainNav.addEventListener('click', (e) => {
             if (e.target === mainNav) {
-                mainNav.classList.remove('nav-active');
+                fecharMenuEResetar();
             }
         });
     }
@@ -36,34 +68,34 @@ document.addEventListener('DOMContentLoaded', () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
             document.body.classList.remove('resize-transition-stopper');
-        }, 400); 
+        }, 400);
     });
 
     const video = document.getElementById('hero-video');
     const volumeToggle = document.getElementById('volume-toggle');
     const volumeIcon = document.getElementById('volume-icon');
     const volumeSlider = document.getElementById('volume-slider');
-    
+
     const MUTE_ICON_SRC = '/assets/img/Social Icons/sem_som.png';
     const UNMUTE_ICON_SRC = '/assets/img/Social Icons/com_som.png';
-    
+
     const TARGET_VOLUME = 0.20;
 
     if (video && volumeToggle && volumeIcon && volumeSlider) {
-        
+
         video.muted = true;
         video.volume = 0;
         volumeSlider.value = 0;
-        
+
         let fadeInterval;
 
         function syncVolumeState() {
-            if (video.muted || video.volume <= 0.01) { 
+            if (video.muted || video.volume <= 0.01) {
                 volumeIcon.src = MUTE_ICON_SRC;
                 volumeIcon.alt = 'Mudo';
                 volumeSlider.value = 0;
                 video.muted = true;
-                video.volume = 0; 
+                video.volume = 0;
             } else {
                 volumeIcon.src = UNMUTE_ICON_SRC;
                 volumeIcon.alt = 'Som Ativado';
@@ -79,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (video.volume > 0) {
                 video.muted = false;
             }
-            
+
             syncVolumeState();
         });
 
@@ -97,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             syncVolumeState();
         });
-        
+
         syncVolumeState();
     }
 });
@@ -117,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }, {
             root: null,
-            threshold: 0.15 
+            threshold: 0.15
         });
 
         observer.observe(footer);

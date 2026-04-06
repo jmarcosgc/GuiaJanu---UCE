@@ -94,8 +94,10 @@ a:hover {
     display: flex;
     gap: 30px;
     justify-content: center;
-    align-items: center; /* Mantém todos os itens na mesma linha reta */
-    margin: 0; /* Remove margens automáticas do Bootstrap que causam desnível */
+    align-items: center;
+    /* Mantém todos os itens na mesma linha reta */
+    margin: 0;
+    /* Remove margens automáticas do Bootstrap que causam desnível */
     padding: 0;
 }
 
@@ -111,13 +113,16 @@ a:hover {
     padding: 10px 20px !important;
     display: inline-block;
     transition: background-color 0.3s ease;
-    color: #ffffff !important; /* Força a cor branca */
-    text-decoration: none !important; /* Tira o sublinhado */
+    color: #ffffff !important;
+    /* Força a cor branca */
+    text-decoration: none !important;
+    /* Tira o sublinhado */
 }
 
 /* Efeito ao passar o mouse em qualquer item do menu principal */
 .main-nav .nav-link:hover {
-    color: none !important; /* Fica azul claro ao passar o mouse */
+    color: none !important;
+    /* Fica azul claro ao passar o mouse */
 }
 
 /* ==========================================================================
@@ -125,23 +130,30 @@ a:hover {
    ========================================================================== */
 .nav-item.dropdown {
     position: relative;
+    overflow: visible;
+    /* garante que o submenu possa se expandir */
 }
 
 /* Submenu transparente e sem bordas/sombras */
 /* Submenu transparente e alinhado */
 .dropdown-menu {
-    background-color: transparent !important;
-    border: none !important; 
-    padding: 0;
-    
-    /* Alterações para centralizar o submenu certinho debaixo do texto */
-    min-width: max-content; /* Garante que a caixa se adapte ao tamanho do texto interno */
-    left: 50% !important; 
-    transform: translateX(-50%) !important; 
-    
-    box-shadow: none !important;
-    top: 100%;
-    margin-top: 0 !important; 
+    position: absolute;
+    top: 55px;
+    /* começa exatamente em cima do link principal */
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    background: rgba(255, 255, 255, 0.01) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 15px 20px;
+    min-width: max-content;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+    z-index: 2000;
+    /* garante que fique acima do texto */
 }
 
 /* Textos do submenu */
@@ -153,16 +165,18 @@ a:hover {
     padding: 12px 20px;
     text-align: center;
     transition: all 0.2s ease;
-    
+
     /* Impede que o texto "Sobre Nós" quebre em duas linhas */
-    white-space: nowrap !important; 
+    white-space: nowrap !important;
 }
 
 /* Efeito ao passar o mouse num item do submenu (Sem azul, sem fundo) */
 .dropdown-item:hover {
     background-color: transparent !important;
-    color: white !important; /* Mantém o texto branco */
-    text-decoration: underline !important; /* Apenas um sublinhado para indicar o mouse */
+    color: white !important;
+    /* Mantém o texto branco */
+    text-decoration: underline !important;
+    /* Apenas um sublinhado para indicar o mouse */
 }
 
 .dropdown-divider {
@@ -175,14 +189,23 @@ a:hover {
 
 /* Hover no Desktop para o Dropdown */
 @media (min-width: 992px) {
-    .nav-item.dropdown:hover .dropdown-toggle + .dropdown-menu,
+    
+    /* 1. Força a caixa a descer e não engolir o texto MAIS */
+    .main-nav .dropdown-menu {
+        top: 55px !important;       
+        bottom: auto !important;    
+        margin-top: 0px !important; /* Espaço para não encostar no texto */
+    }
+
+    /* 2. Efeito de abrir a caixa ao passar o mouse */
+    .nav-item.dropdown:hover .dropdown-toggle+.dropdown-menu,
     .nav-item.dropdown:hover .dropdown-menu,
     .dropdown-menu:hover {
         display: block !important;
-        margin-top: 0;
+        /* margin-top removido daqui para respeitar os 15px lá de cima */
     }
 
-    /* Efeito ao passar o mouse no texto principal "Descubra Januária" */
+    /* 3. Efeito ao passar o mouse no texto principal ("Descubra Januária" / "Mais") */
     .nav-item.dropdown:hover .nav-link {
         background-color: transparent !important; /* Sem fundo preto */
         color: white !important; /* Sem texto azul */
@@ -914,5 +937,50 @@ a.card-mais:hover {
     .events-section {
         padding-left: 15px;
         padding-right: 15px;
+    }
+}
+
+/* =======================================================
+   REGRAS EXCLUSIVAS PARA O SUBMENU NO CELULAR (Até 991px)
+   ======================================================= */
+@media (max-width: 991px) {
+    /* 1. Remove a caixa fantasma, o vidro borrado e centraliza */
+    .main-nav .dropdown-menu {
+        display: none !important; 
+        position: static !important; /* Deixa o menu fluir naturalmente para baixo */
+        transform: none !important;
+        background: transparent !important;
+        backdrop-filter: none !important; 
+        -webkit-backdrop-filter: none !important; 
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        margin: 10px auto 0 auto !important; /* Margem automática garante o centro */
+        float: none !important;
+        text-align: center !important; /* Força o centro de tudo que estiver dentro */
+    }
+
+    /* 2. Mostra o menu quando clicado (em formato de bloco normal) */
+    .main-nav .dropdown-menu.mostrar-mobile {
+        display: block !important;
+    }
+
+    /* 3. Textos do Submenu no centro da tela */
+    .main-nav .dropdown-menu .dropdown-item {
+        display: block !important;
+        text-align: center !important; /* Traz o texto para o meio */
+        color: #d1d1d1 !important; 
+        font-size: 20px !important; 
+        font-weight: 400 !important;
+        padding: 10px 0 !important; 
+        background: transparent !important;
+        white-space: normal !important;
+        margin: 0 auto !important;
+    }
+
+    /* Efeito de toque no celular */
+    .main-nav .dropdown-menu .dropdown-item:active {
+        color: #ffffff !important;
+        background: transparent !important;
     }
 }
