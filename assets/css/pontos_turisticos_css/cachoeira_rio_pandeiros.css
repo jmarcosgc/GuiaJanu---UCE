@@ -462,17 +462,19 @@ a:hover {
 /* TAG DE CRÉDITO */
 .copyright-tag {
   position: absolute;
-  right: 10px;
-  bottom: 10px;
-  left: auto;
-  background: rgba(41, 42, 43, 0.85);
+
+  /* AJUSTE MANUAL AQUI */
+  right: 14px;   /* aumenta = vai mais pra esquerda / diminui = mais pra direita */
+  bottom: 14px;  /* aumenta = sobe / diminui = desce */
+
+  background: rgba(25, 25, 25, 0.82);
   color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 500;
   line-height: 1;
   padding: 7px 10px;
   border-radius: 6px;
-  z-index: 4;
+  z-index: 5;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
   pointer-events: none;
   white-space: nowrap;
