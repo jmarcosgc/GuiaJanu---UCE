@@ -459,6 +459,20 @@ a:hover {
   height: 100%;
 }
 
+/* Créditos da imagem hero */
+.hero-credit {
+  position: absolute;
+  bottom: 50px;
+  right: 15px;
+  color: #fff;
+  font-size: 14px;
+  background: rgba(0,0,0,0.5);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-align: right;
+}
+
 /* TAG DE CRÉDITO */
 .copyright-tag {
   position: absolute;
