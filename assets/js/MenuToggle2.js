@@ -4,24 +4,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainNav = document.querySelector('.main-nav');
 
     if (menuToggle && mainNav) {
-
-        // NOVO: Função central para fechar a tela preta e RESETAR as sanfonas
         const fecharMenuEResetar = () => {
             mainNav.classList.remove('nav-active'); // Fecha a tela preta
 
-            // Procura todos os submenus e remove a classe que deixa eles abertos
             const submenus = mainNav.querySelectorAll('.dropdown-menu');
             submenus.forEach(submenu => {
                 submenu.classList.remove('mostrar-mobile');
             });
         };
 
-        // Abre o menu principal
         menuToggle.addEventListener('click', () => {
             mainNav.classList.add('nav-active');
         });
 
-        // Fecha pelo botão "X"
         if (menuClose) {
             menuClose.addEventListener('click', fecharMenuEResetar);
         }
@@ -76,8 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const volumeIcon = document.getElementById('volume-icon');
     const volumeSlider = document.getElementById('volume-slider');
 
-    const MUTE_ICON_SRC = '/assets/img/Social Icons/sem_som.png';
-    const UNMUTE_ICON_SRC = '/assets/img/Social Icons/com_som.png';
+    const MUTE_ICON_SRC = './assets/img/Social Icons/sem_som.png';
+    const UNMUTE_ICON_SRC = './assets/img/Social Icons/com_som.png';
 
     const TARGET_VOLUME = 0.20;
 

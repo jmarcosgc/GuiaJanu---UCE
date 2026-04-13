@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GuiaJanu</title>
+    <link rel="shortcut icon" href="/assets/img/Logo/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
@@ -27,7 +28,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#descubra" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                        onclick="if(window.innerWidth > 991) { window.location.href='#descubra'; }">
+                        onclick="if(window.innerWidth > 991) { window.location.href='#descubra'; }" >
                         Descubra Januária
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -40,7 +41,7 @@
                     <a class="nav-link" href="./pages/ListagemPontosTuristicos.html">O que Fazer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#contato">Onde Ficar</a>
+                    <a class="nav-link" href="#">Onde Ficar</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="navbarDropdownMais" role="button"
@@ -74,7 +75,7 @@
 
             <div class="video-controls">
                 <button id="volume-toggle" class="video-btn">
-                    <img id="volume-icon" src="assets/img/Social Icons/sem_som.png" alt="Mudo">
+                    <img id="volume-icon" src="./assets/img/Social Icons/sem_som.png" alt="Mudo">
                 </button>
 
                 <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0">
@@ -114,12 +115,16 @@
 
                     <div class="cards-container">
                         <a href="pages/acidade.html" class="card">
-                            <div class="circle-image acidade"></div>
+                            <div class="circle-image acidade">
+                                <img src="assets/img/acidade/januaria.png" alt="Januária">
+                            </div>
                             <h3 class="card-title">A Cidade</h3>
                             <span class="card-link">Saiba mais</span>
                         </a>
                         <a href="pages/como_chegar.html" class="card">
-                            <div class="circle-image comochegar"></div>
+                            <div class="circle-image comochegar">
+                                <img src="assets/img/Logo/tracejado.png">
+                            </div>
                             <h3 class="card-title">Como Chegar</h3>
                             <span class="card-link">Saiba mais</span>
                         </a>
@@ -156,19 +161,25 @@
 
                 <div class="cards-container">
                     <a href="pages/ListagemPontosTuristicos.html" class="card">
-                        <div class="circle-image peruacu"></div>
+                        <div class="circle-image peruacu">
+                            <img src="assets/img/Gruta Janelão/Janelão.jpeg" alt="Gruta Janelão">
+                        </div>
                         <h3 class="card-title">Peruaçu</h3>
                         <span class="card-link">Saiba mais</span>
                     </a>
 
                     <a href="pages/ListagemPontosTuristicos.html" class="card">
-                        <div class="circle-image praia"></div>
+                        <div class="circle-image praia">
+                            <img src="assets/img/img principais/praia .jpg" alt="Praia de Minas">
+                        </div>
                         <h3 class="card-title">Praia de Minas</h3>
                         <span class="card-link">Saiba mais</span>
                     </a>
 
                     <a href="pages/ListagemPontosTuristicos.html" class="card">
-                        <div class="circle-image pantanal"></div>
+                        <div class="circle-image pantanal">
+                            <img src="assets/img/pontos_turisticos_img/Pântano Mineiro/PantanoMineiro.jpeg" alt="Pantanal Mineiro">
+                        </div>
                         <h3 class="card-title">Pantanal Mineiro</h3>
                         <span class="card-link">Saiba mais</span>
                     </a>
@@ -266,7 +277,7 @@
                             <p>Rua Padre Henrique - Centro</p>
                         </div>
 
-                        <img src="assets/img/Social Icons/ponteiro.png" alt="Icone de localização"
+                        <img src="./assets/img/Social Icons/ponteiro.png" alt="Icone de localização"
                             class="location-icon">
                     </a>
 
