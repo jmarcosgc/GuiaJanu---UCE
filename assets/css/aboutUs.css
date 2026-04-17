@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 /* =========================================
    1. RESET E ESTILOS GERAIS
@@ -123,6 +123,19 @@ a:hover {
     z-index: 1;
 }
 
+.hero-copyright {
+    position: absolute;
+    bottom: 40px; 
+    right: 20px; 
+    z-index: 5; 
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 5px 5px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
 @keyframes move-wave {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -161,10 +174,9 @@ a:hover {
 .wave-layer.wave-3 { opacity: 0.7; animation-duration: 13s; }
 
 /* =========================================
-   4. SEÇÃO DE CONTEÚDO (FUNDO BRANCO)
+   4. SEÇÕES DE CONTEÚDO (VERDE E VINHO)
    ========================================= */
-.white-section {
-    background-color: #084222;
+.content-section {
     width: 100%;
     min-height: 90vh;
     padding: 60px 20px 80px;
@@ -173,22 +185,12 @@ a:hover {
     align-items: flex-start;
 }
 
-.hero-copyright {
-    position: absolute;
-    bottom: 40px; /* Sobe o texto para ficar acima das ondas (que têm margem negativa de 50px) */
-    right: 20px; /* Alinha no canto direito */
-    z-index: 5; /* Garante que fique por cima da imagem e das ondas */
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.6); /* Fundo escurinho levemente transparente para dar leitura */
-    padding: 5px 5px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 500;
-}
+.green-section { background-color: #084222; }
+.red-section { background-color: rgba(143, 35, 23, 0.9); }
 
 .text-container {
     width: 100%;
-    max-width: 900px; /* Largura ideal para leitura de textos longos */
+    max-width: 900px;
     color: #ffffff;
     font-size: 18px;
     line-height: 1.7;
@@ -198,52 +200,118 @@ a:hover {
     font-size: 42px;
     font-weight: 800;
     text-align: center;
-    color: #ffd9a8;
-    /* Verde escuro do tema para manter identidade */
+    color: #ffd9a8; 
     margin-bottom: 10px;
 }
 
 .subtitulo {
     font-size: 20px;
     font-weight: 600;
-    text-align: center;
+    text-align: center !important;
     color: #f0f0f0;
     margin-bottom: 50px;
 }
 
 .text-container h3 {
     font-size: 26px;
-    color: #ffd9a8;
-    /* Vinho da seção "Plan" da página acidade para padronizar */
+    color: #ffd9a8; 
     margin-top: 40px;
-    /* margin-bottom: 20px; */
-    /* border-bottom: 2px solid #eee; */
-    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .text-container p {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-align: justify;
 }
 
-.text-container ul {
+.servicos-lista {
     margin-bottom: 20px;
     padding-left: 20px;
     list-style-type: disc;
 }
 
-.text-container li {
-    margin-bottom: 12px;
+.servicos-lista li {
+    margin-bottom: 15px;
 }
 
 .text-container strong {
-    color: #ffd9a8; /* Destaque leve em negrito com a cor tema */
+    color: #ffd9a8; 
 }
 
 /* =========================================
-   5. RODAPÉ (FOOTER)
+   5. GRID DA EQUIPE (CARDS)
    ========================================= */
-/* (Aqui mantive os mesmos estilos exatos da página acidade.css) */
+.equipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.membro-card {
+    background: rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.membro-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.membro-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffd9a8;
+    margin-bottom: 20px;
+    background-color: #fff; /* Fundo branco caso a imagem seja transparente */
+}
+
+.membro-card h5 {
+    font-size: 22px;
+    color: #ffd9a8;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.membro-card p {
+    font-size: 14px;
+    color: #e0e0e0;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    text-align: center;
+    flex-grow: 1; /* Faz o botão descer caso o texto seja curto */
+}
+
+.membro-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #ffd9a8;
+    color: #ffd9a8;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.membro-card a:hover {
+    background: #ffd9a8;
+    color: #084222;
+    text-decoration: none;
+}
+
+/* =========================================
+   6. RODAPÉ (FOOTER)
+   ========================================= */
 .site-footer {
     width: 100%;
     padding: 60px 50px;
@@ -335,23 +403,9 @@ a:hover {
 .logo-item:hover p { color: #89cff0; }
 
 /* =========================================
-   6. RESPONSIVIDADE (CELULAR)
+   7. RESPONSIVIDADE (CELULAR)
    ========================================= */
 @media (max-width: 768px) {
-    #map {
-        height: 350px; /* Diminui a altura do mapa no celular */
-        margin-top: 20px;
-    }
-    
-    .search-group {
-        flex-direction: column; /* Coloca o input e o botão em linhas separadas */
-    }
-    
-    .controls button {
-        width: 100%; /* Botões grandes e fáceis de clicar no touch */
-        padding: 14px;
-    }
-    
     .site-header {
         height: 80px;
         padding: 0 20px;
@@ -382,14 +436,19 @@ a:hover {
         min-height: 300px;
     }
 
-    .white-section {
-        padding: 40px 15px; /* Menos margem lateral no celular */
+    .content-section {
+        padding: 40px 15px;
     }
 
     .titulo-principal { font-size: 32px; }
     .subtitulo { font-size: 18px; margin-bottom: 30px; }
     .text-container h3 { font-size: 22px; }
-    .text-container p, .text-container li { font-size: 16px; text-align: left; }
+    .text-container p, .servicos-lista li { font-size: 16px; text-align: left; }
+
+    .equipe-grid {
+        grid-template-columns: 1fr; /* 1 card por linha no celular */
+        gap: 20px;
+    }
 
     .footer-extra-info { flex-direction: column; align-items: stretch; }
 
@@ -449,173 +508,4 @@ a:hover {
 @media (max-width: 374px) {
     .site-header { padding: 0; }
     .logo-header { width: 120px; }
-}
-
-/* =========================================
-   7. MAPA E CONTROLES DE ROTAS
-   ========================================= */
-
-/* O quadro do mapa */
- 
-#map {
-    height: 450px;
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid #ccc;
-    margin-bottom: 20px;
-}
-
-/* Painel branco de controles abaixo do mapa */
-.controls {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* width: 100%; */
-    /* max-width: 900px; */
-    /* margin: 0 auto 40px auto; */
-}
-
-/* Textos dentro do painel de controle */
-.controls p {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    color: black;
-    font-size: 16px;
-    margin-bottom: 5px;
-    text-align: left;
-    font-weight: bolder;
-    font-size: 19px;
-}
-
-.buttons-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-/* Estilo dos botões de cidades (Restrito à div .controls para não afetar outros botões) */
-.controls button {
-    padding: 10px 18px;
-    background-color: #084222; 
-    /* color: #ffd9a8; */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
-    transition: background 0.3s, transform 0.2s;
-    font-family: 'Inter', sans-serif;
-}
-
-.controls button:hover {
-    background-color: #052c16; /* Verde mais escuro no hover */
-    transform: scale(1.03); /* Leve efeito de zoom ao passar o mouse */
-}
-
-.search-group {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-/* Campo de digitar a cidade */
-.search-group input[type="text"] {
-    flex: 1;
-    min-width: 200px;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    color: #333;
-}
-
-.search-group input[type="text"]:focus {
-    outline: none;
-    border-color: #084222;
-}
-
-/* =========================================
-   9. CORREÇÃO DO PAINEL DE ROTA (LEAFLET)
-   ========================================= */
-
-/* Deixa o resumo da rota (Distância e Tempo) com o verde principal */
-.leaflet-routing-container h2,
-.leaflet-routing-container h3 {
-    color: #084222 !important;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-/* Garante que a lista de ruas e instruções passo a passo fique visível */
-.leaflet-routing-alt table tbody tr td {
-    color: #333333 !important;
-}
-
-/* =========================================
-   10. PAINEL DE RESUMO CUSTOMIZADO NO MAPA
-   ========================================= */
-.painel-resumo {
-    background-color: #ffffff;
-    padding: 10px 12px; /* Diminuímos o espaçamento interno */
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border-left: 5px solid #084222; 
-    font-family: 'Inter', sans-serif;
-    min-width: 180px;
-    max-width: 250px; /* Impede que a caixa cresça infinitamente */
-    z-index: 1000;
-    margin-top: 10px !important;
-    margin-right: 10px !important;
-}
-
-/* O !important garante que o CSS global do site não afete este H3 específico */
-.painel-resumo h3.resumo-titulo {
-    color: #084222 !important;
-    /* background-color: #000; */
-    font-size: 14px !important;
-    font-weight: 700;
-    margin: 0 0 8px 0;
-    padding-bottom: 6px;
-}
-
-.resumo-info p {
-    margin: 4px 0; /* Menos margem entre as linhas */
-    font-size: 12px; /* Texto dos valores mais delicado */
-    color: #333333;
-    display: flex;
-    justify-content: space-between;
-    gap: 15px; /* Reduz o espaço vazio entre a palavra "Distância" e o número */
-}
-
-.resumo-info strong {
-    color: #084222;
-}
-
-/* Garante que o painel original bugado nunca apareça */
-.leaflet-routing-container {
-    display: none !important;
-}
-
-/* Container que envolve a Origem e o Destino */
-.resumo-cidades {
-    border-bottom: 1px solid #eeeeee;
-    padding-bottom: 8px; /* Espaço abaixo do bloco de cidades */
-    margin-bottom: 8px;  /* Espaço antes de começar a Distância */
-}
-
-/* Estilo individual de cada linha (Origem e Destino) */
-.cidade-linha {
-    color: #084222 !important;
-    font-size: 14px !important;
-    font-weight: 700;
-    margin: 2px 0 !important;
 }

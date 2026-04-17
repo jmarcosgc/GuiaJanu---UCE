@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Como chegar - GuiaJanu</title>
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
     <link href="../assets/css/comochegar.css" rel="stylesheet" />
 </head>
 <body>
@@ -24,7 +26,7 @@
 
         <div class="header-right">
             <a href="https://www.instagram.com/guia.janu" class="social-icon" target="_blank">
-                <img src="../assets/img/insta_logo.png" alt="Instagram">
+                <img src="../assets/img/Social Icons/insta_logo.png" alt="Instagram">
             </a>
             <button class="menu-toggle" aria-label="Abrir menu">☰</button>
         </div>
@@ -32,7 +34,7 @@
 
     <main>
         <section class="hero-section">
-            <img src="../assets/img/comochegar/pracagetuliovargas.jpeg" alt="Vista de Januária" class="hero-image">
+            <img src="../assets/img/comochegar/pracagetuliovargas_remastered.png" alt="Vista de Januária" class="hero-image">
             <div class="copyright-tag hero-copyright">© Aurélio Vilares/Prefeitura Municipal de Januária</div>
         </section>
 
@@ -84,7 +86,33 @@
 
                 <h3>Ônibus de Brasília (DF) até Januária MG</h3>
                 <p>Para quem parta da capital federal, a viação Catedral oferece rotas saindo de Brasília direto para Januária. É uma rota muito procurada por quem mora no Centro-Oeste e quer curtir as belezas do Norte de Minas.</p>
+
+                <h3>Busque sua rota para Januária</h3>
+                
+                <div id="map"></div>
+
+                <div class="controls">
+                    <p>Escolha sua cidade de origem:</p>
+                    <div class="buttons-group">
+                        <button onclick="tracarRota([-16.7373, -43.8643], 'Montes Claros, MG')">Montes Claros</button>
+                        <button onclick="tracarRota([-19.9166, -43.9344], 'Belo Horizonte, MG')">Belo Horizonte</button>
+                        <button onclick="tracarRota([-23.5505, -46.6333], 'São Paulo, SP')">São Paulo</button>
+                        <button onclick="tracarRota([-22.9068, -43.1728], 'Rio de Janeiro, RJ')">Rio de Janeiro</button>
+                        <button onclick="tracarRota([-15.7938, -47.8827], 'Brasília, DF')">Brasília</button>
+                    </div>
+
+                    <p>Ou busque outra cidade:</p>
+                    <div class="search-group">
+                        <input type="text" id="cidadeOrigem" placeholder="Ex: Salinas, MG">
+                        <button onclick="buscarCidade()">Buscar Rota</button>
+                </div>
             </div>
+
+            
+            </div>
+
+            <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+            <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
         </section>
 
         <div class="wave-separator" style="--wave-color: #222;">
@@ -194,5 +222,6 @@
     </footer>
 
     <script src="../assets/js/MenuToggle.js"></script>
+    <script src="../assets/js/Map.js"></script>
 </body>
 </html>

@@ -198,8 +198,7 @@ a:hover {
     font-size: 42px;
     font-weight: 800;
     text-align: center;
-    color: #ffd9a8;
-    /* Verde escuro do tema para manter identidade */
+    color: #ffd9a8; /* Verde escuro do tema para manter identidade */
     margin-bottom: 10px;
 }
 
@@ -213,8 +212,7 @@ a:hover {
 
 .text-container h3 {
     font-size: 26px;
-    color: #ffd9a8;
-    /* Vinho da seção "Plan" da página acidade para padronizar */
+    color: #ffd9a8; /* Vinho da seção "Plan" da página acidade para padronizar */
     margin-top: 40px;
     /* margin-bottom: 20px; */
     /* border-bottom: 2px solid #eee; */
@@ -460,10 +458,12 @@ a:hover {
 #map {
     height: 450px;
     width: 100%;
+    max-width: 900px; /* Alinha com a largura do seu texto */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid #ccc;
-    margin-bottom: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    border: 2px solid #ffd9a8; /* Borda usando a cor de destaque do site */
+    margin: 40px auto 20px auto; /* Centraliza na tela */
+    z-index: 1; /* Garante que o mapa não fique por cima do cabeçalho */
 }
 
 /* Painel branco de controles abaixo do mapa */
@@ -472,25 +472,20 @@ a:hover {
     flex-direction: column;
     gap: 15px;
     background: #ffffff;
-    padding: 20px;
+    padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* width: 100%; */
-    /* max-width: 900px; */
-    /* margin: 0 auto 40px auto; */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
 }
 
 /* Textos dentro do painel de controle */
 .controls p {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    color: black;
+    color: #084222; /* Verde padrão do GuiaJanu */
     font-size: 16px;
     margin-bottom: 5px;
     text-align: left;
-    font-weight: bolder;
-    font-size: 19px;
 }
 
 .buttons-group {
@@ -503,8 +498,7 @@ a:hover {
 .controls button {
     padding: 10px 18px;
     background-color: #084222; 
-    /* color: #ffd9a8; */
-    color: white;
+    color: #ffd9a8; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -546,6 +540,14 @@ a:hover {
    9. CORREÇÃO DO PAINEL DE ROTA (LEAFLET)
    ========================================= */
 
+/* Força o fundo branco e o texto padrão escuro no painel inteiro */
+.leaflet-routing-container {
+    background-color: #ffffff !important;
+    color: #333333 !important;
+    margin-bottom: 10px important!;
+    display: none important!;
+}
+
 /* Deixa o resumo da rota (Distância e Tempo) com o verde principal */
 .leaflet-routing-container h2,
 .leaflet-routing-container h3 {
@@ -558,64 +560,4 @@ a:hover {
 /* Garante que a lista de ruas e instruções passo a passo fique visível */
 .leaflet-routing-alt table tbody tr td {
     color: #333333 !important;
-}
-
-/* =========================================
-   10. PAINEL DE RESUMO CUSTOMIZADO NO MAPA
-   ========================================= */
-.painel-resumo {
-    background-color: #ffffff;
-    padding: 10px 12px; /* Diminuímos o espaçamento interno */
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    border-left: 5px solid #084222; 
-    font-family: 'Inter', sans-serif;
-    min-width: 180px;
-    max-width: 250px; /* Impede que a caixa cresça infinitamente */
-    z-index: 1000;
-    margin-top: 10px !important;
-    margin-right: 10px !important;
-}
-
-/* O !important garante que o CSS global do site não afete este H3 específico */
-.painel-resumo h3.resumo-titulo {
-    color: #084222 !important;
-    /* background-color: #000; */
-    font-size: 14px !important;
-    font-weight: 700;
-    margin: 0 0 8px 0;
-    padding-bottom: 6px;
-}
-
-.resumo-info p {
-    margin: 4px 0; /* Menos margem entre as linhas */
-    font-size: 12px; /* Texto dos valores mais delicado */
-    color: #333333;
-    display: flex;
-    justify-content: space-between;
-    gap: 15px; /* Reduz o espaço vazio entre a palavra "Distância" e o número */
-}
-
-.resumo-info strong {
-    color: #084222;
-}
-
-/* Garante que o painel original bugado nunca apareça */
-.leaflet-routing-container {
-    display: none !important;
-}
-
-/* Container que envolve a Origem e o Destino */
-.resumo-cidades {
-    border-bottom: 1px solid #eeeeee;
-    padding-bottom: 8px; /* Espaço abaixo do bloco de cidades */
-    margin-bottom: 8px;  /* Espaço antes de começar a Distância */
-}
-
-/* Estilo individual de cada linha (Origem e Destino) */
-.cidade-linha {
-    color: #084222 !important;
-    font-size: 14px !important;
-    font-weight: 700;
-    margin: 2px 0 !important;
 }

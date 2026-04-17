@@ -438,15 +438,28 @@ details[open] .icone-seta { transform: rotate(180deg); }
 /* ADICIONADO: O estilo da etiqueta de copyright */
 .copyright {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 17px; /* Sobe o texto para ficar acima das ondas (que têm margem negativa de 50px) */
+    right: 20px; /* Alinha no canto direito */
+    z-index: 5; /* Garante que fique por cima da imagem e das ondas */
     color: #ffffff;
-    padding: 5px 10px;
-    font-family: Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escurinho levemente transparente para dar leitura */
+    padding: 5px 5px;
+    border-radius: 6px;
     font-size: 12px;
-    border-radius: 4px;
-    pointer-events: none;
+    font-weight: 500;
+}
+
+.copyright2 {
+    position: absolute;
+    bottom: 35px; /* Sobe o texto para ficar acima das ondas (que têm margem negativa de 50px) */
+    right: 20px; /* Alinha no canto direito */
+    z-index: 5; /* Garante que fique por cima da imagem e das ondas */
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo escurinho levemente transparente para dar leitura */
+    padding: 5px 5px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
 }
 
 .site-header {
