@@ -1,8 +1,6 @@
 const footerElement = document.querySelector('.site-footer');
 
 const footerHTML = `
-  <footer id="contato" class="site-footer">
-
     <div class="footer-main">
 
       <div class="footer-left-column">
@@ -130,8 +128,6 @@ const footerHTML = `
       <p>As imagens nesse site são de inteira responsabilidade dos proprietários dos estabelecimentos cadastrados em nosso banco de dados.</p>
     
     </div>
-
-  </footer>
 `;
 
 if (footerElement) {

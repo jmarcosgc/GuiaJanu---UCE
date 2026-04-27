@@ -27,50 +27,6 @@ a:hover {
 }
 
 /* =========================================
-   2. CABEÇALHO (HEADER)
-   ========================================= */
-.site-header {
-    width: 100%;
-    padding: 20px 40px;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    justify-content: space-between; 
-}
-
-.logo-header {
-    width: 200px;
-    height: auto;
-    flex-shrink: 0;
-}
-
-.header-right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 30px;
-    width: 200px;
-    flex-shrink: 0;
-}
-
-.social-icon {
-    width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social-icon img {
-    width: 30px;
-    height: 30px;
-    filter: brightness(0) invert(1); /* Ícone branco no desktop e mobile */
-}
-
-/* =========================================
    3. HERO SECTION (Imagem Principal)
    ========================================= */
 .hero-section {

@@ -30,12 +30,8 @@ a:hover {
    2. CABEÇALHO (HEADER)
    ========================================= */
 
-/* ==========================================================================
-   02. HEADER E NAVEGAÇÃO PRINCIPAL
-   ========================================================================== */
-
 /* header */
-.site-header {
+/* .site-header {
     width: 100%;
     padding: 20px 40px;
     background: transparent;
@@ -45,39 +41,38 @@ a:hover {
     top: 0;
     left: 0;
     z-index: 10;
-    justify-content: space-between; 
-}
+    justify-content: space-between;  
+}*/
 
-/* header */
+/* header
 .logo-header {
     width: 200px;
     height: auto;
     flex-shrink: 0;
-}
+}*/
 
-/* header */
+/* header
 .main-nav {
     flex-grow: 1;
-    /* ⚠️ CUIDADO: Retirei o 'overflow: hidden' daqui. 
-       Se ele ficar, o dropdown será cortado e não aparecerá na tela! */
-}
+}*/
 
-/* header */
+/* header
 .nav-links {
     list-style: none;
     display: flex;
     gap: 30px;
     justify-content: center;
     align-items: center;
-}
+}*/
 
-/* header */
+/* header
 .nav-links > li {
     position: relative; 
-    padding: 10px 0; /* Aumenta a área de contato do mouse para o hover não falhar */
-}
+    padding: 10px 0;
+}*/
 
-/* header */
+
+/*
 .nav-links a {
     font-size: 30px;
     font-weight: 700;
@@ -85,67 +80,66 @@ a:hover {
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     text-decoration: none;
     transition: 0.3s ease;
-}
+}*/
 
 /* ==========================================================================
    02.1 DROPDOWN (GLASSMORPHISM)
    ========================================================================== */
 
-/* header */
+/*
 .dropdown {
     position: absolute;
-    top: 100%; /* Nasce exatamente abaixo do item principal */
+    top: 100%;
     left: 50%;
-    transform: translateX(-50%); /* Centraliza o balão do dropdown com o texto de cima */
+    transform: translateX(-50%);
     padding: 15px 10px;
     min-width: 220px;
     text-align: center;
     
-    /* O seu efeito Glass do protótipo */
+    
     background-color: rgba(0, 0, 0, 0.44);
     backdrop-filter: blur(10px);
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.209);
     border-radius: 1.5em;
     
-    /* A Lógica do Temporizador */
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
     transition-delay: 0.4s;
-    z-index: 99; /* Garante que fique por cima de banners ou outros elementos */
-}
+    z-index: 99; 
+}*/
 
-/* header */
+/*
 .dropdown a {
     font-size: 20px; 
-    text-shadow: none; /* Remove a sombra pesada para leitura mais limpa */
+    text-shadow: none;
     display: block;
     padding: 10px;
-}
+}*/
 
-/* header */
+/*
 .dropdown li {
     border-radius: 1em;
     transition: background-color 0.3s ease;
-}
+}*/
 
-/* header */
+/*
 .dropdown li:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Feedback visual no item aninhado */
-}
+    background-color: rgba(255, 255, 255, 0.2);
+}*/
 
-/* header */
-/* O Gatilho do Hover! */
+/*
 .nav-links > li:hover .dropdown {
     opacity: 1;
     visibility: visible;
-    transition-delay: 0s; /* Aparece na hora ao colocar o mouse */
-}
+    transition-delay: 0s;
+}*/
+
 
 /* ==========================================================================
    02.2 ÍCONES E MOBILE
    ========================================================================== */
-/* header */
+/*
 .header-right {
     display: flex;
     align-items: center;
@@ -153,30 +147,30 @@ a:hover {
     gap: 30px;
     width: 200px;
     flex-shrink: 0;
-}
+}*/
 
-/* header */
+/*
 .social-icon {
     width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease;
-}
+}*/
 
-/* header */
+/*
 .social-icon:hover {
-    transform: scale(1.1); /* Um charminho de bônus no hover do Instagram ;) */
+    transform: scale(1.1);
 }
 
-/* header */
+
 .social-icon img {
     width: 30px;
     height: 30px;
     filter: brightness(0) invert(1);
 }
 
-/* header */
+
 .menu-toggle,
 .menu-close {
     display: none;
@@ -186,8 +180,29 @@ a:hover {
     font-size: 28px;
     color: #ffffff; 
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}*/
+
+/* ==========================================================================
+   02.3 CHECKBOX HACK (NÚCLEO)
+   ==========================================================================
+
+
+.menu-checkbox, 
+.drop-checkbox {
+    display: none;
 }
 
+
+.drop-icon {
+    display: none; 
+}
+
+
+.link-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+} */
 
 /* =========================================
    3. HERO SECTION E ONDAS
@@ -331,6 +346,7 @@ a:hover {
    5. RODAPÉ (FOOTER)
    ========================================= */
 /* (Aqui mantive os mesmos estilos exatos da página acidade.css) */
+/*
 .site-footer {
     width: 100%;
     padding: 60px 50px;
@@ -420,6 +436,8 @@ a:hover {
 .logo-item:hover .partner-logo { opacity: 1; }
 .logo-item p { color: #f0f0f0; font-weight: 600; margin: 0; }
 .logo-item:hover p { color: #89cff0; }
+
+*/
 
 /* =========================================
    6. RESPONSIVIDADE (CELULAR)
@@ -530,6 +548,66 @@ a:hover {
         font-weight: 500;
         color: white;
         text-shadow: none; 
+    }
+
+    /* Mostra a setinha e dá um estilo clicável a ela */
+    .drop-icon {
+        display: block;
+        color: #ffffff;
+        font-size: 26px;
+        cursor: pointer;
+        line-height: 1;
+        padding: 0 10px;
+        transition: transform 0.3s ease;
+    }
+
+    /* Centraliza os links no mobile */
+    .link-wrapper {
+        justify-content: center;
+    }
+
+    /* 🔴 A MÁGICA 1: Abre o Menu Principal quando o checkbox mestre está marcado */
+    .menu-checkbox:checked ~ .main-nav {
+        transform: translateX(0) !important;
+    }
+
+    /* Mata o hover do Desktop para não bugar o toque no celular */
+    .nav-links > li:hover .dropdown {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    /* Estado inicial do Dropdown no celular (fechado) */
+    .dropdown {
+        position: static;
+        transform: none;
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        margin-top: 15px;
+        
+        display: none !important; /* Escondido por padrão */
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+
+    /* 🔴 A MÁGICA 2: Abre a Sanfona quando o checkbox do dropdown é marcado */
+    .drop-checkbox:checked ~ .dropdown {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    /* Bônus visual: Gira a setinha quando o dropdown está aberto */
+    .drop-checkbox:checked ~ .link-wrapper .drop-icon {
+        transform: rotate(180deg);
+        color: #ffd9a8;
+    }
+
+    /* Ajuste da fonte dos sub-links */
+    .dropdown a {
+        font-size: 22px;
+        color: #ffd9a8;
+        padding: 8px 0;
     }
 }
 
