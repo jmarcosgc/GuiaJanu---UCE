@@ -70,6 +70,9 @@
     box-shadow: 0 5px 12px rgba(0, 0, 0, 0.209);
     border-radius: 1.5em;
     
+    display: flex !important;
+    flex-direction: column !important;
+
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
@@ -160,7 +163,10 @@
    ========================================================================== */
 @media (max-width: 768px) {
     .site-header { height: 80px; padding: 0 20px; }
-    .logo-header { width: 150px; }
+    .logo-header { 
+        width: 150px;
+        padding: 20px; 
+    }
     
     .header-right { 
         width: auto !important; 
@@ -218,6 +224,11 @@
 }
 
 @media (max-width: 374px) {
-    .site-header { padding: 0; }
-    .logo-header { width: 120px; }
+    .site-header { 
+        padding: 0; 
+    }
+    .logo-header { 
+        width: 120px;
+        padding: 20px; 
+    }
 }
