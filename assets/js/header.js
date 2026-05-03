@@ -9,17 +9,20 @@ const headerHTML = `
             <label for="menu-mobile-check" class="menu-close" aria-label="Fechar menu">×</label>
         
             <ul class="nav-links">
+                
+
+                <li><a href="../index.html">Inicio</a></li>
                 <li>
                     <input type="checkbox" id="drop-1" class="drop-checkbox" hidden>
-                    
+            
                     <div class="link-wrapper">
                         <a href="../pages/DescubraJanuaria.html">Descubra Januária</a>
                         <label for="drop-1" class="drop-icon">▾</label>
                     </div>
 
                     <ul class="dropdown">
-                        <li><a href="#">A cidade</a></li>
-                        <li><a href="#">Como chegar</a></li>
+                        <li><a href="../pages/acidade.html">A cidade</a></li>
+                        <li><a href="../pages/comochegar.html">Como chegar</a></li>
                     </ul>
                 </li>
                 

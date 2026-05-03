@@ -15,12 +15,63 @@
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
 
-    <script src="../assets/js/header.js" defer></script>
+    <!-- <script src="../assets/js/header.js" defer></script> -->
     <script src="../assets/js/footer.js" defer></script>
 </head>
 <body>
 
-    <header class="site-header"></header>
+    <header class="site-header">
+        <img src="../assets/img/Logo/TauriLogo2.png" alt="Logo GuiaJanu" class="logo-header">
+        
+        <input type="checkbox" id="menu-mobile-check" class="menu-checkbox" hidden>
+
+        <nav class="main-nav">
+            <label for="menu-mobile-check" class="menu-close" aria-label="Fechar menu">×</label>
+        
+            <ul class="nav-links">
+                
+
+                <li><a href="../index.html">Inicio</a></li>
+                <li>
+                    <input type="checkbox" id="drop-1" class="drop-checkbox" hidden>
+            
+                    <div class="link-wrapper">
+                        <a href="../pages/DescubraJanuaria.html">Descubra Januária</a>
+                        <label for="drop-1" class="drop-icon">▾</label>
+                    </div>
+
+                    <ul class="dropdown">
+                        <li><a href="../pages/acidade.html">A cidade</a></li>
+                        <li><a href="../pages/comochegar.html">Como chegar</a></li>
+                    </ul>
+                </li>
+                
+                <!-- <li><a href="../pages/emconstrucao.html">O que fazer</a></li> -->
+                <li><a href="../pages/emconstrucao.html">Onde ficar</a></li>
+                
+                <li>
+                    <input type="checkbox" id="drop-2" class="drop-checkbox" hidden>
+                    
+                    <div class="link-wrapper">
+                        <a href="#">Mais</a>
+                        <label for="drop-2" class="drop-icon">▾</label>
+                    </div>
+
+                    <ul class="dropdown">
+                        <li><a href="../pages/cat.html">CAT</a></li>
+                        <li><a href="../pages/aboutUs.html">Sobre Nós</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header-right">
+            <a href="https://www.instagram.com/guia.janu" class="social-icon" target="_blank">
+                <img src="../assets/img/Social Icons/insta_logo.png" alt="Instagram">
+            </a>
+            <label for="menu-mobile-check" class="menu-toggle" aria-label="Abrir menu">☰</label>
+        </div>
+    </header>
 
     <main>
         <section class="hero-section">
@@ -64,111 +115,134 @@
             <div class="list-cards-container">
 
                 <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="../assets/img/img principais/pantano mineiro.jpeg" alt="Pântano Mineiro - Imagem" class="card-image">
-                        <div class="copyright-tag">© Prefeitura de Januária</div>
-                    </div>
-                    <h3 class="card-title">Pântano Mineiro</h3>
-                    <a href="" class="card-link">Saiba mais</a>
+                    <a href="../pages/pontos_turisticos_html/pantano_mineiro.html">
+                        <div class="card-image-wrapper">
+                            <img src="../assets/img/img principais/pantano mineiro.jpeg" alt="Pântano Mineiro - Imagem" class="card-image">
+                            <div class="copyright-tag">© Prefeitura de Januária</div>
+                        </div>
+                        <h3 class="card-title">Pântano Mineiro</h3>
+                        <a href="../pages/pontos_turisticos_html/pantano_mineiro.html" class="card-link">Saiba mais</a>
+                    </a>
                 </div>
 
                 <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="../assets/img/img principais/Cachoeira do rio pandeiros (1).jpg" alt="Cachoeiras do rio Pandeiros - Imagem" class="card-image">
-                        <div class="copyright-tag">© Prefeitura de Januária</div>
-                    </div>
-                    <h3 class="card-title">Cachoeiras do rio Pandeiros</h3>
-                    <a href="" class="card-link">Saiba mais</a>
+                    <a href="../pages/pontos_turisticos_html/cachoeira_rio_pandeiros.html">    
+                        <div class="card-image-wrapper">
+                            <img src="../assets/img/img principais/Cachoeira do rio pandeiros (1).jpg" alt="Cachoeiras do rio Pandeiros - Imagem" class="card-image">
+                            <div class="copyright-tag">© Prefeitura de Januária</div>
+                        </div>
+                        <h3 class="card-title">Cachoeiras do rio Pandeiros</h3>
+                        <a href="../pages/pontos_turisticos_html/cachoeira_rio_pandeiros.html" class="card-link">Saiba mais</a>
+                    </a>
                 </div>
 
                 <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="../assets/img/img principais/igreja.jpg" alt="Igreja Nossa Senhora do Rosário - Imagem" class="card-image">
-                        <div class="copyright-tag">© @la_belle_jan</div>
-                    </div>
-                    <h3 class="card-title">Igreja Nossa Senhora do Rosário</h3>
-                    <a href="" class="card-link">Saiba mais</a>
+                    <a href="../pages/pontos_turisticos_html/igreja_nossa_senhora_rosario.html">
+                        <div class="card-image-wrapper">
+                            <img src="../assets/img/img principais/igreja.jpg" alt="Igreja Nossa Senhora do Rosário - Imagem" class="card-image">
+                            <div class="copyright-tag">© @la_belle_jan</div>
+                        </div>
+                        <h3 class="card-title">Igreja Nossa Senhora do Rosário</h3>
+                        <a href="../pages/pontos_turisticos_html/igreja_nossa_senhora_rosario.html" class="card-link">Saiba mais</a>
+                    </a>
                 </div>
 
                 <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="../assets/img/img principais/Mirante do brejo.jpg" alt="Mirante do Brejo do Amparo - Imagem" class="card-image">
-                        <div class="copyright-tag">© Prefeitura de Januária</div>
-                    </div>
-                    <h3 class="card-title">Mirante do Brejo do Amparo</h3>
-                    <a href="ponto_morro_brejo.html" class="card-link">Saiba mais</a>
+                    <a href="#">
+                        <div class="card-image-wrapper">
+                            <img src="../assets/img/img principais/Mirante do brejo.jpg" alt="Mirante do Brejo do Amparo - Imagem" class="card-image">
+                            <div class="copyright-tag">© Prefeitura de Januária</div>
+                        </div>
+                        <h3 class="card-title">Mirante do Brejo do Amparo</h3>
+                        <a href="#" class="card-link">Saiba mais</a>
+                    </a>
                 </div>
 
                 <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="../assets/img/img principais/brejo.jpg" alt="Brejo do Amparo - Distrito Histórico - Imagem" class="card-image">
-                        <div class="copyright-tag">© @la_belle_janu</div>
-                    </div>
-                    <h3 class="card-title">Brejo do Amparo - Distrito Histórico</h3>
-                    <a href="" class="card-link">Saiba mais</a>
+                    <a href="#">    
+                        <div class="card-image-wrapper">
+                            <img src="../assets/img/img principais/brejo.jpg" alt="Brejo do Amparo - Distrito Histórico - Imagem" class="card-image">
+                            <div class="copyright-tag">© @la_belle_janu</div>
+                        </div>
+                        <h3 class="card-title">Brejo do Amparo - Distrito Histórico</h3>
+                        <a href="#" class="card-link">Saiba mais</a>
+                    </a>
                 </div>
 
                 <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="../assets/img/img principais/praia .jpg" alt="Praia de Minas - Imagem" class="card-image">
-                        <div class="copyright-tag">© @la_belle_janu</div>
-                    </div>
-                    <h3 class="card-title">Praia de Minas</h3>
-                    <a href="" class="card-link">Saiba mais</a>
+                    <a href="../pages/pontos_turisticos_html/praia.html">
+                        <div class="card-image-wrapper">
+                            <img src="../assets/img/img principais/praia .jpg" alt="Praia de Minas - Imagem" class="card-image">
+                            <div class="copyright-tag">© @la_belle_janu</div>
+                        </div>
+                        <h3 class="card-title">Praia de Minas</h3>
+                        <a href="../pages/pontos_turisticos_html/praia.html" class="card-link">Saiba mais</a>
+                    </a>
                 </div>
 
                 <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="../assets/img/img principais/praça getulio 6.jpg" alt="Praça Getúlio Vargas - Imagem" class="card-image">
-                        <div class="copyright-tag">© @la_belle_janu</div>
-                    </div>
-                    <h3 class="card-title">Praça Getúlio Vargas</h3>
-                    <a href="" class="card-link">Saiba mais</a>
+                    <a href="../pages/pontos_turisticos_html/getulio_vargas.html">
+                        <div class="card-image-wrapper">
+                            <img src="../assets/img/img principais/praça getulio 6.jpg" alt="Praça Getúlio Vargas - Imagem" class="card-image">
+                            <div class="copyright-tag">© @la_belle_janu</div>
+                        </div>
+                        <h3 class="card-title">Praça Getúlio Vargas</h3>
+                        <a href="../pages/pontos_turisticos_html/getulio_vargas.html" class="card-link">Saiba mais</a>
+                    </a>
                 </div>
 
                 <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="../assets/img/img principais/tiradentes.jpg" alt="Praça Tiradentes - Imagem" class="card-image">
-                        <div class="copyright-tag">© @la_belle_janu</div>
-                    </div>
-                    <h3 class="card-title">Praça Tiradentes</h3>
-                    <a href="" class="card-link">Saiba mais</a>
+                    <a href="../pages/pontos_turisticos_html/tiradentes.html">
+                        <div class="card-image-wrapper">
+                            <img src="../assets/img/img principais/tiradentes.jpg" alt="Praça Tiradentes - Imagem" class="card-image">
+                            <div class="copyright-tag">© @la_belle_janu</div>
+                        </div>
+                        <h3 class="card-title">Praça Tiradentes</h3>
+                        <a href="../pages/pontos_turisticos_html/tiradentes.html" class="card-link">Saiba mais</a>
+                    </a>
                 </div>
 
                 <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="../assets/img/img principais/rio sao francisco.jpg" alt="Rio São Francisco - Imagem" class="card-image">
-                        <div class="copyright-tag">© @la_belle_janu</div>
-                    </div>
-                    <h3 class="card-title">Rio São Francisco</h3>
-                    <a href="" class="card-link">Saiba mais</a>
+                    <a href="../pages/pontos_turisticos_html/rio.html">
+                        <div class="card-image-wrapper">
+                            <img src="../assets/img/img principais/rio sao francisco.jpg" alt="Rio São Francisco - Imagem" class="card-image">
+                            <div class="copyright-tag">© @la_belle_janu</div>
+                        </div>
+                        <h3 class="card-title">Rio São Francisco</h3>
+                        <a href="../pages/pontos_turisticos_html/rio.html" class="card-link">Saiba mais</a>
+                    </a>
                 </div>
 
                 <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="../assets/img/img principais/rua da cultura.jpg" alt="Rua da Cultura - Imagem" class="card-image">
-                        <div class="copyright-tag">© @la_belle_janu</div>
-                    </div>
-                    <h3 class="card-title">Rua da Cultura</h3>
-                    <a href="" class="card-link">Saiba mais</a>
+                    <a href="../pages/pontos_turisticos_html/rua_da_cultura.html">    
+                        <div class="card-image-wrapper">
+                            <img src="../assets/img/img principais/rua da cultura.jpg" alt="Rua da Cultura - Imagem" class="card-image">
+                            <div class="copyright-tag">© @la_belle_janu</div>
+                        </div>
+                        <h3 class="card-title">Rua da Cultura</h3>
+                        <a href="../pages/pontos_turisticos_html/rua_da_cultura.html" class="card-link">Saiba mais</a>
+                    </a>
                 </div>
 
                 <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="../assets/img/img principais/cais.jpg" alt="Cais de Januária - Imagem" class="card-image">
-                        <div class="copyright-tag">© @la_belle_janu</div>
-                    </div>
-                    <h3 class="card-title">Cais de Januária</h3>
-                    <a href="" class="card-link">Saiba mais</a>
+                    <a href="../pages/pontos_turisticos_html/cais.html">
+                        <div class="card-image-wrapper">
+                            <img src="../assets/img/img principais/cais.jpg" alt="Cais de Januária - Imagem" class="card-image">
+                            <div class="copyright-tag">© @la_belle_janu</div>
+                        </div>
+                        <h3 class="card-title">Cais de Januária</h3>
+                        <a href="../pages/pontos_turisticos_html/cais.html" class="card-link">Saiba mais</a>
+                    </a>
                 </div>
 
                 <div class="card">
-                    <div class="card-image-wrapper">
-                        <img src="../assets/img/img principais/Janelão 1 .jpeg" alt="Parque Nacional Cavernas do Peruaçu - Imagem" class="card-image">
-                        <div class="copyright-tag">© Davi Almeida</div>
-                    </div>
-                    <h3 class="card-title">Parque Nacional Cavernas do Peruaçu</h3>
-                    <a href="" class="card-link">Saiba mais</a>
+                    <a href="#"></a>
+                        <div class="card-image-wrapper">
+                            <img src="../assets/img/img principais/Janelão 1 .jpeg" alt="Parque Nacional Cavernas do Peruaçu - Imagem" class="card-image">
+                            <div class="copyright-tag">© Davi Almeida</div>
+                        </div>
+                        <h3 class="card-title">Parque Nacional Cavernas do Peruaçu</h3>
+                        <a href="#" class="card-link">Saiba mais</a>
                 </div>
 
             </div>
