@@ -12,7 +12,7 @@ const headerHTML = `
                     <input type="checkbox" id="drop-1" class="drop-checkbox" hidden>
                     
                     <div class="link-wrapper">
-                        <a href="./index.html">Descubra Januária</a>
+                        <a href="">Descubra Januária</a>
                         <label for="drop-1" class="drop-icon">▾</label>
                     </div>
 

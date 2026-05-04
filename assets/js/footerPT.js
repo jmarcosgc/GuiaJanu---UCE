@@ -16,14 +16,15 @@ const footerHTML = `
           <h4>Conheça Nosso App</h4>
           <ul>
             <li><a href="../pages/emconstrução.html">JanuTour</a></li>
+
             </ul>
         </div>
 
         <div class="footer-col links-col">
           <h4>Descubra Januária</h4>
           <ul>
-            <li><a href="../pages/ACidade.hmtl">A Cidade</a></li>
-            <li><a href="../pages/comochegar.hmtl">Como Chegar</a></li>
+            <li><a href="../../pages/ACidade.hmtl">A Cidade</a></li>
+            <li><a href="../../pages/comochegar.hmtl">Como Chegar</a></li>
             </ul>
         </div>
 
@@ -80,7 +81,7 @@ const footerHTML = `
             <div class="logo-item">
               <a href="https://www.ifnmg.edu.br/januaria" target="_blank" class="logo-link">
                 <p>IFNMG</p>
-                <img src="../assets/img/Logo/IFNMG3.png" alt="Logo IFNMG Campus Januária" class="partner-logo">
+                <img src="../../assets/img/Logo/IFNMG3.png" alt="Logo IFNMG Campus Januária" class="partner-logo">
                 <p class="ifnmg">
                   <span class="linha1">INSTITUTO FEDERAL</span>
                   <span class="linha2">Norte de Minas Gerais</span>
@@ -92,14 +93,14 @@ const footerHTML = `
             <div class="logo-item">
               <a href="https://www.instagram.com/guia.janu" target="_blank" class="logo-link">
                 <p>UCE-BSI</p>
-                <img src="../assets/img/Social Icons/insta_logo.png" alt="Logo UCE-BSI" class="partner-logo logo-insta">
+                <img src="../../assets/img/Social Icons/insta_logo.png" alt="Logo UCE-BSI" class="partner-logo logo-insta">
               </a>
             </div>
             
             <div class="logo-item">
               <a href="https://www.instagram.com/petadmifnmg" target="_blank" class="logo-link">
                 <p>PET-ADM</p>
-                <img src="../assets/img/Parcerias/PETADM.png" alt="Logo PET-ADM" class="partner-logo">
+                <img src="../../assets/img/Parcerias/PETADM.png" alt="Logo PET-ADM" class="partner-logo">
               </a>
             </div>
             
@@ -113,21 +114,21 @@ const footerHTML = `
             <div class="logo-item">
               <a href="https://www.januaria.mg.gov.br/portal/secretarias/26/setur--secretaria-municipal-de-turismo-cultura-meio-ambiente-e-desenvolvimento-economico" target="_blank" class="logo-link">
                 <p>SETUR</p>
-                <img src="../assets/img/Parcerias/SETUR.png" alt="Setur" class="partner-logo">
+                <img src="../../assets/img/Parcerias/SETUR.png" alt="Setur" class="partner-logo">
               </a>
             </div>
             
             <div class="logo-item">
               <a href="https://www.instagram.com/la_belle_janu" target="_blank" class="logo-link">
                 <p>La Belle Janu</p>
-                <img src="../assets/img/Social Icons/insta_logo.png" alt="La Belle Janu" class="partner-logo logo-insta">
+                <img src="../../assets/img/Social Icons/insta_logo.png" alt="La Belle Janu" class="partner-logo logo-insta">
               </a>
             </div>
             
             <div class="logo-item">
               <a href="https://www.youtube.com/c/SERTÕESGERAIS" target="_blank" class="logo-link">
                 <p>Canal Sertões Gerais</p>
-                <img src="../assets/img/Parcerias/SERTOESGERAIS.png" alt="Canal Sertão Mineiro" class="partner-logo">
+                <img src="../../assets/img/Parcerias/SERTOESGERAIS.png" alt="Canal Sertão Mineiro" class="partner-logo">
               </a>
             </div>
             
