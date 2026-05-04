@@ -8,48 +8,56 @@
     
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
     <link href="../assets/css/acidade.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+
+    <!-- <script src="../assets/js/header.js" defer></script> -->
     <script src="../assets/js/footer.js" defer></script>
 </head>
 <body>
 
-    <!--header class="site-header">
-        <img src="../assets/img/Logo/TauriLogo2.png" alt="Logo GuiaJanu" class="logo-header">
-        
-        <div class="header-right">../assets/img/Social Icons/insta_logo.png
-            <a href="https://www.instagram.com/guia.janu" class="social-icon" target="_blank">
-                <img src="../assets/img/insta_logo.png" alt="Instagram">
-            </a>
-        </div>
-    </header-->
-
-    <header class="site-header">
-        <img src="../assets/img/Logo/TauriLogo2.png" alt="Logo GuiaJanu" class="logo-header">
-        <div class="wrapper">
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#oqfzr">O que fazer</a></li>
-                    <li><a href="#eventos">Onde comer</a></li>
-                    <li><a href="#contato">Onde ficar</a></li>
-                    <li><a href="#contato">Mais</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-
     <header class="site-header">
         <img src="../assets/img/Logo/TauriLogo2.png" alt="Logo GuiaJanu" class="logo-header">
         
+        <input type="checkbox" id="menu-mobile-check" class="menu-checkbox" hidden>
+
         <nav class="main-nav">
-            <button class="menu-close" aria-label="Fechar menu">
-                ×
-            </button>
-            <ul>
-                <li><a href="../pages/DescubraJanuaria.html">Descubra Januária</a></li>
-                <li><a href="#oqfzr">O que fazer</a></li>
-                <li><a href="#eventos">Onde comer</a></li>
-                <li><a href="#contato">Onde ficar</a></li>
-                <li><a href="#contato">Mais</a></li>
+            <label for="menu-mobile-check" class="menu-close" aria-label="Fechar menu">×</label>
+        
+            <ul class="nav-links">
+                
+
+                <li><a href="../index.html">Inicio</a></li>
+                <li>
+                    <input type="checkbox" id="drop-1" class="drop-checkbox" hidden>
+            
+                    <div class="link-wrapper">
+                        <a href="../pages/DescubraJanuaria.html">Descubra Januária</a>
+                        <label for="drop-1" class="drop-icon">▾</label>
+                    </div>
+
+                    <ul class="dropdown">
+                        <li><a href="../pages/comochegar.html">Como chegar</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="../pages/ListagemPontosTuristicos.html">O que fazer</a></li>
+                <li><a href="../pages/emconstrucao.html">Onde ficar</a></li>
+                
+                <li>
+                    <input type="checkbox" id="drop-2" class="drop-checkbox" hidden>
+                    
+                    <div class="link-wrapper">
+                        <a href="#">Mais</a>
+                        <label for="drop-2" class="drop-icon">▾</label>
+                    </div>
+
+                    <ul class="dropdown">
+                        <li><a href="../pages/cat.html">CAT</a></li>
+                        <li><a href="../pages/aboutUs.html">Sobre Nós</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
 
@@ -57,9 +65,7 @@
             <a href="https://www.instagram.com/guia.janu" class="social-icon" target="_blank">
                 <img src="../assets/img/Social Icons/insta_logo.png" alt="Instagram">
             </a>
-            
-            <button class="menu-toggle" aria-label="Abrir menu">
-                ☰ </button>
+            <label for="menu-mobile-check" class="menu-toggle" aria-label="Abrir menu">☰</label>
         </div>
     </header>
 

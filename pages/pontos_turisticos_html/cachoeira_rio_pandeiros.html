@@ -8,57 +8,79 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rye&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/pontos_turisticos_css/cachoeira_rio_pandeiros.css">
-  <script src="../../assets/js/footerPT.js" defer></script>
+  
 
-  <style>
-    /* Créditos da imagem hero */
-    .hero-credit {
-      position: absolute;
-      bottom: 10px;
-      right: 15px;
-      color: #fff;
-      font-size: 14px;
-      background: rgba(0,0,0,0.5);
-      padding: 4px 8px;
-      border-radius: 4px;
-      font-weight: 500;
-      text-align: right;
-    }
-  </style>
+  <link rel="stylesheet" href="../../assets/css/pontos_turisticos_css/pontos_turisticos_base.css">
+  <link rel="stylesheet" href="../../assets/css/header.css">
+  <link rel="stylesheet" href="../../assets/css/footer.css">
+
+  <script src="../../assets/js/headerPT.js" defer></script>
+  <script src="../../assets/js/footerPT.js" defer></script>
 </head>
 <body>
 
-  <header class="site-header">
-    <img src="../../assets/img/Logo/TauriLogo2.png" alt="Logo GuiaJanu" class="logo-header">
+  <header class="site-header"></header>
+
+  <!--header class="site-header">
+    <a href="../../index.html"><img src="../../assets/img/Logo/TauriLogo2.png" alt="Logo GuiaJanu" class="logo-header"></a>
+    <input type="checkbox" id="menu-mobile-check" class="menu-checkbox" hidden>
 
     <nav class="main-nav">
-      <button class="menu-close" aria-label="Fechar menu">×</button>
-      <ul>
-        <li><a href="../../index.html">Início</a></li>
-        <li><a href="../../pages/DescubraJanuaria.html">Descubra Januária</a></li>
-        <li><a href="../../pages/ListagemPontosTuristicos.html">O que fazer</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
+        <label for="menu-mobile-check" class="menu-close" aria-label="Fechar menu">×</label>
+    
+        <ul class="nav-links">
+            <li>
+                <input type="checkbox" id="drop-1" class="drop-checkbox" hidden>
+                
+                <div class="link-wrapper">
+                    <a href="./index.html">Descubra Januária</a>
+                    <label for="drop-1" class="drop-icon">▾</label>
+                </div>
+
+                <ul class="dropdown">
+                    <li><a href="../acidade.html">A cidade</a></li>
+                    <li><a href="../comochegar.html">Como chegar</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="../ListagemPontosTuristicos.html">O que fazer</a></li>
+            <li><a href="../emconstrucao.html">Onde ficar</a></li>
+            
+            <li>
+                <input type="checkbox" id="drop-2" class="drop-checkbox" hidden>
+                
+                <div class="link-wrapper">
+                    <a href="#">Mais</a>
+                    <label for="drop-2" class="drop-icon">▾</label>
+                </div>
+
+                <ul class="dropdown">
+                    <li><a href="../cat.html">CAT</a></li>
+                    <li><a href="../aboutUs.html">Sobre Nós</a></li>
+                </ul>
+            </li>
+        </ul>
     </nav>
 
     <div class="header-right">
-      <a href="https://www.instagram.com/guia.janu" class="social-icon" target="_blank">
-        <img src="../../assets/img/Social Icons/insta_logo.png" alt="Instagram">
-      </a>
-
-      <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+        <a href="https://www.instagram.com/guia.janu" class="social-icon" target="_blank">
+            <img src="../../assets/img/Social Icons/insta_logo.png" alt="Instagram">
+        </a>
+        <label for="menu-mobile-check" class="menu-toggle" aria-label="Abrir menu">☰</label>
     </div>
-  </header>
+  </header-->
 
   <main>
     <section class="hero">
-      <img class="hero-img" src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/rio_pandeiros_03.jpg" alt="Cachoeira do Rio Pandeiros">
+      <video class="hero-img" autoplay muted loop playsinline>
+        <source src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/cachoeria.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo em HTML5.
+      </video>
 
       <div class="overlay">
         <div class="conteudo-hero">
           <h1>Cachoeira do Rio Pandeiros</h1>
-          <!-- CRÉDITO ADICIONADO AQUI -->
-          <div class="hero-credit">© colocar crédito</div>
+          <div class="copyright-tag">© Guia Janu</div>
         </div>
       </div>
     </section>
@@ -97,9 +119,6 @@
             <p>
               No balneário do <strong>Rio Pandeiros</strong>, a cerca de 50 km do centro de <strong>Januária</strong>, três
               belas <strong>cachoeiras</strong> encantam os visitantes com suas águas cristalinas.
-            </p>
-
-            <p>
               O rio, famoso pelas corredeiras cujo som lembra o toque do pandeiro, oferece um cenário perfeito para quem busca
               contato intenso com a <strong>natureza</strong>. O local conta com áreas para <strong>churrasco</strong> e é bastante
               procurado para a prática de <strong>camping</strong>.
@@ -109,11 +128,7 @@
               <strong>Dica de segurança:</strong> o banho no rio <strong>Pandeiros</strong> requer <strong>atenção</strong>, pois há
               <strong>riscos</strong> de <strong>afogamento</strong> devido à formação de <strong>bancos de areia</strong> e “sugões”
               próximos às <strong>quedas-d’água</strong>. Na primeira e terceira <strong>cachoeiras</strong>, a área de banho é delimitada
-              e há sinalização indicando os locais de perigo.
-            </p>
-
-            <p>
-              Lembre-se de que se trata de um local remoto, sem equipe de salvamento permanente. Portanto, aproveite este paraíso com
+              e há sinalização indicando os locais de perigo. Lembre-se de que se trata de um local remoto, sem equipe de salvamento permanente. Portanto, aproveite este paraíso com
               <strong>responsabilidade</strong>, <strong>cuidado</strong> e <strong>segurança</strong>.
             </p>
 
@@ -144,6 +159,7 @@
               <p><strong>Pet Friendly:</strong> Não há informações oficiais sobre</p>
               <p><strong>Contato:</strong> Não há</p>
               <p><strong>Site:</strong> Não há</p>
+              <p><strong>Referência:</strong> <a href="https://www.januaria.mg.gov.br/portal/turismo/0/9/2522/cachoeiras-do-rio-pandeiros" target="_blank">[Referência 1]</a> <a href="https://onorte.net/variedades/refugio-silvestre-1.636997" target="_blank">[Referência 2]</a></p>
             </div>
           </div>
 
@@ -181,30 +197,86 @@
 
           <div class="slide">
             <div class="slide-img-wrapper">
-              <img src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/rio_pandeiros_03.jpg" alt="Foto 1 da cachoeira do rio pandeiros">
-              <div class="copyright-tag">© Prefeitura de Januária</div>
+              <img src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/1.jpg" alt="Foto 1 da cachoeira do rio Pandeiros">
+              <div class="copyright-tag">© Guia Janu</div>
             </div>
           </div>
 
           <div class="slide">
             <div class="slide-img-wrapper">
-              <img src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/rio_pandeiros_03.jpg" alt="Foto 2 da cachoeira do rio pandeiros">
-              <div class="copyright-tag">© Prefeitura de Januária</div>
+              <img src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/2.jpg" alt="Foto 2 da cachoeira do rio Pandeiros">
+              <div class="copyright-tag">© Guia Janu</div>
             </div>
           </div>
 
           <div class="slide">
             <div class="slide-img-wrapper">
-              <img src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/rio_pandeiros_03.jpg" alt="Foto 3 da cachoeira do rio pandeiros">
+              <img src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/3.jpg" alt="Foto 3 da cachoeira do rio Pandeiros">
+              <div class="copyright-tag">© Guia Janu</div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-img-wrapper">
+              <img src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/4.jpg" alt="Foto 4 da cachoeira do rio Pandeiros">
+              <div class="copyright-tag">© Guia Janu</div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-img-wrapper">
+              <img src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/5.jpg" alt="Foto 5 da cachoeira do rio Pandeiros">
+              <div class="copyright-tag">© Guia Janu</div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-img-wrapper">
+              <img src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/6.jpg" alt="Foto 6 da cachoeira do rio Pandeiros">
+              <div class="copyright-tag">© Guia Janu</div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-img-wrapper">
+              <img src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/7.jpg" alt="Foto 7 da cachoeira do rio Pandeiros">
+              <div class="copyright-tag">© Guia Janu</div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-img-wrapper">
+              <img src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/8.jpg" alt="Foto 8 da cachoeira do rio Pandeiros">
+              <div class="copyright-tag">© Guia Janu</div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-img-wrapper">
+              <img src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/9.jpg" alt="Foto 9 da cachoeira do rio Pandeiros">
+              <div class="copyright-tag">© Guia Janu</div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="slide-img-wrapper">
+              <img src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/rio_pandeiros_03.jpg" alt="Foto 10 da cachoeira do rio Pandeiros">
               <div class="copyright-tag">© Prefeitura de Januária</div>
             </div>
           </div>
 
-      </div>
+        </div>
 
         <button class="nav next" aria-label="Próxima imagem">&#10095;</button>
 
         <div class="indicadores">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
           <span class="dot"></span>
           <span class="dot"></span>
           <span class="dot"></span>
@@ -237,7 +309,7 @@
         <h2>Conheça em vídeo</h2>
 
         <div class="video-wrapper">
-          <iframe 
+          <iframe
             src="https://www.youtube.com/embed/82T1ir4_A9Q"
             title="Vídeo da Cachoeira do Rio Pandeiros"
             frameborder="0"
@@ -248,7 +320,7 @@
       </div>
     </section>
 
-    <!-- ONDA GALERIA -> FOOTER -->
+    <!-- ONDA VIDEO -> FOOTER -->
     <div class="wave-separator wave-footer footer-wave">
       <div class="wave-layer wave-1">
         <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
@@ -269,124 +341,6 @@
   </main>
 
   <footer class="site-footer"></footer>
-
-  <!--footer id="contato" class="site-footer">
-    <div class="footer-main">
-
-      <div class="footer-left-column">
-        <div class="footer-col contact-info">
-          <a href="https://www.google.com/maps/place/Janu%C3%A1ria,+MG" class="location-link" target="_blank">
-            <div class="location-text">
-              <p>Januária - MG</p>
-              <p>Rua Padre Henrique - Centro</p>
-            </div>
-            <img src="../../assets/img/Social Icons/ponteiro.png" alt="Ícone de localização" class="location-icon">
-          </a>
-
-          <br>
-
-          <p>(11) 4002-8922</p>
-          <p>turismo@guiajanu.com</p>
-        </div>
-
-        <div class="footer-col links-col">
-          <h4>O que fazer</h4>
-          <ul>
-            <li><a href="#">Como Chegar</a></li>
-            <li><a href="#">Atendimento ao Turista</a></li>
-            <li><a href="#">Calendário de Eventos</a></li>
-            <li><a href="#">Meios de Transporte</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-right-column">
-        <div class="footer-col links-col">
-          <h4>Descubra Januária</h4>
-          <ul>
-            <li><a href="#">Passeios</a></li>
-            <li><a href="#">Praia</a></li>
-            <li><a href="#">Praças</a></li>
-            <li><a href="#">Hospedagem</a></li>
-            <li><a href="#">Igrejas</a></li>
-            <li><a href="#">Mirantes</a></li>
-            <li><a href="#">Rota da Cachaça</a></li>
-            <li><a href="#">Feira</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2025 GuiaJanu - Todos os direitos reservados.</p>
-
-      <p>
-        Desenvolvido por:
-        <a href="https://www.instagram.com/eric_lopes01" target="_blank">Eric L. Guimarães</a>,
-        <a href="https://www.instagram.com/c.daniel7" target="_blank">Carlos D. Araujo</a>,
-        <a href="https://www.instagram.com/felipemeireles.1" target="_blank">Felipe Gonçalves</a>,
-        <a href="https://www.instagram.com/_jmarcos.gc" target="_blank">João M. Guimarães</a>,
-        <a href="https://www.instagram.com/pfmella" target="_blank">Pâmella Ferreira</a>,
-        <a href="https://www.instagram.com/tkmaia" target="_blank">Thalles K. Maia</a>
-      </p>
-
-      <div class="footer-extra-info">
-        <div class="developed-by-section">
-          <h4>Desenvolvido por</h4>
-          <div class="developed-logos">
-            <div class="logo-item">
-              <a href="https://www.ifnmg.edu.br/januaria" target="_blank" class="logo-link">
-                <p>IFNMG</p>
-                <img src="../../assets/img/Logo/IFNMG.png" alt="Logo IFNMG Campus Januária" class="partner-logo">
-              </a>
-            </div>
-
-            <div class="logo-item">
-              <a href="https://www.instagram.com/guia.janu" target="_blank" class="logo-link">
-                <p>UCE-BSI</p>
-                <img src="../../assets/img/Social Icons/insta_logo.png" alt="Logo UCE-BSI" class="partner-logo logo-insta">
-              </a>
-            </div>
-
-            <div class="logo-item">
-              <a href="https://www.instagram.com/petadmifnmg" target="_blank" class="logo-link">
-                <p>PET-ADM</p>
-                <img src="../../assets/img/Parcerias/PETADM.png" alt="Logo PET-ADM" class="partner-logo">
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-partners">
-          <h4>Nossos Parceiros</h4>
-          <div class="partners-logos">
-            <div class="logo-item">
-              <a href="https://www.januaria.mg.gov.br/portal/secretarias/26/setur--secretaria-municipal-de-turismo-cultura-meio-ambiente-e-desenvolvimento-economico" target="_blank" class="logo-link">
-                <p>SETUR</p>
-                <img src="../../assets/img/Parcerias/SETUR.png" alt="Setur" class="partner-logo">
-              </a>
-            </div>
-
-            <div class="logo-item">
-              <a href="https://www.instagram.com/la_belle_janu" target="_blank" class="logo-link">
-                <p>La Belle Janu</p>
-                <img src="../../assets/img/Social Icons/insta_logo.png" alt="La Belle Janu" class="partner-logo logo-insta">
-              </a>
-            </div>
-
-            <div class="logo-item">
-              <a href="#" target="_blank" class="logo-link">
-                <p>Canal Sertão Mineiro</p>
-                <img src="../../assets/img/Parcerias/SERTOESGERAIS.png" alt="Canal Sertão Mineiro" class="partner-logo">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <p>As imagens nesse site são de inteira responsabilidade dos proprietários dos estabelecimentos cadastrados em nosso banco de dados.</p>
-    </div>
-  </footer-->
 
   <script>
     const menuToggle = document.querySelector('.menu-toggle');
@@ -424,11 +378,15 @@
       const prev = (current - 1 + total) % total;
       const next = (current + 1) % total;
 
-      slides[current].classList.add('center');
-      slides[prev].classList.add('left');
-      slides[next].classList.add('right');
+      if (total > 0) {
+        slides[current].classList.add('center');
+        dots[current].classList.add('active');
+      }
 
-      dots[current].classList.add('active');
+      if (total > 1) {
+        slides[prev].classList.add('left');
+        slides[next].classList.add('right');
+      }
 
       slides.forEach((slide, i) => {
         if (i !== current && i !== prev && i !== next) {
