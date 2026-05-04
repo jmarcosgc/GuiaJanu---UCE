@@ -290,6 +290,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 /* FOOTER */
+/*
 .site-footer {
     width: 100%;
     padding: 60px 50px;
@@ -469,7 +470,7 @@ input[type=range]::-webkit-slider-thumb {
 .logo-item .logo-link:hover .partner-logo {
     opacity: 1;
 }
-
+*/
 /* RESPONSIVO */
 .resize-transition-stopper .main-nav {
     transition: none !important;
