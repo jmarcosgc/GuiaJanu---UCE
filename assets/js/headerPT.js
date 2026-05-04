@@ -1,8 +1,7 @@
 const headerElement = document.querySelector('.site-header');
 
 const headerHTML = `
-        <img src="../../assets/img/Logo/TauriLogo2.png" alt="Logo GuiaJanu" class="logo-header">
-        
+        <a href="../../index.html"><img src="../../assets/img/Logo/TauriLogo2.png" alt="Logo GuiaJanu" class="logo-header"></a>
         <input type="checkbox" id="menu-mobile-check" class="menu-checkbox" hidden>
 
         <nav class="main-nav">
@@ -13,18 +12,18 @@ const headerHTML = `
                     <input type="checkbox" id="drop-1" class="drop-checkbox" hidden>
                     
                     <div class="link-wrapper">
-                        <a href="../../pages/DescubraJanuaria.html">Descubra Januária</a>
+                        <a href="./index.html">Descubra Januária</a>
                         <label for="drop-1" class="drop-icon">▾</label>
                     </div>
 
                     <ul class="dropdown">
-                        <li><a href="#">A cidade</a></li>
-                        <li><a href="#">Como chegar</a></li>
+                        <li><a href="../acidade.html">A cidade</a></li>
+                        <li><a href="../comochegar.html">Como chegar</a></li>
                     </ul>
                 </li>
                 
-                <li><a href="#">O que fazer</a></li>
-                <li><a href="#">Onde ficar</a></li>
+                <li><a href="../ListagemPontosTuristicos.html">O que fazer</a></li>
+                <li><a href="../emconstrucao.html">Onde ficar</a></li>
                 
                 <li>
                     <input type="checkbox" id="drop-2" class="drop-checkbox" hidden>
@@ -35,8 +34,8 @@ const headerHTML = `
                     </div>
 
                     <ul class="dropdown">
-                        <li><a href="#">CAT</a></li>
-                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="../cat.html">CAT</a></li>
+                        <li><a href="../aboutUs.html">Sobre Nós</a></li>
                     </ul>
                 </li>
             </ul>

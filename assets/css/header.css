@@ -15,7 +15,9 @@
     top: 0;
     left: 0;
     z-index: 10;
-    justify-content: space-between; 
+    justify-content: space-between;
+
+    /* background-color: black; */
 }
 
 .logo-header {
@@ -26,6 +28,7 @@
 
 .main-nav {
     flex-grow: 1;
+    overflow: visible;
 }
 
 .nav-links {
@@ -63,7 +66,6 @@
     min-width: 270px;
     text-align: center;
     
-    /* background-color: rgba(0, 0, 0, 0.44);*/
     background-color: transparent;
     backdrop-filter: blur(4px);
     border: rgba(0, 0, 0, 0.44);
@@ -77,7 +79,8 @@
     visibility: hidden;
     transition: all 0.3s ease;
     transition-delay: 0.4s;
-    z-index: 99; 
+    z-index: 99;
+    gap: 10px !important; 
 }
 
 .dropdown a {
@@ -219,8 +222,8 @@
     }
     
     .drop-checkbox:checked ~ .dropdown { display: flex !important; flex-direction: column; }
-    .drop-checkbox:checked ~ .link-wrapper .drop-icon { transform: rotate(180deg); color: #ffd9a8; }
-    .dropdown a { font-size: 22px; color: #ffd9a8; padding: 8px 0; }
+    .drop-checkbox:checked ~ .link-wrapper .drop-icon { transform: rotate(180deg); color: white; }
+    .dropdown a { font-size: 22px; color: white; padding: 8px 0; }
 }
 
 @media (max-width: 374px) {
