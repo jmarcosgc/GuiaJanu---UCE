@@ -1,26 +1,112 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Em construção</title>
-  <link rel="shortcut icon" href="../assets/img/Logo/favicon.ico">
-  <style>
-    body {
-      background-color: black;
-    }
+  <title>Site em Construção</title>
+  <link rel="shortcut icon" href="/assets/img/Logo/favicon.ico">
 
-    .build {
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 400px;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+  <link href="/assets/css/emconstrucao.css" rel="stylesheet" />
+
+  <script src="/assets/js/footer.js" defer></script>
 </head>
+
 <body>
-  <h1 class="build">Página em Construção</h1>
+
+  <header class="site-header">
+    <img src="/assets/img/Logo/TauriLogo2.png" alt="Logo GuiaJanu" class="logo-header">
+
+    <nav class="main-nav">
+      <button class="menu-close" aria-label="Fechar menu">×</button>
+      <ul>
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html">Início</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"
+            onclick="if(window.innerWidth > 991) { window.location.href='#descubra'; }">
+            Descubra Januária
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="./acidade.html">A Cidade</a>
+            <a class="dropdown-item" href="./comochegar.html">Como Chegar</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./ListagemPontosTuristicos.html">O que Fazer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./emconstrucao.html">Onde Ficar</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="javascript:void(0);" id="navbarDropdownMais" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Mais
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+            <a class="dropdown-item" href="./pages/cat.html">CAT</a>
+            <a class="dropdown-item" href="./pages/aboutUs.html">Sobre Nós</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header-right">
+      <a href="https://www.instagram.com/guia.janu" class="social-icon" target="_blank">
+        <img src="/assets/img/Social Icons/insta_logo.png" alt="Instagram">
+      </a>
+      <button class="menu-toggle" aria-label="Abrir menu">
+        <img src="/assets/img/Social Icons/menu.png" alt="Menu">
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container-aviso">
+      <div class="icon-anim">🚧</div>
+      <h1>Ainda estamos construindo essa página!</h1>
+      <div class="loader-custom"></div>
+    </div>
+  </main>
+  <div class="wave-separator" style="--wave-color: #222;">
+    <div class="wave-layer wave-1">
+      <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+        <path
+          d="M-500,50 Q-375,0 -250,50 T0,50 Q125,0 250,50 T500,50 Q625,0 750,50 T1000,50 Q1125,0 1250,50 T1500,50 V101 H-500 Z"
+          fill="var(--wave-color)"></path>
+      </svg>
+    </div>
+    <div class="wave-layer wave-2">
+      <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+        <path
+          d="M-500,50 Q-375,100 -250,50 T0,50 Q125,100 250,50 T500,50 Q625,100 750,50 T1000,50 Q1125,100 1250,50 T1500,50 V101 H-500 Z"
+          fill="var(--wave-color)"></path>
+      </svg>
+    </div>
+    <div class="wave-layer wave-3">
+      <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
+        <path
+          d="M-500,50 Q-375,0 -250,50 T0,50 Q125,0 250,50 T500,50 Q625,0 750,50 T1000,50 Q1125,0 1250,50 T1500,50 V101 H-500 Z"
+          fill="var(--wave-color)"></path>
+      </svg>
+    </div>
+  </div>
+  <footer class="site-footer"></footer>
+  <script src="/assets/js/MenuToggle.js"> </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
+
 </html>

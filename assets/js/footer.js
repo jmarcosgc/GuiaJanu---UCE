@@ -8,14 +8,14 @@ const footerHTML = `
         <div class="footer-col links-col">
           <h4>Email Para Contato</h4>
           <ul>
-            <p>turismo@guiajanu.com</p>
+            <p>guiajanuifnmg@gmail.com</p>
             </ul>
         </div>
 
         <div class="footer-col links-col">
           <h4>Conheça Nosso App</h4>
           <ul>
-            <li><a href="../pages/emconstrução.html">GuiaJanu Autoguiado</a></li>
+            <li><a href="../pages/emconstrução.html">JanuTour</a></li>
             </ul>
         </div>
 
@@ -34,20 +34,25 @@ const footerHTML = `
           <h4>O que fazer</h4>
           <ul>
             <li><a href="../pages/ListagemPontosTuristicos.html">Listagem Pontos Turisticos</a></li>
-            <li><a href="#">Em Construção</a></li>
+          </ul>
+        </div>
+        <div class="footer-col links-col">
+          <h4>Onde Comer</h4>
+          <ul>
+            <li><a href="../pages/emconstrucao.html">Em Construção</a></li>
           </ul>
         </div>
         <div class="footer-col links-col">
           <h4>Onde Ficar</h4>
           <ul>
-            <li><a href="#">Em Construção</a></li>
+            <li><a href="../pages/emconstrucao.html">Em Construção</a></li>
           </ul>
         </div>
         <div class="footer-col links-col">
           <h4>Mais</h4>
           <ul>
-            <li><a href="#">CAT</a></li>
-            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="../pages/cat.html">CAT</a></li>
+            <li><a href="../pages/aboutUs.html">Sobre Nós</a></li>
           </ul>
         </div>
       </div>
