@@ -8,8 +8,6 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rye&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../assets/css/pontos_turisticos_css/cachoeira_rio_pandeiros.css">
-  
-
   <link rel="stylesheet" href="../../assets/css/pontos_turisticos_css/pontos_turisticos_base.css">
   <link rel="stylesheet" href="../../assets/css/header.css">
   <link rel="stylesheet" href="../../assets/css/footer.css">
@@ -22,71 +20,30 @@
 
   <header class="site-header"></header>
 
-  <!--header class="site-header">
-    <a href="../../index.html"><img src="../../assets/img/Logo/TauriLogo2.png" alt="Logo GuiaJanu" class="logo-header"></a>
-    <input type="checkbox" id="menu-mobile-check" class="menu-checkbox" hidden>
-
-    <nav class="main-nav">
-        <label for="menu-mobile-check" class="menu-close" aria-label="Fechar menu">×</label>
-    
-        <ul class="nav-links">
-            <li>
-                <input type="checkbox" id="drop-1" class="drop-checkbox" hidden>
-                
-                <div class="link-wrapper">
-                    <a href="./index.html">Descubra Januária</a>
-                    <label for="drop-1" class="drop-icon">▾</label>
-                </div>
-
-                <ul class="dropdown">
-                    <li><a href="../acidade.html">A cidade</a></li>
-                    <li><a href="../comochegar.html">Como chegar</a></li>
-                </ul>
-            </li>
-            
-            <li><a href="../ListagemPontosTuristicos.html">O que fazer</a></li>
-            <li><a href="../emconstrucao.html">Onde ficar</a></li>
-            
-            <li>
-                <input type="checkbox" id="drop-2" class="drop-checkbox" hidden>
-                
-                <div class="link-wrapper">
-                    <a href="#">Mais</a>
-                    <label for="drop-2" class="drop-icon">▾</label>
-                </div>
-
-                <ul class="dropdown">
-                    <li><a href="../cat.html">CAT</a></li>
-                    <li><a href="../aboutUs.html">Sobre Nós</a></li>
-                </ul>
-            </li>
-        </ul>
-    </nav>
-
-    <div class="header-right">
-        <a href="https://www.instagram.com/guia.janu" class="social-icon" target="_blank">
-            <img src="../../assets/img/Social Icons/insta_logo.png" alt="Instagram">
-        </a>
-        <label for="menu-mobile-check" class="menu-toggle" aria-label="Abrir menu">☰</label>
-    </div>
-  </header-->
-
   <main>
     <section class="hero">
-      <video class="hero-img" autoplay muted loop playsinline>
-        <source src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/cachoeria.mp4" type="video/mp4">
+      <video id="hero-video" class="hero-img" autoplay muted loop playsinline>
+        <source src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/cachoeira.mp4" type="video/mp4">
         Seu navegador não suporta vídeo em HTML5.
       </video>
 
+      <div class="video-controls">
+        <button id="volume-toggle" class="video-btn" aria-label="Ativar ou desativar som">
+          <img id="volume-icon" src="../../assets/img/Social Icons/sem_som.png" alt="Mudo">
+        </button>
+
+        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0">
+      </div>
+
       <div class="overlay">
-        <div class="conteudo-hero">
-          <h1>Cachoeiras do Rio Pandeiros</h1>
+        <div class="conteudo-hero-pandeiros">
+          <h1>Cachoeiras do 
+            Rio Pandeiros</h1>
           <div class="copyright-tag-up">© Guia Janu</div>
         </div>
       </div>
     </section>
 
-    <!-- ONDA HERO -> SOBRE -->
     <div class="wave-separator wave-verde">
       <div class="wave-layer wave-1">
         <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
@@ -105,17 +62,14 @@
       </div>
     </div>
 
-    <!-- SOBRE O LOCAL -->
     <section class="section-verde">
       <div class="conteudo-limitado">
-
         <div class="titulo-info">
           <img src="../../assets/img/Social Icons/esclamacao_icon.png" alt="Informações">
           <h3><strong>Sobre o Local</strong></h3>
         </div>
 
         <div class="sobre-local-wrapper">
-
           <div class="texto-sobre">
             <p>
               No balneário do <strong>Rio Pandeiros</strong>, a cerca de 50 km do centro de <strong>Januária</strong>, três
@@ -129,8 +83,8 @@
               <strong>Dica de segurança:</strong> o banho no rio <strong>Pandeiros</strong> requer <strong>atenção</strong>, pois há
               <strong>riscos</strong> de <strong>afogamento</strong> devido à formação de <strong>bancos de areia</strong> e “sugões”
               próximos às <strong>quedas-d’água</strong>. Na primeira e terceira <strong>cachoeiras</strong>, a área de banho é delimitada
-              e há sinalização indicando os locais de perigo. Lembre-se de que se trata de um local remoto, sem equipe de salvamento permanente. Portanto, aproveite este paraíso com
-              <strong>responsabilidade</strong>, <strong>cuidado</strong> e <strong>segurança</strong>.
+              e há sinalização indicando os locais de perigo. Lembre-se de que se trata de um local remoto, sem equipe de salvamento permanente.
+              Portanto, aproveite este paraíso com <strong>responsabilidade</strong>, <strong>cuidado</strong> e <strong>segurança</strong>.
             </p>
 
             <p>
@@ -162,12 +116,10 @@
               <p><strong>Site:</strong> Não há</p>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- ONDA SOBRE -> GALERIA -->
     <div class="wave-separator wave-vermelho">
       <div class="wave-layer wave-1">
         <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
@@ -186,7 +138,6 @@
       </div>
     </div>
 
-    <!-- GALERIA -->
     <section class="section-vermelho">
       <div class="carrossel-container">
         <h2>Galeria de Fotos</h2>
@@ -194,7 +145,6 @@
         <button class="nav prev" aria-label="Imagem anterior">&#10094;</button>
 
         <div class="carrossel-3d">
-
           <div class="slide">
             <div class="slide-img-wrapper">
               <img src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/1.jpg" alt="Foto 1 da cachoeira do rio Pandeiros">
@@ -264,7 +214,6 @@
               <div class="copyright-tag">© Prefeitura de Januária</div>
             </div>
           </div>
-
         </div>
 
         <button class="nav next" aria-label="Próxima imagem">&#10095;</button>
@@ -284,7 +233,6 @@
       </div>
     </section>
 
-    <!-- ONDA GALERIA -> VIDEO -->
     <div class="wave-separator wave-azul">
       <div class="wave-layer wave-1">
         <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
@@ -303,7 +251,6 @@
       </div>
     </div>
 
-    <!-- SEÇÃO DE VÍDEO -->
     <section class="section-azul">
       <div class="conteudo-limitado video-container">
         <h2>Conheça em vídeo</h2>
@@ -320,7 +267,6 @@
       </div>
     </section>
 
-    <!-- ONDA VIDEO -> FOOTER -->
     <div class="wave-separator wave-footer footer-wave">
       <div class="wave-layer wave-1">
         <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
@@ -414,6 +360,44 @@
       });
 
       atualizarCarrossel();
+    }
+
+    const heroVideo = document.getElementById("hero-video");
+    const volumeToggle = document.getElementById("volume-toggle");
+    const volumeSlider = document.getElementById("volume-slider");
+    const volumeIcon = document.getElementById("volume-icon");
+
+    if (heroVideo && volumeToggle && volumeSlider && volumeIcon) {
+      volumeToggle.addEventListener("click", () => {
+        if (heroVideo.muted || heroVideo.volume === 0) {
+          heroVideo.muted = false;
+          heroVideo.volume = 0.5;
+          volumeSlider.value = 0.5;
+          volumeIcon.src = "../../assets/img/Social Icons/com_som.png";
+          volumeIcon.alt = "Com som";
+        } else {
+          heroVideo.muted = true;
+          heroVideo.volume = 0;
+          volumeSlider.value = 0;
+          volumeIcon.src = "../../assets/img/Social Icons/sem_som.png";
+          volumeIcon.alt = "Mudo";
+        }
+      });
+
+      volumeSlider.addEventListener("input", () => {
+        const volume = parseFloat(volumeSlider.value);
+
+        heroVideo.volume = volume;
+        heroVideo.muted = volume === 0;
+
+        if (volume === 0) {
+          volumeIcon.src = "../../assets/img/Social Icons/sem_som.png";
+          volumeIcon.alt = "Mudo";
+        } else {
+          volumeIcon.src = "../../assets/img/Social Icons/com_som.png";
+          volumeIcon.alt = "Com som";
+        }
+      });
     }
   </script>
 
