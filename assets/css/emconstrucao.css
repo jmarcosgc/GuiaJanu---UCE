@@ -180,12 +180,13 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #04341A;
+    background-color: #084222;
     padding-top: 150px;
-    padding-bottom: 100px;
+    padding-bottom: 350px;
 }
 
 .container-aviso {
+    margin-top: 150px;
     max-width: 600px;
     width: 90%;
     padding: 40px;

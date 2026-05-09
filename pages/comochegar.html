@@ -16,9 +16,10 @@
     
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/wave.css">
 
-    <!-- <script src="../assets/js/header.js" defer></script> -->
     <script src="../assets/js/footer.js" defer></script>
+    <script src="../assets/js/wave.js" defer></script>
 </head>
 <body>
 
@@ -80,11 +81,7 @@
             <div class="copyright-tag hero-copyright">© Aurélio Vilares/Prefeitura Municipal de Januária</div>
         </section>
 
-        <div class="wave-separator" style="--wave-color: #084222;">
-            <div class="wave-layer wave-1"><svg viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M-500,50 Q-375,0 -250,50 T0,50 Q125,0 250,50 T500,50 Q625,0 750,50 T1000,50 Q1125,0 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path></svg></div>
-            <div class="wave-layer wave-2"><svg viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M-500,50 Q-375,100 -250,50 T0,50 Q125,100 250,50 T500,50 Q625,100 750,50 T1000,50 Q1125,100 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path></svg></div>
-            <div class="wave-layer wave-3"><svg viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M-500,50 Q-375,0 -250,50 T0,50 Q125,0 250,50 T500,50 Q625,0 750,50 T1000,50 Q1125,0 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path></svg></div>
-        </div>
+        <wave-separator-component color="#084222"></wave-separator-component>
 
         <section id="comochegar" class="content-section white-section">
             <div class="text-container">
@@ -157,18 +154,17 @@
             <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
         </section>
 
-        <div class="wave-separator" style="--wave-color: #222;">
+        <wave-separator-component color="#222"></wave-separator-component>
+
+        <!--div class="wave-separator" style="--wave-color: #222;">
             <div class="wave-layer wave-1"><svg viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M-500,50 Q-375,0 -250,50 T0,50 Q125,0 250,50 T500,50 Q625,0 750,50 T1000,50 Q1125,0 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path></svg></div>
             <div class="wave-layer wave-2"><svg viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M-500,50 Q-375,100 -250,50 T0,50 Q125,100 250,50 T500,50 Q625,100 750,50 T1000,50 Q1125,100 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path></svg></div>
             <div class="wave-layer wave-3"><svg viewBox="0 0 1000 100" preserveAspectRatio="none"><path d="M-500,50 Q-375,30 -250,50 T0,50 Q125,30 250,50 T500,50 Q625,30 750,50 T1000,50 Q1125,30 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path></svg></div>
-        </div>
+        </div-->
     </main>
 
     <footer class="site-footer"></footer>
-
-    <script src="../assets/js/MenuToggle3.js"></script>
     <script src="../assets/js/Map.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

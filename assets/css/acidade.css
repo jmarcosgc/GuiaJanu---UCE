@@ -26,12 +26,12 @@ a:hover {
     text-decoration: underline;
 }
 
-
 /* =========================================
    3. HERO SECTION (Imagem Principal)
    ========================================= */
 .hero-section {
     width: 100%;
+    padding: 0 0 900px;
     height: 80vh; /* Altura padrão para PC */
     position: relative;
     overflow: hidden;
@@ -53,6 +53,7 @@ a:hover {
 /* =========================================
    4. ONDAS DECORATIVAS (WAVES)
    ========================================= */
+/*
 @keyframes move-wave {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
@@ -89,7 +90,7 @@ a:hover {
 .wave-layer.wave-1 { opacity: 0.9; animation-duration: 7s; animation-delay: -1s; }
 .wave-layer.wave-2 { opacity: 0.8; animation-duration: 10s; }
 .wave-layer.wave-3 { opacity: 0.7; animation-duration: 13s; }
-
+*/
 
 /* =========================================
    5. SEÇÕES DE CONTEÚDO
@@ -97,8 +98,10 @@ a:hover {
 .discover-section,
 .plan-section { 
     width: 100%;
+    height: 150% !important;
     min-height: 90vh;
-    padding: 60px 20px 0;
+    padding: 60px 20px 150px;
+    /* padding: top, right, botton, left */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -106,8 +109,10 @@ a:hover {
     gap: 40px;
 }
 
-.discover-section { background: rgba(4, 52, 26, 0.9); }
-.plan-section     { background: rgba(143, 35, 23, 0.9); }
+/* .discover-section { background: rgba(4, 52, 26, 0.9); } */
+.discover-section {background-color: #084222;}
+/* .plan-section     { background: rgba(143, 35, 23, 0.9); } */
+.plan-section { background-color: #8f2317;}
 
 .apresentacao-container {
     width: 100%;

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 
 :root {
-  --cor-verde: #04341a;
+  --cor-verde: #084222;
   --cor-vermelho: #8f2317;
   --cor-amarelo: #e99931;
   --cor-footer: #222;
@@ -113,7 +113,8 @@ a:hover {
 /* HERO */
 .hero {
   width: 100%;
-  height: 85vh;
+  /* height: 85vh; */
+  padding-top: 900px;
   min-height: 500px;
   position: relative;
   overflow: hidden;
@@ -152,6 +153,7 @@ a:hover {
   line-height: 1.1;
   letter-spacing: 1px;
   text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  margin-bottom: 50px !important;
 }
 
 .conteudo-hero-pandeiros h1 {
@@ -166,24 +168,6 @@ a:hover {
   text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
   margin-bottom: 40px !important;
 }
-
-/*.hero-credit {
-  position: absolute;
-  right: 14px;
-  bottom: 48px;
-  left: auto;
-  background: rgba(41, 42, 43, 0.88);
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  padding: 7px 10px;
-  border-radius: 6px;
-  z-index: 5;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.28);
-  pointer-events: none;
-  white-space: nowrap;
-}*/
 
 
 /* COPYRIGHT */
@@ -202,12 +186,13 @@ a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
   pointer-events: none;
   white-space: nowrap;
+  margin-bottom: 60px !important;
 }
 
-.copyright-tag-up {
+.copyright-tag-img {
   position: absolute;
   right: 14px;
-  bottom: 57px;
+  bottom: 14px;
   background: rgba(25, 25, 25, 0.82);
   color: #fff;
   font-size: 14px;
@@ -219,6 +204,7 @@ a:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
   pointer-events: none;
   white-space: nowrap;
+  margin-bottom: 1px !important;
 }
 
 .hero-copyright {
@@ -228,13 +214,6 @@ a:hover {
   z-index: 3;
 }
 
-/* cais.css */
-/*.slide-img-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}*/
-
 /* SEÇÕES */
 .section-amarelo {
   background-color: var(--cor-amarelo);
@@ -243,24 +222,25 @@ a:hover {
 
 .section-verde {
   background-color: var(--cor-verde);
-  padding: 80px 20px 100px;
+  padding: 80px 20px 200px;
   color: #fff;
 }
 
 .section-vermelho {
   background-color: var(--cor-vermelho);
-  padding: 80px 20px;
+  padding: 80px 20px 200px;
   color: #fff;
 }
 
 .section-azul {
   background-color: var(--cor-azul);
-  padding: 80px 20px;
+  padding: 80px 20px 200px;
   color: #fff;
   text-align: center;
 }
 
 /* ONDAS */
+/*
 @keyframes move-wave {
   0% {
     transform: translateX(0);
@@ -338,7 +318,7 @@ a:hover {
   margin-top: -80px;
   margin-bottom: -1px;
 }
-
+*/
 /* CONTEÚDO */
 .conteudo-limitado {
   max-width: 1100px;
