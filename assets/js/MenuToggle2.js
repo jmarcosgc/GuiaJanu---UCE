@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
+    /*const menuToggle = document.querySelector('.menu-toggle');
     const menuClose = document.querySelector('.menu-close');
     const mainNav = document.querySelector('.main-nav');
 
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.classList.remove('resize-transition-stopper');
         }, 400);
     });
-
+    */
     const video = document.getElementById('hero-video');
     const volumeToggle = document.getElementById('volume-toggle');
     const volumeIcon = document.getElementById('volume-icon');

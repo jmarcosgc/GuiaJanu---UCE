@@ -51,48 +51,6 @@ a:hover {
 }
 
 /* =========================================
-   4. ONDAS DECORATIVAS (WAVES)
-   ========================================= */
-/*
-@keyframes move-wave {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-.wave-separator {
-    width: 100%;
-    height: 100px;
-    position: relative; 
-    overflow: hidden; 
-    margin-top: -50px; 
-    z-index: 2; 
-}
-
-.hero-section + .wave-separator {
-    z-index: 3;
-}
-
-.wave-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%; 
-    height: 100px; 
-    animation: move-wave linear infinite;
-}
-
-.wave-layer svg {
-    width: 100%; 
-    height: 100px;
-    display: block;
-}
-
-.wave-layer.wave-1 { opacity: 0.9; animation-duration: 7s; animation-delay: -1s; }
-.wave-layer.wave-2 { opacity: 0.8; animation-duration: 10s; }
-.wave-layer.wave-3 { opacity: 0.7; animation-duration: 13s; }
-*/
-
-/* =========================================
    5. SEÇÕES DE CONTEÚDO
    ========================================= */
 .discover-section,
@@ -233,6 +191,10 @@ details[open] .icone-seta { transform: rotate(180deg); }
         min-height: 300px;
     }
 
+    .copyright-tag {
+        margin-bottom: 50px !important;
+    }
+
     .apresentacao-content {
         flex-direction: column;
     }
@@ -286,15 +248,42 @@ details[open] .icone-seta { transform: rotate(180deg); }
     font-weight: 500;
 }
 
-.copyright2 {
-    position: absolute;
-    bottom: 35px; /* Sobe o texto para ficar acima das ondas (que têm margem negativa de 50px) */
-    right: 20px; /* Alinha no canto direito */
-    z-index: 5; /* Garante que fique por cima da imagem e das ondas */
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.6); /* Fundo escurinho levemente transparente para dar leitura */
-    padding: 5px 5px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 500;
+.copyright-tag {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  background: rgba(25, 25, 25, 0.82);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 7px 10px;
+  border-radius: 6px;
+  z-index: 4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+  white-space: nowrap;
+  margin-bottom: 60px !important;
+}
+
+.copyright-tag-img {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  background: rgba(25, 25, 25, 0.82);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 7px 10px;
+  border-radius: 6px;
+  z-index: 4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+  white-space: nowrap;
+  margin-bottom: 1px !important;
+}
+
+summary {
+    background-color: #222;
 }

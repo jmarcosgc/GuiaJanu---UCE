@@ -103,6 +103,7 @@ a:hover {
     align-items: flex-start;
 }
 
+/*
 .hero-copyright {
     position: absolute;
     bottom: 40px;
@@ -114,6 +115,31 @@ a:hover {
     border-radius: 6px;
     font-size: 12px;
     font-weight: 500;
+}*/
+
+.copyright-tag {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  background: rgba(25, 25, 25, 0.82);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 7px 10px;
+  border-radius: 6px;
+  z-index: 4;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
+  pointer-events: none;
+  white-space: nowrap;
+  margin-bottom: 60px !important;
+}
+
+.hero-copyright {
+  right: 14px;
+  bottom: 48px;
+  left: auto;
+  z-index: 3;
 }
 
 .text-container {
