@@ -20,14 +20,13 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* HERO */
 .hero-section {
     width: 100%;
     height: 80vh;
-    padding: 0 0 900px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -35,14 +34,26 @@ a:hover {
     align-items: center;
 }
 
-#hero-video {
+#hero-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+    object-position: center;
+
     z-index: 1;
+}
+
+/* Escurece levemente a imagem para o título aparecer melhor */
+.hero-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 2;
 }
 
 .hero-title-container {
@@ -50,6 +61,7 @@ a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
     width: 100%;
     text-align: center;
     z-index: 5;
@@ -63,73 +75,34 @@ a:hover {
     line-height: 1.2;
     letter-spacing: 0.45em;
     color: #ffffff;
-    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.30);
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.45);
     margin: 0;
 }
 
-/* CONTROLES DO VÍDEO */
-.video-copyright {
+/* COPYRIGHT PADRÃO */
+.copyright-tag {
     position: absolute;
-    bottom: 100px;
-    right: 20px;
+    bottom: 15px;
+    right: 15px;
     z-index: 6;
+
     color: rgba(255, 255, 255, 0.7);
-    font-size: 12px;
-    font-weight: 300;
+    font-size: 11px;
+    font-weight: 500;
     letter-spacing: 1px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
     pointer-events: none;
 }
 
-.video-controls {
-    position: absolute;
-    bottom: 100px;
-    left: 20px;
+.copyright-tag---hero {
+    margin-bottom: 70px !important;
+}
+
+.hero-copyright {
+    right: 14px;
+    left: auto;
     z-index: 6;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: rgba(0, 0, 0, 0.4);
-    border-radius: 20px;
-}
-
-.video-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
-.video-btn img {
-    width: 25px;
-    height: 25px;
-    filter: invert(1);
-    display: block;
-}
-
-input[type=range] {
-    width: 80px;
-    background: transparent;
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-    width: 100%;
-    height: 4px;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 2px;
-    cursor: pointer;
-}
-
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;
-    background: #ffffff;
-    cursor: pointer;
-    margin-top: -4px;
 }
 
 /* LISTAGEM */
@@ -143,20 +116,21 @@ input[type=range]::-webkit-slider-thumb {
 .list-cards-container {
     width: 100%;
     max-width: 1200px;
+
     display: grid;
     grid-template-columns: repeat(3, 300px);
     justify-content: center;
-    gap: 40px 70px;
+
+    gap: 32px 70px;
     margin: 0 auto;
 }
 
-/* MÁGICA DO ALINHAMENTO AQUI */
 .list-cards-container .card {
     display: flex;
     flex-direction: column;
-    height: 100%;
     align-items: center;
     text-align: center;
+
     background: transparent;
     padding: 0;
     border-radius: 10px;
@@ -164,11 +138,9 @@ input[type=range]::-webkit-slider-thumb {
     text-decoration: none;
 }
 
-/* A tag <a> que engloba a imagem e o título vai crescer para empurrar o botão para baixo */
-.list-cards-container .card > a:first-child {
+.card-link-area {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
     width: 100%;
     text-decoration: none;
     color: inherit;
@@ -179,6 +151,7 @@ input[type=range]::-webkit-slider-thumb {
     width: 100%;
     height: 220px;
     flex-shrink: 0;
+
     border-radius: 10px;
     overflow: hidden;
 }
@@ -186,8 +159,10 @@ input[type=range]::-webkit-slider-thumb {
 .card-image {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
     display: block;
+
     transition: transform 0.4s ease;
 }
 
@@ -195,67 +170,18 @@ input[type=range]::-webkit-slider-thumb {
     transform: scale(1.04);
 }
 
-.copyright-tag {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
-    z-index: 6;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 12px;
-    font-weight: 300;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    pointer-events: none;
-}
-
-.copyright-tag---hero {
-    margin-bottom: 70px !important;
-}
-
 .list-cards-container .card-title {
-    flex-grow: 1; /* Garante que o texto ocupe o espaço extra se o título for curto */
     color: #000000;
-    margin-top: 15px;
-    margin-bottom: 15px;
+
+    margin-top: 8px;
+    margin-bottom: 0;
+
     font-size: 1.5rem;
     line-height: 1.2;
     font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
     text-align: center;
 }
-
-.list-cards-container .card-link {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: auto; /* Empurra o botão firmemente para a base do card */
-    border: 2px solid #8f2317;
-    color: #8f2317;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1.1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.list-cards-container .card-link:hover {
-    background-color: #8f2317;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-/* FOOTER */
-/* (Seu código do footer estava comentado, mantive exatamente como você enviou)
-.site-footer {
-    width: 100%;
-    padding: 60px 50px;
-    background: #222;
-    color: #f0f0f0;
-    text-align: left;
-}
-...
-*/
 
 /* RESPONSIVO */
 .resize-transition-stopper .main-nav {
@@ -269,7 +195,7 @@ input[type=range]::-webkit-slider-thumb {
 @media (max-width: 1024px) {
     .list-cards-container {
         grid-template-columns: repeat(2, 300px);
-        gap: 35px 40px;
+        gap: 32px 40px;
     }
 }
 
@@ -292,13 +218,17 @@ input[type=range]::-webkit-slider-thumb {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         position: fixed;
         top: 80px;
         left: 0;
+
         width: 100%;
         height: calc(100vh - 80px);
+
         background: rgba(0, 0, 0, 0.95);
         z-index: 100;
+
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
     }
@@ -311,8 +241,10 @@ input[type=range]::-webkit-slider-thumb {
         display: block;
         padding: 0;
         margin: 0;
+
         line-height: 1;
         font-size: 30px;
+
         color: #ffffff;
         text-shadow: none;
     }
@@ -322,6 +254,7 @@ input[type=range]::-webkit-slider-thumb {
         position: absolute;
         top: 20px;
         right: 40px;
+
         color: white;
         font-size: 40px;
     }
@@ -344,9 +277,11 @@ input[type=range]::-webkit-slider-thumb {
         gap: 20px !important;
         margin-left: auto;
         margin-right: -10px;
+
         display: flex;
         align-items: center;
         justify-content: flex-end;
+
         transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     }
 
@@ -364,8 +299,8 @@ input[type=range]::-webkit-slider-thumb {
         opacity: 0;
     }
 
-    #volume-slider {
-        display: none;
+    .hero-section {
+        height: 75vh;
     }
 
     .hero-title-discover {
@@ -380,7 +315,7 @@ input[type=range]::-webkit-slider-thumb {
     .list-cards-container {
         grid-template-columns: 1fr;
         justify-items: center;
-        gap: 40px; /* Aumentei levemente o gap para o celular para respirar melhor */
+        gap: 32px;
     }
 
     .list-cards-container .card {
@@ -388,25 +323,28 @@ input[type=range]::-webkit-slider-thumb {
         max-width: 320px;
     }
 
-    .list-cards-container .card-image {
+    .card-image-wrapper {
         height: 210px;
     }
 
     .list-cards-container .card-title {
         font-size: 1.35rem;
-        margin-top: 12px;
-        margin-bottom: 12px;
-    }
-
-    .list-cards-container .card-link {
-        font-size: 1rem;
+        margin-top: 7px;
+        margin-bottom: 0;
     }
 
     .copyright-tag {
         font-size: 11px;
-        padding: 6px 8px;
         right: 8px;
         bottom: 8px;
+    }
+
+    .copyright-tag---hero {
+        margin-bottom: 35px !important;
+    }
+
+    .hero-copyright {
+        right: 15px;
     }
 
     .footer-extra-info {
@@ -432,6 +370,9 @@ input[type=range]::-webkit-slider-thumb {
 
     .copyright-tag {
         font-size: 10px;
-        padding: 5px 7px;
+    }
+
+    .list-cards-container .card-title {
+        font-size: 1.25rem;
     }
 }
