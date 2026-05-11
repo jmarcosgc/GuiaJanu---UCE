@@ -70,7 +70,11 @@ a:hover {
     color: #666;
 }
 
-.loader-custom {
+.icon-anim {
+    font-size: 50px;
+}
+
+/* .loader-custom {
     border: 5px solid #f3f3f3;
     border-top: 5px solid #3d66bd;
     border-radius: 50%;
@@ -78,7 +82,7 @@ a:hover {
     height: 50px;
     animation: spin-anim 1s linear infinite;
     margin: 20px auto 0;
-}
+} */
 
 @keyframes spin-anim {
     0% { transform: rotate(0deg); }
