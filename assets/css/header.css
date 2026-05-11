@@ -113,7 +113,7 @@
     align-items: center;
     justify-content: flex-end;
     gap: 30px;
-    width: 200px;
+    width: 100px;
     flex-shrink: 0;
 }
 
