@@ -325,7 +325,7 @@ input[type=range]::-webkit-slider-thumb {
     z-index: 10;
 }
 
-/* Cores de Fundo das Seções */
+
 .discover-section {
     background: #084222;
 }
@@ -338,7 +338,6 @@ input[type=range]::-webkit-slider-thumb {
     background: rgba(253, 216, 164, 1);
 }
 
-/* Títulos das Seções */
 .section-title {
     font-family: 'Ubuntu', sans-serif;
     font-size: 52px;
