@@ -14,9 +14,10 @@
 
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/wave.css">
 
-    <!-- <script src="../assets/js/header.js" defer></script> -->
     <script src="../assets/js/footer.js" defer></script>
+    <script src="../assets/js/wave.js" defer></script>
 </head>
 <body>
 
@@ -90,182 +91,151 @@
                 <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0">
             </div>
 
-            <div class="video-copyright">© Prefeitura Municipal de Januária</div>
+            <!-- <div class="video-copyright">© Prefeitura Municipal de Januária</div> -->
+            <div class="copyright-tag hero-copyright copyright-tag---hero">© Prefeitura Municipal de Januária</div>
         </section>
 
-        <div class="wave-separator" style="--wave-color: #e9962c;">
-            <div class="wave-layer wave-1">
-                <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
-                    <path d="M-500,50 Q-375,0 -250,50 T0,50 Q125,0 250,50 T500,50 Q625,0 750,50 T1000,50 Q1125,0 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path>
-                </svg>
-            </div>
-            <div class="wave-layer wave-2">
-                <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
-                    <path d="M-500,50 Q-375,100 -250,50 T0,50 Q125,100 250,50 T500,50 Q625,100 750,50 T1000,50 Q1125,100 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path>
-                </svg>
-            </div>
-            <div class="wave-layer wave-3">
-                <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
-                    <path d="M-500,50 Q-375,0 -250,50 T0,50 Q125,0 250,50 T500,50 Q625,0 750,50 T1000,50 Q1125,0 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path>
-                </svg>
-            </div>
-        </div>
+        <wave-separator-component color="#e9962c"></wave-separator-component>
 
         <section id="lista-pontos" class="list-section">
             <div class="list-cards-container">
 
                 <div class="card">
-                    <a href="../pages/pontos_turisticos_html/pantano_mineiro.html">
+                    <a href="../pages/pontos_turisticos_html/pantano_mineiro.html" class="card">
                         <div class="card-image-wrapper">
                             <img src="../assets/img/img principais/pantano mineiro.jpeg" alt="Pântano Mineiro - Imagem" class="card-image">
                             <div class="copyright-tag">© Prefeitura de Januária</div>
                         </div>
                         <h3 class="card-title">Pântano Mineiro</h3>
-                        <a href="../pages/pontos_turisticos_html/pantano_mineiro.html" class="card-link">Saiba mais</a>
+                        <span class="card-link">Saiba mais</span>
                     </a>
                 </div>
 
                 <div class="card">
-                    <a href="../pages/pontos_turisticos_html/cachoeira_rio_pandeiros.html">    
+                    <a href="../pages/pontos_turisticos_html/cachoeira_rio_pandeiros.html" class="card">    
                         <div class="card-image-wrapper">
                             <img src="../assets/img/img principais/Cachoeira do rio pandeiros (1).jpg" alt="Cachoeiras do rio Pandeiros - Imagem" class="card-image">
                             <div class="copyright-tag">© Prefeitura de Januária</div>
                         </div>
                         <h3 class="card-title">Cachoeiras do rio Pandeiros</h3>
-                        <a href="../pages/pontos_turisticos_html/cachoeira_rio_pandeiros.html" class="card-link">Saiba mais</a>
+                        <span class="card-link">Saiba mais</span>
                     </a>
                 </div>
 
                 <div class="card">
-                    <a href="../pages/pontos_turisticos_html/igreja_nossa_senhora_rosario.html">
+                    <a href="../pages/pontos_turisticos_html/igreja_nossa_senhora_rosario.html" class="card">
                         <div class="card-image-wrapper">
                             <img src="../assets/img/img principais/igreja.jpg" alt="Igreja Nossa Senhora do Rosário - Imagem" class="card-image">
                             <div class="copyright-tag">© @la_belle_jan</div>
                         </div>
                         <h3 class="card-title">Igreja Nossa Senhora do Rosário</h3>
-                        <a href="../pages/pontos_turisticos_html/igreja_nossa_senhora_rosario.html" class="card-link">Saiba mais</a>
+                        <span class="card-link">Saiba mais</span>
                     </a>
                 </div>
 
                 <div class="card">
-                    <a href="../pages/pontos_turisticos_html/morro_brejo.html">
+                    <a href="../pages/pontos_turisticos_html/morro_brejo.html" class="card">
                         <div class="card-image-wrapper">
                             <img src="../assets/img/img principais/Mirante do brejo.jpg" alt="Mirante do Brejo do Amparo - Imagem" class="card-image">
                             <div class="copyright-tag">© Prefeitura de Januária</div>
                         </div>
                         <h3 class="card-title">Mirante do Brejo do Amparo</h3>
-                        <a href="../pages/pontos_turisticos_html/morro_brejo.html" class="card-link">Saiba mais</a>
+                        <span class="card-link">Saiba mais</span>
                     </a>
                 </div>
 
                 <div class="card">
-                    <a href="../pages/pontos_turisticos_html/distrito_brejo_amparo.html">    
+                    <a href="../pages/pontos_turisticos_html/distrito_brejo_amparo.html" class="card">    
                         <div class="card-image-wrapper">
                             <img src="../assets/img/img principais/brejo.jpg" alt="Brejo do Amparo - Distrito Histórico - Imagem" class="card-image">
                             <div class="copyright-tag">© @la_belle_janu</div>
                         </div>
                         <h3 class="card-title">Brejo do Amparo - Distrito Histórico</h3>
-                        <a href="../pages/pontos_turisticos_html/distrito_brejo_amparo.html" class="card-link">Saiba mais</a>
+                        <span class="card-link">Saiba mais</span>
                     </a>
                 </div>
 
                 <div class="card">
-                    <a href="../pages/pontos_turisticos_html/praia.html">
+                    <a href="../pages/pontos_turisticos_html/praia.html" class="card">
                         <div class="card-image-wrapper">
                             <img src="../assets/img/img principais/praia .jpg" alt="Praia de Minas - Imagem" class="card-image">
                             <div class="copyright-tag">© @la_belle_janu</div>
                         </div>
                         <h3 class="card-title">Praia de Minas</h3>
-                        <a href="../pages/pontos_turisticos_html/praia.html" class="card-link">Saiba mais</a>
+                        <span class="card-link">Saiba mais</span>
                     </a>
                 </div>
 
                 <div class="card">
-                    <a href="../pages/pontos_turisticos_html/getulio_vargas.html">
+                    <a href="../pages/pontos_turisticos_html/getulio_vargas.html" class="card">
                         <div class="card-image-wrapper">
                             <img src="../assets/img/img principais/praça getulio 6.jpg" alt="Praça Getúlio Vargas - Imagem" class="card-image">
                             <div class="copyright-tag">© @la_belle_janu</div>
                         </div>
                         <h3 class="card-title">Praça Getúlio Vargas</h3>
-                        <a href="../pages/pontos_turisticos_html/getulio_vargas.html" class="card-link">Saiba mais</a>
+                        <span class="card-link">Saiba mais</span>
                     </a>
                 </div>
 
                 <div class="card">
-                    <a href="../pages/pontos_turisticos_html/tiradentes.html">
+                    <a href="../pages/pontos_turisticos_html/tiradentes.html" class="card">
                         <div class="card-image-wrapper">
                             <img src="../assets/img/img principais/tiradentes.jpg" alt="Praça Tiradentes - Imagem" class="card-image">
                             <div class="copyright-tag">© @la_belle_janu</div>
                         </div>
                         <h3 class="card-title">Praça Tiradentes</h3>
-                        <a href="../pages/pontos_turisticos_html/tiradentes.html" class="card-link">Saiba mais</a>
+                        <span class="card-link">Saiba mais</span>
                     </a>
                 </div>
 
                 <div class="card">
-                    <a href="../pages/pontos_turisticos_html/rio.html">
+                    <a href="../pages/pontos_turisticos_html/rio.html" class="card">
                         <div class="card-image-wrapper">
                             <img src="../assets/img/img principais/rio sao francisco.jpg" alt="Rio São Francisco - Imagem" class="card-image">
                             <div class="copyright-tag">© @la_belle_janu</div>
                         </div>
                         <h3 class="card-title">Rio São Francisco</h3>
-                        <a href="../pages/pontos_turisticos_html/rio.html" class="card-link">Saiba mais</a>
+                        <span class="card-link">Saiba mais</span>
                     </a>
                 </div>
 
                 <div class="card">
-                    <a href="../pages/pontos_turisticos_html/rua_da_cultura.html">    
+                    <a href="../pages/pontos_turisticos_html/rua_da_cultura.html" class="card">    
                         <div class="card-image-wrapper">
                             <img src="../assets/img/img principais/rua da cultura.jpg" alt="Rua da Cultura - Imagem" class="card-image">
                             <div class="copyright-tag">© @la_belle_janu</div>
                         </div>
                         <h3 class="card-title">Rua da Cultura</h3>
-                        <a href="../pages/pontos_turisticos_html/rua_da_cultura.html" class="card-link">Saiba mais</a>
+                        <span class="card-link">Saiba mais</span>
                     </a>
                 </div>
 
                 <div class="card">
-                    <a href="../pages/pontos_turisticos_html/cais.html">
+                    <a href="../pages/pontos_turisticos_html/cais.html" class="card">
                         <div class="card-image-wrapper">
                             <img src="../assets/img/img principais/cais.jpg" alt="Cais de Januária - Imagem" class="card-image">
                             <div class="copyright-tag">© @la_belle_janu</div>
                         </div>
                         <h3 class="card-title">Cais de Januária</h3>
-                        <a href="../pages/pontos_turisticos_html/cais.html" class="card-link">Saiba mais</a>
+                        <span class="card-link">Saiba mais</span>
                     </a>
                 </div>
 
                 <div class="card">
-                    <a href="../pages/pontos_turisticos_html/peruacu.html">
+                    <a href="../pages/pontos_turisticos_html/peruacu.html" class="card">
                         <div class="card-image-wrapper">
                             <img src="../assets/img/img principais/Janelão 1 .jpeg" alt="Parque Nacional Cavernas do Peruaçu - Imagem" class="card-image">
                             <div class="copyright-tag">© Davi Almeida</div>
                         </div>
                         <h3 class="card-title">Parque Nacional Cavernas do Peruaçu</h3>
-                        <a href="../pages/pontos_turisticos_html/peruacu.html" class="card-link">Saiba mais</a>
+                        <span class="card-link">Saiba mais</span>
                     </a>
                 </div>
 
             </div>
         </section>
 
-        <div class="wave-separator" style="--wave-color: #222;">
-            <div class="wave-layer wave-1">
-                <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
-                    <path d="M-500,50 Q-375,0 -250,50 T0,50 Q125,0 250,50 T500,50 Q625,0 750,50 T1000,50 Q1125,0 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path>
-                </svg>
-            </div>
-            <div class="wave-layer wave-2">
-                <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
-                    <path d="M-500,50 Q-375,100 -250,50 T0,50 Q125,100 250,50 T500,50 Q625,100 750,50 T1000,50 Q1125,100 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path>
-                </svg>
-            </div>
-            <div class="wave-layer wave-3">
-                <svg viewBox="0 0 1000 100" preserveAspectRatio="none">
-                    <path d="M-500,50 Q-375,0 -250,50 T0,50 Q125,0 250,50 T500,50 Q625,0 750,50 T1000,50 Q1125,0 1250,50 T1500,50 V101 H-500 Z" fill="var(--wave-color)"></path>
-                </svg>
-            </div>
-        </div>
+        <wave-separator-component color="#222"></wave-separator-component>
 
     </main>
 

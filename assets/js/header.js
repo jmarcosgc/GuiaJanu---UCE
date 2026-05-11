@@ -33,13 +33,13 @@ const headerHTML = `
                     <input type="checkbox" id="drop-2" class="drop-checkbox" hidden>
                     
                     <div class="link-wrapper">
-                        <a href="#">Mais</a>
+                        <a href="">Mais</a>
                         <label for="drop-2" class="drop-icon">▾</label>
                     </div>
 
                     <ul class="dropdown">
-                        <li><a href="#">CAT</a></li>
-                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="../pages/cat.html">CAT</a></li>
+                        <li><a href="../pages/aboutUs.html">Sobre Nós</a></li>
                     </ul>
                 </li>
             </ul>

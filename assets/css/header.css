@@ -85,9 +85,10 @@
 
 .dropdown a {
     font-size: 30px; 
-    text-shadow: none; 
+    /* text-shadow: none;  */
     display: block;
     padding: 10px;
+    text-shadow: 2px 2px #555 !important;
 }
 
 .dropdown li {
