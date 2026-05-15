@@ -1,7 +1,7 @@
 const headerElement = document.querySelector('.site-header');
 
 const headerHTML = `
-        <a href="../../index.html"><img src="../../assets/img/Logo/TauriLogo2.png" alt="Logo GuiaJanu" class="logo-header"></a>
+        <a href="../../index.html"><img src="../../assets/img/Logo/TauriLogo2.webp" alt="Logo GuiaJanu" class="logo-header"></a>
         <input type="checkbox" id="menu-mobile-check" class="menu-checkbox" hidden>
 
         <nav class="main-nav">
@@ -44,7 +44,7 @@ const headerHTML = `
 
         <div class="header-right">
             <a href="https://www.instagram.com/guia.janu" class="social-icon" target="_blank">
-                <img src="../../assets/img/Social Icons/insta_logo.png" alt="Instagram">
+                <img src="../../assets/img/Social Icons/insta_logo.webp" alt="Instagram">
             </a>
             <label for="menu-mobile-check" class="menu-toggle" aria-label="Abrir menu">☰</label>
         </div>
