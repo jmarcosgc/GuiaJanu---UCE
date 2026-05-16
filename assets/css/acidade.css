@@ -235,20 +235,46 @@ details[open] .icone-seta { transform: rotate(180deg); }
     line-height: 1.6; 
 }
 
-.copyright {
+/*
+.copyright-tag {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  z-index: 6;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
+
+.copyright-tag---hero {
+  margin-bottom: 70px !important;
+}
+
+.hero-copyright {
+  right: 14px;
+  left: auto;
+  z-index: 3;
+}*/
+
+
+/*.copyright {
     position: absolute;
-    bottom: 17px; /* Sobe o texto para ficar acima das ondas (que têm margem negativa de 50px) */
-    right: 20px; /* Alinha no canto direito */
-    z-index: 5; /* Garante que fique por cima da imagem e das ondas */
+    bottom: 17px;
+    right: 20px;
+    z-index: 5;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.6); /* Fundo escurinho levemente transparente para dar leitura */
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 5px 5px;
     border-radius: 6px;
     font-size: 12px;
     font-weight: 500;
 }
+*/
 
-.copyright-tag {
+/*.copyright-tag {
   position: absolute;
   right: 14px;
   bottom: 14px;
@@ -264,25 +290,45 @@ details[open] .icone-seta { transform: rotate(180deg); }
   pointer-events: none;
   white-space: nowrap;
   margin-bottom: 60px !important;
-}
+}*/
 
 .copyright-tag-img {
   position: absolute;
   right: 14px;
   bottom: 14px;
-  background: rgba(25, 25, 25, 0.82);
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
   font-size: 14px;
-  font-weight: 500;
+  /* font-weight: 500; */
   line-height: 1;
-  padding: 7px 10px;
-  border-radius: 6px;
+  /* padding: 7px 10px; */
+  /* border-radius: 6px; */
   z-index: 4;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
-  pointer-events: none;
-  white-space: nowrap;
-  margin-bottom: 1px !important;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  /* pointer-events: none; */
+  /* white-space: nowrap; */
 }
+
+.copyright-tag---hero {
+  margin-bottom: 70px !important;
+}
+
+/*
+.copyright-tag {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  z-index: 6;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}*/
+
+
+
 
 summary {
     background-color: #222;
