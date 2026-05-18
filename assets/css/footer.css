@@ -219,3 +219,43 @@
 .footer-bottom p a:hover {
     color: #fff;
 }
+
+/* ==========================================================================
+   RESPONSIVIDADE (RESOLVE O ALINHAMENTO DAS LOGOS E DO FOOTER NO MOBILE)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 40px 15px; /* Reduz o preenchimento para telas de celular */
+    }
+
+    .footer-main {
+        flex-direction: column; /* Empilha as colunas de "O que fazer" e "Contatos" */
+        align-items: center;    /* Joga tudo pro meio */
+        text-align: center;
+        gap: 40px;
+    }
+
+    .location-link {
+        justify-content: center; /* Centraliza o ícone de localização com o texto */
+    }
+
+    /* Solução direta para a área das logos */
+    .footer-extra-info {
+        flex-direction: column;  /* Obriga as duas sessões a ficarem uma embaixo da outra */
+        align-items: center;     /* Centraliza as sessões na tela */
+        justify-content: center;
+        gap: 50px;               /* Dá um bom respiro entre "Desenvolvido por" e "Parceiros" */
+    }
+
+    .developed-by-section,
+    .footer-partners {
+        width: 100%;
+        align-items: center; /* Trava o alinhamento central */
+    }
+
+    .developed-logos,
+    .partners-logos {
+        justify-content: center; /* As logos ficarão perfeitamente no meio */
+        gap: 20px;               /* Aproxima um pouco as logos caso a tela seja muito estreita */
+    }
+}

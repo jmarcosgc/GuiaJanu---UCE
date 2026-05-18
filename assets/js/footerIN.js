@@ -24,8 +24,8 @@ const footerHTML = `
         <div class="footer-col links-col">
           <h4>Descubra Januária</h4>
           <ul>
-            <li><a href="./pages/ACidade.hmtl">A Cidade</a></li>
-            <li><a href="./pages/comochegar.hmtl">Como Chegar</a></li>
+            <li><a href="./pages/acidade.html">A Cidade</a></li>
+            <li><a href="./pages/comochegar.html">Como Chegar</a></li>
             </ul>
         </div>
 

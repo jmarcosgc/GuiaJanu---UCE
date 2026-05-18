@@ -22,9 +22,9 @@ const headerHTML = `
                     </ul>
                 </li>
                 
-                <li><a href="./ListagemPontosTuristicos.html">O Que Fazer</a></li>
-                <li><a href="./emconstrucao.html">Onde Comer</a></li>
-                <li><a href="./emconstrucao.html">Onde Ficar</a></li>
+                <li><a href="../../pages/ListagemPontosTuristicos.html">O Que Fazer</a></li>
+                <li><a href="../../pages/emconstrucao.html">Onde Comer</a></li>
+                <li><a href="../../pages/emconstrucao.html">Onde Ficar</a></li>
                 
                 <li>
                     <input type="checkbox" id="drop-2" class="drop-checkbox" hidden>

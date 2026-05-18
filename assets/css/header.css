@@ -2,9 +2,6 @@
    HEADER GLOBAL E NAVEGAÇÃO
    ========================================================================== */
 
-/* main-nav  /  nav-links  /  link-wrapper */
-
-
 .site-header {
     width: 100%;
     padding: 20px 40px;
@@ -16,8 +13,6 @@
     left: 0;
     z-index: 10;
     justify-content: space-between;
-
-    /* background-color: black; */
 }
 
 .logo-header {
@@ -79,7 +74,7 @@
     visibility: hidden;
     transition: all 0.3s ease;
     transition-delay: 0.4s;
-    z-index: 99;
+    z-index: 1;
     gap: 10px !important; 
 }
 

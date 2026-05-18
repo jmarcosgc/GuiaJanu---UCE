@@ -1,17 +1,47 @@
+/* ==========================================================================
+   01. VARIÁVEIS (DESIGN SYSTEM)
+   ========================================================================== */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
 
 :root {
+  /* Paleta de Cores Principais */
   --cor-verde: #084222;
   --cor-vermelho: #8f2317;
   --cor-amarelo: #e99931;
-  --cor-footer: #222;
-  --cor-texto: #000;
   --cor-azul: #072530;
-  --cor-branco: #fff;
+  
+  /* Cores Neutras e Texto */
+  --cor-branco: #ffffff;
+  --cor-preto: #000000;
+  --cor-texto: #000000;
+  --cor-texto-claro: #ffffff;
+  --cor-texto-muted: rgba(255, 255, 255, 0.7);
+  --cor-fundo-escuro: #111111;
+
+  /* Cores de Destaque e Links */
+  --cor-destaque: #ffd9a8;
+  --cor-link: #6ec1ff;
+  --cor-link-hover: #9fd7ff;
+  --cor-link-alt: #00BFFF;
+
+  /* Tipografia */
+  --font-principal: 'Inter', sans-serif;
+  --font-titulos: 'Rye', serif;
+
+  /* Sombras e Efeitos */
+  --sombra-texto: 0px 4px 8px rgba(0, 0, 0, 0.4);
   --sombra-card: 0 10px 25px rgba(0, 0, 0, 0.15);
   --sombra-forte: 0 25px 50px rgba(0, 0, 0, 0.35);
+  --sombra-slide: 0 30px 60px rgba(0, 0, 0, 0.45);
+  
+  /* Transições */
+  --transition-speed: 0.3s;
 }
 
+/* ==========================================================================
+   02. RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -20,156 +50,281 @@
 
 html,
 body {
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-principal);
   font-size: 14px;
   color: var(--cor-texto);
-  background: #fff;
+  background: var(--cor-branco);
   line-height: 1.6;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  transition: color var(--transition-speed) ease;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-/* HERO */
-.hero {
-  width: 100%;
-  /* height: 85vh; */
-  padding-top: 900px;
-  min-height: 500px;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-img-wrapper {
-  position: absolute;
-  inset: 0;
-}
-
-.overlay {
-  position: absolute;
-  inset: 0;
-  /* background: rgba(0, 0, 0, 0.45); */
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 0 20px 60px;
-}
-
-.conteudo-hero h1 {
-  font-family: 'Rye', serif;
-  font-size: 72px;
-  font-weight: 400;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 1.1;
-  letter-spacing: 1px;
-  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-  margin-bottom: 50px !important;
-}
-
-.conteudo-hero-pandeiros h1 {
-  font-family: 'Rye', serif;
-  font-size: 72px;
-  font-weight: 400;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 1.1;
-  letter-spacing: 1px;
-  text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-  margin-bottom: 40px !important;
-}
-
-
-.copyright-tag {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  z-index: 6;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-  pointer-events: none;
-}
-
-.copyright-tag---hero {
-  margin-bottom: 70px !important;
-}
-
-.copyright-tag-gruta {
-  position: absolute;
-  bottom: 100px;
-  right: 20px;
-  z-index: 6;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-  pointer-events: none;
-  margin-bottom: 100px !important;
-}
-
-.hero-copyright {
-  right: 14px;
-  /* bottom: 48px; */
-  left: auto;
-  z-index: 3;
-}
-
-/* SEÇÕES */
-.section-amarelo {
-  background-color: var(--cor-amarelo);
-  padding: 80px 20px;
-  padding-bottom: 200px !important;
-}
-
-.section-verde {
-  background-color: var(--cor-verde);
-  padding: 80px 20px 200px;
-  color: #fff;
-}
-
-.section-vermelho {
-  background-color: var(--cor-vermelho);
-  padding: 80px 20px 200px;
-  color: #fff;
-}
-
+/* ==========================================================================
+   03. LAYOUT GLOBAL E SEÇÕES (DRY)
+   ========================================================================== */
+/* Agrupamento de Paddings para todas as seções (Evita repetição e !important) */
+.section-amarelo,
+.section-verde,
+.section-vermelho,
 .section-azul {
-  background-color: var(--cor-azul);
   padding: 80px 20px 200px;
-  color: #fff;
-  text-align: center;
 }
 
-/* CONTEÚDO */
+.section-amarelo { 
+  background-color: var(--cor-amarelo); 
+  color: var(--cor-texto); 
+}
+
+.section-verde { 
+  background-color: var(--cor-verde); 
+  color: var(--cor-texto-claro); 
+}
+
+.section-vermelho { 
+  background-color: var(--cor-vermelho); 
+  color: var(--cor-texto-claro); 
+}
+
+.section-azul { 
+  background-color: var(--cor-azul); 
+  color: var(--cor-texto-claro); 
+  text-align: center; 
+}
+
 .conteudo-limitado {
   max-width: 1100px;
   margin: 0 auto;
 }
 
+/* ==========================================================================
+   04. HERO SECTION
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 500px;
+  overflow: hidden;
+  background: #000;
+}
+
+/* VÍDEO */
+.hero video,
+.hero-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 101%;
+  height: 101%;
+
+  min-width: 100%;
+  min-height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+
+  transform: translate(-50%, -50%);
+
+  z-index: 1;
+
+  display: block;
+}
+
+/* OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  padding: 0 20px 60px;
+
+  /*background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.1)
+  );*/
+}
+
+/* CONTEÚDO HERO */
+.conteudo-hero,
+.conteudo-hero-pandeiros {
+  position: relative;
+  z-index: 3;
+}
+
+/* TÍTULOS */
+.conteudo-hero h1,
+.conteudo-hero-pandeiros h1 {
+  font-family: var(--font-titulos);
+  font-size: 72px;
+  font-weight: 400;
+  color: var(--cor-branco);
+
+  text-transform: uppercase;
+  text-align: center;
+
+  line-height: 1.1;
+  letter-spacing: 1px;
+
+  text-shadow: var(--sombra-texto);
+}
+
+.conteudo-hero h1 {
+  margin-bottom: 50px;
+}
+
+.conteudo-hero-pandeiros h1 {
+  margin-bottom: 40px;
+}
+
+/* CONTROLES DE VÍDEO */
+.video-controls {
+  position: absolute;
+
+  bottom: 100px;
+  left: 14px;
+
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  background: rgba(0, 0, 0, 0.45);
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  backdrop-filter: blur(5px);
+}
+
+.video-btn {
+  background: none;
+  border: none;
+
+  cursor: pointer;
+
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-btn img {
+  width: 25px;
+  height: 25px;
+
+  filter: invert(1);
+
+  display: block;
+
+  transform: translateY(2px);
+}
+
+/* SLIDER DE VOLUME */
+#volume-slider {
+  -webkit-appearance: none;
+  width: 80px;
+  background: transparent;
+}
+
+#volume-slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+
+  background: rgba(255, 255, 255, 0.5);
+
+  border-radius: 2px;
+
+  cursor: pointer;
+}
+
+#volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  height: 12px;
+  width: 12px;
+
+  border-radius: 50%;
+
+  background: var(--cor-branco);
+
+  cursor: pointer;
+
+  margin-top: -4px;
+}
+
+/* COPYRIGHT */
+.copyright-tag,
+.copyright-tag---hero,
+.copyright-tag-gruta,
+.hero-credit {
+  position: absolute;
+
+  z-index: 6;
+
+  color: var(--cor-texto-muted);
+
+  font-size: 11px;
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+
+  pointer-events: none;
+}
+
+.copyright-tag {
+  bottom: 15px;
+  right: 15px;
+}
+
+.copyright-tag---hero {
+  bottom: 85px;
+  right: 15px;
+}
+
+.copyright-tag-gruta {
+  bottom: 200px;
+  right: 20px;
+}
+
+.hero-credit {
+  bottom: 48px;
+  right: 14px;
+
+  z-index: 3;
+}
+
+/* ==========================================================================
+   05. COMPONENTES DE CONTEÚDO (SOBRE, MAPA, INFO EXTRA)
+   ========================================================================== */
 .sobre-local-wrapper {
   display: flex;
   gap: 60px;
@@ -192,6 +347,7 @@ a:hover {
   width: 28px;
   height: 28px;
   object-fit: contain;
+  /* Cor complexa mantida do original */
   filter: brightness(0) saturate(100%) invert(88%) sepia(21%) saturate(457%) hue-rotate(338deg) brightness(101%) contrast(102%);
 }
 
@@ -208,8 +364,9 @@ a:hover {
   text-align: justify;
 }
 
-.texto-sobre strong {
-  color: #ffd9a8;
+.texto-sobre strong,
+.info-extra strong {
+  color: var(--cor-destaque);
   font-weight: 700;
 }
 
@@ -219,32 +376,28 @@ a:hover {
   border-top: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-.text-link {
-  color: #00BFFF;
-  font-weight: bold;
-}
-
 .info-extra p {
   font-size: 17px;
   margin-bottom: 12px;
   text-align: left;
 }
 
-.info-extra strong {
-  color: #ffd9a8;
+.text-link {
+  color: var(--cor-link-alt);
+  font-weight: bold;
 }
 
 .info-extra a {
-  color: #6ec1ff;
+  color: var(--cor-link);
   font-weight: 700;
   text-decoration: underline;
 }
 
 .info-extra a:hover {
-  color: #9fd7ff;
+  color: var(--cor-link-hover);
 }
 
-/* COLUNA DIREITA: igreja_nossa_senhora... */
+/* Coluna da Direita e Mapa */
 .lado-direito-local {
   flex: 1;
   min-width: 360px;
@@ -253,7 +406,6 @@ a:hover {
   gap: 18px;
 }
 
-/* MAPA */
 .mapa-info-coluna {
   flex: 1;
   display: flex;
@@ -267,7 +419,7 @@ a:hover {
   border-radius: 16px;
   overflow: hidden;
   box-shadow: var(--sombra-card);
-  background: #fff;
+  background: var(--cor-branco);
 }
 
 .mapa-box iframe {
@@ -277,7 +429,9 @@ a:hover {
   border: 0;
 }
 
-/* GALERIA */
+/* ==========================================================================
+   06. CARROSSEL 3D
+   ========================================================================== */
 .carrossel-container {
   position: relative;
   max-width: 1100px;
@@ -285,12 +439,13 @@ a:hover {
   text-align: center;
 }
 
-.carrossel-container h2 {
+.carrossel-container h2,
+.video-container h2 {
   font-size: 34px;
   font-weight: 700;
   margin-bottom: 40px;
   letter-spacing: 0.5px;
-  color: #fff;
+  color: var(--cor-texto-claro);
 }
 
 .carrossel-3d {
@@ -317,18 +472,8 @@ a:hover {
   height: 100%;
   border-radius: 20px;
   overflow: hidden;
-  background: #111;
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
-}
-
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 0;
-  box-shadow: none;
-  display: block;
+  background: var(--cor-fundo-escuro);
+  box-shadow: var(--sombra-slide);
 }
 
 .slide img {
@@ -336,9 +481,10 @@ a:hover {
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.45);
+  display: block;
 }
 
+/* Posições do Slide */
 .slide.center {
   transform: translateX(-50%) scale(1);
   opacity: 1;
@@ -362,30 +508,26 @@ a:hover {
   z-index: 1;
 }
 
+/* Controles do Slider */
 .nav {
   width: 60px;
   height: 60px;
   position: absolute;
   top: 55%;
   transform: translateY(-50%);
-  background: #000;
-  color: #fff;
+  background: var(--cor-preto);
+  color: var(--cor-branco);
   border: none;
   font-size: 22px;
   padding: 12px 22px;
   border-radius: 50%;
   cursor: pointer;
-  transition: 0.3s;
+  transition: transform var(--transition-speed);
   z-index: 10;
 }
 
-.prev {
-  left: -60px;
-}
-
-.next {
-  right: -60px;
-}
+.prev { left: -60px; }
+.next { right: -60px; }
 
 .nav:hover {
   transform: translateY(-50%) scale(1.08);
@@ -402,29 +544,24 @@ a:hover {
   background: rgba(255, 255, 255, 0.35);
   border-radius: 50%;
   display: inline-block;
-  transition: 0.3s;
+  transition: var(--transition-speed);
   cursor: pointer;
 }
 
 .dot.active {
-  background: #fff;
+  background: var(--cor-branco);
   transform: scale(1.4);
 }
 
-
-/* VÍDEO */
-.video-container h2 {
-  font-size: 34px;
-  margin-bottom: 40px;
-  font-weight: 700;
-}
-
+/* ==========================================================================
+   07. VÍDEO EMBED (YOUTUBE)
+   ========================================================================== */
 .video-wrapper {
   position: relative;
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding-bottom: 56.25%;
+  padding-bottom: 56.25%; /* Mantém proporção 16:9 nativamente */
   height: 0;
   border-radius: 20px;
   overflow: hidden;
@@ -437,26 +574,19 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
+  border: none;
 }
 
-/*
-============================================
-              MOBILE VIEW
-============================================
-*/
+/* ==========================================================================
+   08. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
 
-/* RESPONSIVO */
 @media (max-width: 1100px) {
-  .prev {
-    left: 10px;
-  }
-
-  .next {
-    right: 10px;
-  }
+  .prev { left: 10px; }
+  .next { right: 10px; }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 991px) {
   .sobre-local-wrapper {
     flex-direction: column;
     align-items: stretch;
@@ -464,17 +594,11 @@ a:hover {
   }
 
   .texto-sobre,
-  .mapa-info-coluna {
+  .mapa-info-coluna,
+  .lado-direito-local {
     max-width: 100%;
     width: 100%;
-  }
-
-  .mapa-box {
-    width: 100%;
-  }
-
-  .conteudo-hero h1 {
-    font-size: 46px;
+    min-width: auto;
   }
 
   .carrossel-3d {
@@ -484,27 +608,22 @@ a:hover {
   .slide {
     width: 80%;
   }
-
-  .footer-extra-info {
-    flex-direction: column;
-    align-items: stretch;
-  }
 }
 
 @media (max-width: 768px) {
-
   .section-amarelo,
   .section-verde,
   .section-vermelho,
   .section-azul {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 60px 15px 120px; /* Preenchimentos ajustados para mobile */
   }
 
-  .texto-sobre p {
-    font-size: 16px;
+  .conteudo-hero h1,
+  .conteudo-hero-pandeiros h1 {
+    font-size: 46px;
   }
 
+  .texto-sobre p,
   .info-extra p {
     font-size: 16px;
   }
@@ -537,45 +656,41 @@ a:hover {
     padding: 10px 16px;
   }
 
-  .site-footer {
-    padding: 40px 20px;
-  }
-
   .copyright-tag,
+  .copyright-tag---hero,
+  .copyright-tag-gruta,
   .hero-credit {
     font-size: 12px;
     padding: 6px 8px;
-    margin-bottom: 35px !important;
   }
 
-  .hero-credit {
-    right: 10px;
-    bottom: 40px;
-  }
+  /* Ajuste unificado e sem !important para posição das tags em telas menores */
+  .copyright-tag { bottom: 10px; }
+  .copyright-tag---hero { bottom: 50px; }
+  .copyright-tag-gruta { bottom: 100px; }
+  .hero-credit { right: 10px; bottom: 40px; }
 
-  .hero-img-igreja {
-    object-position: 60% center;
-  }
+  /* Ajuste de Posições Específicas de Imagens de Fundo */
+  .hero-img-igreja { object-position: 60% center; }
+  .hero-img-brejo { object-position: 40% center; }
+  .hero-img-praia { object-position: 62% center; }
+  .hero-img-tiradentes { object-position: 60% center; }
+  .hero-img-rio { object-position: 1% center; }
 
-  .hero-img-brejo {
-    object-position: 40% center;
+  /* Ajustes do Controle de Vídeo Mobile */
+  .video-controls {
+    bottom: 57px; 
+    left: 10px;
   }
-
-  .hero-img-praia {
-    object-position: 62% center;
-  }
-
-  .hero-img-tiradentes {
-    object-position: 60% center;
-  }
-
-  .hero-img-rio {
-    object-position: 1% center;
+  
+  #volume-slider {
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
-  .conteudo-hero h1 {
+  .conteudo-hero h1,
+  .conteudo-hero-pandeiros h1 {
     font-size: 34px;
   }
 
@@ -595,114 +710,15 @@ a:hover {
     top: 50%;
   }
 
-  .logo-header {
-    width: 130px;
-  }
-
   .copyright-tag,
+  .copyright-tag---hero,
+  .copyright-tag-gruta,
   .hero-credit {
     font-size: 11px;
-    padding: 5px 7px;
-  }
-
-  .hero-credit {
-    right: 8px;
-    bottom: 34px;
-  }
-
-  .video-wrapper {
-    position: relative;
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    padding-bottom: 56.25%; /* 16:9 */
-    height: 0;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: var(--sombra-forte);
-  }
-
-  .video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    padding: 5px 7px 30px;
   }
 }
 
-/* Controle de som do vídeo da hero */
-.hero {
-  position: relative;
-}
-
-.video-controls {
-  position: absolute;
-  bottom: 57px;
-  left: 14px;
-  z-index: 20;
-  margin-bottom: 45px !important;
-
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(0, 0, 0, 0.4);
-  padding: 5px 10px;
-  border-radius: 20px;
-}
-
-.video-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.video-btn img {
-  width: 25px;
-  height: 25px;
-  filter: invert(1);
-  display: block;
-
-  
-  transform: translateY(2px);
-}
-
-#volume-slider {
-  -webkit-appearance: none;
-  width: 80px;
-  background: transparent;
-}
-
-#volume-slider::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 4px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 2px;
-  cursor: pointer;
-}
-
-#volume-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  background: #ffffff;
-  cursor: pointer;
-  margin-top: -4px;
-}
-
-
-@media (max-width: 768px) {
-  .video-controls {
-    bottom: 57px; 
-    left: 10px;
-  }
-
-  #volume-slider {
-    display: none;
-  }
-}
+/* * {
+    outline: 1px solid red;
+} */

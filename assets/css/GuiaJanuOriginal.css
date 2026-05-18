@@ -1,0 +1,503 @@
+/* ==========================================================================
+   01. RESET E CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #000;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   02. HEADER E NAVEGAÇÃO PRINCIPAL
+   ========================================================================== */
+/*   
+.site-header {
+    width: 100%;
+    padding: 20px 40px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.site-header.header-hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.logo-header {
+    width: 200px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+    flex-shrink: 0;
+}
+
+.social-icon {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+}
+
+.menu-toggle,
+.menu-close {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 28px;
+    color: #ffffff;
+}*/
+
+/* --- Menu Principal (Nav) --- */
+
+.main-nav {
+    flex-grow: 1;
+    overflow: visible;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    font-size: 27px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.main-nav .nav-link {
+    padding: 10px 20px !important;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    color: #ffffff !important;
+    text-decoration: none !important;
+}
+.main-nav .nav-link:hover {
+    color: none !important;
+}
+
+/* ==========================================================================
+   03. SUBMENU (DROPDOWN BOOTSTRAP CUSTOMIZADO)
+   ========================================================================== */
+/*
+   .nav-item.dropdown {
+    position: relative;
+    overflow: visible;
+}
+
+
+.dropdown-menu {
+    position: absolute;
+    top: 55px;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    background: rgba(255, 255, 255, 0.01) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    padding: 15px 20px;
+    min-width: max-content;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+
+    z-index: 2000;
+}
+
+.dropdown-item {
+    color: white !important;
+    font-size: 18px;
+    font-weight: 700;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 12px 20px;
+    text-align: center;
+    transition: all 0.2s ease;
+
+    white-space: nowrap !important;
+}
+
+.dropdown-item:hover {
+    background-color: transparent !important;
+    color: white !important;
+    text-decoration: underline !important;
+}
+
+.dropdown-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+*/
+@media (min-width: 992px) {
+    
+    /* 1. Força a caixa a descer e não engolir o texto MAIS */
+    /*
+    .main-nav .dropdown-menu {
+        top: 55px !important;       
+        bottom: auto !important;    
+        margin-top: 0px !important;
+    }
+
+    .nav-item.dropdown:hover .dropdown-toggle+.dropdown-menu,
+    .nav-item.dropdown:hover .dropdown-menu,
+    .dropdown-menu:hover {
+        display: block !important;
+    }
+
+    .nav-item.dropdown:hover .nav-link {
+        background-color: transparent !important;
+        color: white !important;
+    }*/
+}
+
+/* ==========================================================================
+   04. HERO SECTION (VÍDEO DE FUNDO PRINCIPAL)
+   ========================================================================== */
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-section-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* --- Controles do Vídeo --- */
+.video-controls {
+    position: absolute;
+    bottom: 120px;
+    left: 20px;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.video-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.video-btn img {
+    width: 25px;
+    height: 25px;
+    filter: invert(1);
+    display: block;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 80px;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    margin-top: -4px;
+}
+
+.video-copyright {
+    position: absolute;
+    bottom: 120px;
+    right: 20px;
+    z-index: 5;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   05. ESTRUTURA DAS SEÇÕES (CONTEÚDO ROLÁVEL)
+   ========================================================================== */
+.content-wrapper {
+    position: relative;
+    z-index: 10;
+    margin-top: 100vh;
+    background: transparent;
+}
+
+.discover-section,
+.plan-section,
+.events-section {
+    width: 100%;
+    min-height: 90vh;
+    padding: 60px 20px 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+
+.discover-section {
+    background: #084222;
+}
+
+.plan-section {
+    background: #8f2317;
+}
+
+.events-section {
+    background: rgba(253, 216, 164, 1);
+}
+
+.section-title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 52px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+}
+
+.section-subtitle {
+    font-size: 30px;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   06. COMPONENTES: CARDS E MOSAICOS
+   ========================================================================== */
+.cards-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+/* Container do card (Corrigido para remover o fundo branco do Bootstrap) */
+.card,
+.card-mais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-decoration: none;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+/* Anula o azul padrão do Bootstrap no link inteiro */
+a.card,
+a.card-mais,
+a.card:hover,
+a.card-mais:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+/* Imagens Circulares */
+.circle-image {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    margin: 0 auto 0px;
+    background-size: cover;
+    background-position: center;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.card:hover .circle-image {
+    transform: scale(1.1);
+}
+
+/* Mosaico do Card "Mais" */
+.mais-mosaico {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.mais-mosaico img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-mais:hover .mais-mosaico {
+    transform: scale(1.1);
+}
+
+.circle-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a foto preencher o círculo sem distorcer ou amassar */
+    border-radius: 50%; /* Garante que a foto fique redondinha */
+}
+
+/* ==========================================================================
+   Textos dos Cards (Corrigido para arrumar as cores azuis)
+   ========================================================================== */
+
+/* Título principal dos cards (Padrão/Cima) */
+.card-title {
+    font-size: 38px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.2;
+    min-height: 2.4em;
+    color: #ffffff !important;
+    /* Força o branco */
+}
+
+/* Link "Saiba Mais" (Padrão/Cima) */
+.card-link {
+    font-size: 23px;
+    font-weight: bold;
+    color: #ffffff !important;
+    /* Força o branco inicial */
+    transition: color 0.3s ease;
+}
+
+/* Hover do "Saiba Mais" - Só ele fica azul */
+.card-link:hover {
+    color: #87CEFA !important;
+    text-decoration: none !important;
+}
+
+/* Cores específicas do card da seção debaixo (Plan Section) */
+.plan-section .card-title {
+    color: #ffffff !important;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.plan-section .card-link {
+    color: #fdd8a4 !important;
+    /* Cor laranjinha inicial */
+    font-size: 1.50em;
+}
+
+.plan-section .card-link:hover {
+    color: #87CEFA !important;
+    /* Azul no hover */
+}
+
+.card-date {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 374px) {
+}
+
+@media (max-width: 991px) {
+   
+}

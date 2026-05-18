@@ -2,11 +2,17 @@
 
 /* =========================================
    1. RESET E ESTILOS GERAIS
-   ========================================= */
+========================================= */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -28,11 +34,11 @@ a:hover {
 
 /* =========================================
    3. HERO SECTION (Imagem Principal)
-   ========================================= */
+========================================= */
 .hero-section {
     width: 100%;
-    padding: 0 0 900px;
-    height: 80vh; /* Altura padrão para PC */
+    height: 80vh;
+    min-height: 500px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -52,14 +58,13 @@ a:hover {
 
 /* =========================================
    5. SEÇÕES DE CONTEÚDO
-   ========================================= */
+========================================= */
 .discover-section,
-.plan-section { 
+.plan-section {
     width: 100%;
-    height: 150% !important;
     min-height: 90vh;
+    height: auto;
     padding: 60px 20px 150px;
-    /* padding: top, right, botton, left */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,20 +72,14 @@ a:hover {
     gap: 40px;
 }
 
-/* .discover-section { background: rgba(4, 52, 26, 0.9); } */
-.discover-section {background-color: #084222;}
-/* .plan-section     { background: rgba(143, 35, 23, 0.9); } */
-.plan-section { background-color: #8f2317;}
+.discover-section { background-color: #084222; }
+.plan-section { background-color: #8f2317; }
 
 .apresentacao-container {
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
     color: #fff;
-    
-    /* CORREÇÃO DO BOTÃO INCLICÁVEL:
-       Aplicamos o padding aqui para TODOS os containers.
-       Isso garante que o botão "Ocultar" nunca fique escondido atrás da onda. */
     padding-bottom: 80px;
 }
 
@@ -93,40 +92,27 @@ a:hover {
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-.apresentacao-content {
-    display: flex;
-    align-items: flex-start;
-    gap: 40px;
-    text-align: left;
+.col-imagem { 
+    flex: 1; 
+    min-width: 300px; 
 }
 
-.col-imagem { flex: 1; min-width: 300px; }
-.col-texto { 
-    flex: 1.2; 
-    font-size: 18px; 
-    line-height: 1.6; 
+.col-texto {
+    flex: 1.2;
+    font-size: 18px;
+    line-height: 1.6;
 }
-
-.img-destaque {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    border: 3px solid rgba(255,255,255,0.2);
-}
-
 
 .col-texto strong { color: #fdd8a4; }
 .col-texto p { margin-bottom: 15px; }
 
-
 /* =========================================
    6. ACCORDION (BOTÃO)
-   ========================================= */
+========================================= */
 details.google-accordion {
     margin-top: 15px;
     border: none;
-    display: flex; 
+    display: flex;
     flex-direction: column;
 }
 
@@ -152,7 +138,7 @@ summary {
     user-select: none;
     transition: background 0.2s;
     border: 1px solid rgba(255,255,255,0.1);
-    align-self: flex-start; 
+    align-self: flex-start;
 }
 
 summary:hover { background-color: #3c4043; }
@@ -180,33 +166,74 @@ details[open] .icone-seta { transform: rotate(180deg); }
     border-color: rgba(255, 255, 255, 0.4);
 }
 
-
 /* =========================================
    8. RESPONSIVIDADE (CELULAR)
-   ========================================= */
+========================================= */
 @media (max-width: 768px) {
-
-    .hero-section {
-        height: 40vh; 
-        min-height: 300px;
+    body {
+        overflow-x: hidden;
     }
 
-    .copyright-tag {
-        margin-bottom: 50px !important;
+    .hero-section {
+        height: 45vh;
+        min-height: 260px;
+    }
+
+    .discover-section,
+    .plan-section {
+        padding: 50px 20px 80px;
+        gap: 30px;
+        min-height: auto;
+    }
+
+    .titulo-apresentacao {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    .apresentacao-container {
+        padding-bottom: 20px;
     }
 
     .apresentacao-content {
         flex-direction: column;
+        gap: 25px;
     }
-    
+
     .historia-ajuste .apresentacao-content {
         flex-direction: column-reverse;
     }
 
-    .col-imagem, .col-texto { width: 100%; }
-    .img-destaque { transform: rotate(0deg); }
-    
-    .apresentacao-container { padding-bottom: 40px; }
+    .col-imagem,
+    .col-texto {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .col-texto {
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .img-destaque {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .copyright-tag-img {
+        font-size: 10px;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    summary {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        padding: 12px 20px;
+        height: auto;
+        /* border-radius: 14px; */
+    }
 }
 
 .apresentacao-content {
@@ -216,10 +243,11 @@ details[open] .icone-seta { transform: rotate(180deg); }
     text-align: left;
 }
 
-.col-imagem { 
-    flex: 1; 
-    min-width: 300px; 
-    position: relative; 
+.col-imagem {
+    flex: 1;
+    width: 100%;
+    min-width: 0;
+    position: relative;
 }
 
 .img-destaque {
@@ -229,106 +257,21 @@ details[open] .icone-seta { transform: rotate(180deg); }
     border-radius: 8px;
 }
 
-.col-texto { 
-    flex: 1.2; 
-    font-size: 18px; 
-    line-height: 1.6; 
-}
-
-/*
-.copyright-tag {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  z-index: 6;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-  pointer-events: none;
-}
-
-.copyright-tag---hero {
-  margin-bottom: 70px !important;
-}
-
-.hero-copyright {
-  right: 14px;
-  left: auto;
-  z-index: 3;
-}*/
-
-
-/*.copyright {
-    position: absolute;
-    bottom: 17px;
-    right: 20px;
-    z-index: 5;
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 5px 5px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 500;
-}
-*/
-
-/*.copyright-tag {
-  position: absolute;
-  right: 14px;
-  bottom: 14px;
-  background: rgba(25, 25, 25, 0.82);
-  color: #fff;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1;
-  padding: 7px 10px;
-  border-radius: 6px;
-  z-index: 4;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.28);
-  pointer-events: none;
-  white-space: nowrap;
-  margin-bottom: 60px !important;
-}*/
-
 .copyright-tag-img {
-  position: absolute;
-  right: 14px;
-  bottom: 14px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 14px;
-  /* font-weight: 500; */
-  line-height: 1;
-  /* padding: 7px 10px; */
-  /* border-radius: 6px; */
-  z-index: 4;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-  /* pointer-events: none; */
-  /* white-space: nowrap; */
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    line-height: 1;
+    z-index: 4;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
 .copyright-tag---hero {
-  margin-bottom: 70px !important;
+    margin-bottom: 70px !important;
 }
-
-/*
-.copyright-tag {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  z-index: 6;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-  pointer-events: none;
-}*/
-
-
-
 
 summary {
     background-color: #222;
