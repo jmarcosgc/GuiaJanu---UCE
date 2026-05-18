@@ -26,9 +26,9 @@ const headerHTML = `
                     </ul>
                 </li>
                 
-                <li><a href="./ListagemPontosTuristicos.html">O Que Fazer</a></li>
-                <li><a href="./emconstrucao.html">Onde Comer</a></li>
-                <li><a href="./emconstrucao.html">Onde Ficar</a></li>
+                <li><a href="./ListagemPontosTuristicos.html">O que fazer</a></li>
+                <li><a href="./emconstrucao.html">Onde comer</a></li>
+                <li><a href="./emconstrucao.html">Onde ficar</a></li>
                 
                 <li>
                     <input type="checkbox" id="drop-2" class="drop-checkbox" hidden>
@@ -40,7 +40,7 @@ const headerHTML = `
 
                     <ul class="dropdown">
                         <li><a href="../pages/cat.html">CAT</a></li>
-                        <li><a href="../pages/aboutUs.html">Sobre Nós</a></li>
+                        <li><a href="../pages/aboutUs.html">Sobre nós</a></li>
                     </ul>
                 </li>
             </ul>

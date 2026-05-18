@@ -1,4 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
+/* ==========================================================================
+   01. VARIÁVEIS (DESIGN SYSTEM)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+:root {
+  /* Paleta de Cores Principais */
+  --cor-verde: #084222;
+  --cor-vermelho: #8f2317;
+  --cor-amarelo: #e99931;
+  --cor-azul: #072530;
+  
+  /* Cores Neutras e Texto */
+  --cor-branco: #ffffff;
+  --cor-preto: #000000;
+  --cor-texto: #000000;
+  --cor-texto-claro: #ffffff;
+  --cor-texto-muted: rgba(255, 255, 255, 0.7);
+  --cor-fundo-escuro: #111111;
+
+  /* Cores de Destaque e Links */
+  --cor-destaque: #ffd9a8;
+  --cor-link: #6ec1ff;
+  --cor-link-hover: #9fd7ff;
+  --cor-link-alt: #00BFFF;
+
+  /* Tipografia */
+  --font-principal: 'Inter', sans-serif;
+  --font-titulos: 'Rye', serif;
+
+  /* Sombras e Efeitos */
+  --sombra-texto: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  --sombra-card: 0 10px 25px rgba(0, 0, 0, 0.15);
+  --sombra-forte: 0 25px 50px rgba(0, 0, 0, 0.35);
+  --sombra-slide: 0 30px 60px rgba(0, 0, 0, 0.45);
+  
+  /* Transições */
+  --transition-speed: 0.3s;
+}
 
 * {
     box-sizing: border-box;

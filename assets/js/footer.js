@@ -6,14 +6,14 @@ const footerHTML = `
       <div class="footer-left-column">
 
         <div class="footer-col links-col">
-          <h4>Email Para Contato</h4>
+          <h4>Email para contato</h4>
           <ul>
             <p>guiajanuifnmg@gmail.com</p>
             </ul>
         </div>
 
         <div class="footer-col links-col">
-          <h4>Conheça Nosso App</h4>
+          <h4>Conheça nosso app</h4>
           <ul>
             <li><a href="../pages/emconstrução.html">JanuTour</a></li>
             </ul>
@@ -22,8 +22,8 @@ const footerHTML = `
         <div class="footer-col links-col">
           <h4>Descubra Januária</h4>
           <ul>
-            <li><a href="../pages/acidade.html">A Cidade</a></li>
-            <li><a href="../pages/comochegar.html">Como Chegar</a></li>
+            <li><a href="../pages/acidade.html">A cidade</a></li>
+            <li><a href="../pages/comochegar.html">Como chegar</a></li>
             </ul>
         </div>
 
@@ -33,26 +33,26 @@ const footerHTML = `
         <div class="footer-col links-col">
           <h4>O que fazer</h4>
           <ul>
-            <li><a href="../pages/ListagemPontosTuristicos.html">Listagem Pontos Turisticos</a></li>
+            <li><a href="../pages/ListagemPontosTuristicos.html">Pontos turisticos</a></li>
           </ul>
         </div>
         <div class="footer-col links-col">
-          <h4>Onde Comer</h4>
+          <h4>Onde comer</h4>
           <ul>
-            <li><a href="../pages/emconstrucao.html">Em Construção</a></li>
+            <li><a href="../pages/emconstrucao.html">Em construção</a></li>
           </ul>
         </div>
         <div class="footer-col links-col">
-          <h4>Onde Ficar</h4>
+          <h4>Onde ficar</h4>
           <ul>
-            <li><a href="../pages/emconstrucao.html">Em Construção</a></li>
+            <li><a href="../pages/emconstrucao.html">Em construção</a></li>
           </ul>
         </div>
         <div class="footer-col links-col">
           <h4>Mais</h4>
           <ul>
             <li><a href="../pages/cat.html">CAT</a></li>
-            <li><a href="../pages/aboutUs.html">Sobre Nós</a></li>
+            <li><a href="../pages/aboutUs.html">Sobre nós</a></li>
           </ul>
         </div>
       </div>
