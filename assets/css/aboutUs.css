@@ -145,14 +145,25 @@ a:hover {
 /* =========================================
    5. GRID DA EQUIPE (CARDS)
    ========================================= */
-.equipe-grid {
+/*.equipe-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}*/
+
+.equipe-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
     margin-top: 50px;
 }
 
 .membro-card {
+    flex: 1 1 220px;
+    max-width: 280px;
+
     background: rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
@@ -235,7 +246,7 @@ a:hover {
     }
 
     .content-section {
-        padding: 45px 16px 70px;
+        padding: 45px 16px 120px;
         min-height: auto;
     }
 
@@ -267,13 +278,22 @@ a:hover {
     }
 
     .equipe-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
         gap: 20px;
         margin-top: 35px;
     }
+    
+    /*.equipe-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 35px;
+    }*/
 
     .membro-card {
         padding: 24px 18px;
+        width: 100%;
+        max-width: 300px
     }
 
     .membro-card img {
