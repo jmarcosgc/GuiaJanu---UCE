@@ -92,7 +92,7 @@ const footerHTML = `
             <div class="logo-item">
               <a href="https://www.instagram.com/guia.janu" target="_blank" class="logo-link">
                 <p>UCE-BSI</p>
-                <img src="../assets/img/Social Icons/insta_logo.webp" alt="Logo UCE-BSI" class="partner-logo logo-insta">
+                <img src="../assets/img/Social_Icons/insta_logo.webp" alt="Logo UCE-BSI" class="partner-logo logo-insta">
               </a>
             </div>
             
@@ -120,7 +120,7 @@ const footerHTML = `
             <div class="logo-item">
               <a href="https://www.instagram.com/la_belle_janu" target="_blank" class="logo-link">
                 <p>La Belle Janu</p>
-                <img src="../assets/img/Social Icons/insta_logo.webp" alt="La Belle Janu" class="partner-logo logo-insta">
+                <img src="../assets/img/Social_Icons/insta_logo.webp" alt="La Belle Janu" class="partner-logo logo-insta">
               </a>
             </div>
             

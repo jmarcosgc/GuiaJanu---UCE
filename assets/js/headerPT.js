@@ -44,7 +44,7 @@ const headerHTML = `
 
         <div class="header-right">
             <a href="https://www.instagram.com/guia.janu" class="social-icon" target="_blank">
-                <img src="../../assets/img/Social Icons/insta_logo.webp" alt="Instagram">
+                <img src="../../assets/img/Social_Icons/insta_logo.webp" alt="Instagram">
             </a>
             <label for="menu-mobile-check" class="menu-toggle" aria-label="Abrir menu">☰</label>
         </div>

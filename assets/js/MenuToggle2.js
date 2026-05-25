@@ -71,8 +71,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const volumeIcon = document.getElementById('volume-icon');
     const volumeSlider = document.getElementById('volume-slider');
 
-    const MUTE_ICON_SRC = './assets/img/Social Icons/sem_som.webp';
-    const UNMUTE_ICON_SRC = './assets/img/Social Icons/com_som.webp';
+    const MUTE_ICON_SRC = './assets/img/Social_Icons/sem_som.webp';
+    const UNMUTE_ICON_SRC = './assets/img/Social_Icons/com_som.webp';
 
     const TARGET_VOLUME = 0.20;
 
