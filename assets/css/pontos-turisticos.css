@@ -164,7 +164,7 @@ a:hover {
 
 /* LISTAGEM */
 .list-section {
-    padding: 40px 20px 80px;
+    padding: 40px 20px 150px;
     background-color: #e9962c;
     display: flex;
     justify-content: center;
@@ -366,7 +366,7 @@ a:hover {
     }
 
     .list-section {
-        padding: 30px 15px 60px;
+        padding: 60px 15px 150px;
     }
 
     .list-cards-container {
@@ -433,3 +433,7 @@ a:hover {
         font-size: 1.25rem;
     }
 }
+
+/* * {
+    outline: 1px solid red;
+} */
