@@ -18,6 +18,7 @@ const headerHTML = `
 
                     <ul class="dropdown">
                         <li><a href="../acidade.html">A cidade</a></li>
+                        <li><a href="https://q.me-qr.com/f/guia-turistico-januaria">Guia Oficial</a></li>
                         <li><a href="../comochegar.html">Como chegar</a></li>
                     </ul>
                 </li>
