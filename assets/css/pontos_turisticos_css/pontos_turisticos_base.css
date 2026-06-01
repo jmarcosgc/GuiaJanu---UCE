@@ -370,6 +370,27 @@ a:hover {
   font-weight: 700;
 }
 
+.titulo-passeio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 40px;    /* Garante um respiro confortável após o texto anterior */
+  margin-bottom: 20px; /* Alinhamento sutil antes da lista de contatos */
+}
+
+.titulo-passeio h3 {
+  font-size: 24px;     /* Um pouco menor que o título principal (30px) por ser um subtítulo */
+  font-weight: 700;
+  color: var(--cor-destaque); /* Mantém o padrão de destaque, se desejar */
+}
+
+.texto-passeio p {
+  margin-bottom: 12px; /* Espaçamento menor entre as linhas de contato */
+  font-size: 18px;     /* Mesma legibilidade do bloco superior */
+  line-height: 1.6;
+  text-align: left;    /* Contatos e nomes ficam melhores alinhados à esquerda do que justificados */
+}
+
 .info-extra {
   margin-top: 24px;
   padding-top: 18px;
