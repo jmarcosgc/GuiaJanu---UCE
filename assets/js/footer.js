@@ -51,7 +51,7 @@ const footerHTML = `
         <div class="footer-col links-col">
           <h4>Mais</h4>
           <ul>
-            <li><a href="../pages/cat.html">CAT</a></li>
+            <li><a href="../pages/cat.html">Centro de Atendimento<br>ao Turista</a></li>
             <li><a href="../pages/aboutUs.html">Sobre nós</a></li>
           </ul>
         </div>

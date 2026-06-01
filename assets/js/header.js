@@ -39,7 +39,7 @@ const headerHTML = `
                     </div>
 
                     <ul class="dropdown">
-                        <li><a href="../pages/cat.html">CAT</a></li>
+                        <li><a href="../pages/cat.html">Atendimento</a></li>
                         <li><a href="https://q.me-qr.com/f/guia-turistico-januaria">Guia Oficial</a></li>
                         <li><a href="../pages/aboutUs.html">Sobre nós</a></li>
                     </ul>
