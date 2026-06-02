@@ -36,21 +36,20 @@ a:hover {
 
 .hero-section {
     width: 100%;
-    background-color: #084222;
+    height: 100vh;
     position: relative;
     overflow: hidden;
-
-    /* reduz visualmente a seção */
-    padding-top: 80px;
+    padding-top: 0;
+    margin: 0;
+    background: transparent;
 }
 
 .hero-image {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
-
-    /* mantém a imagem inteira */
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center center;
 }
 
 .copyright-tag-img {
@@ -69,6 +68,20 @@ a:hover {
 
 .copyright-tag---hero {
     margin-bottom: 0 !important;
+}
+
+/* =========================================
+   AJUSTE DA ONDA DA IMAGEM HERO
+   ========================================= */
+
+.onda-hero {
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.onda-hero .wave-separator {
+    margin-top: -35px !important;
 }
 
 /* =========================================
@@ -360,19 +373,27 @@ a:hover {
    ========================================= */
 
 @media (max-width: 768px) {
+
     body {
         overflow-x: hidden;
     }
 
     .hero-section {
-        height: 38vh;
-        min-height: 260px;
-        max-height: 340px;
+        height: 100vh;
+        min-height: 100vh;
+        max-height: none;
+        padding-top: 0;
     }
 
     .hero-image {
+        width: 100%;
+        height: 100%;
         object-fit: cover;
         object-position: center center;
+    }
+
+    .onda-hero .wave-separator {
+        margin-top: -25px !important;
     }
 
     .copyright-tag-img {
