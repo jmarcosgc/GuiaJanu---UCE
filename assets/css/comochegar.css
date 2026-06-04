@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz@0,14..32;1,14..32&display=swap');
 
-/* =========================================
-   1. RESET E ESTILOS GERAIS
-   ========================================= */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -34,34 +31,63 @@ a:hover {
 }
 
 /* =========================================
-   3. HERO SECTION E ONDAS
+   HERO SECTION
    ========================================= */
+
 .hero-section {
     width: 100%;
-    height: 80vh;
-    min-height: 500px;
+    height: 100vh;
     position: relative;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: 0;
+    margin: 0;
+    background: transparent;
 }
 
 .hero-image {
-    position: absolute;
-    inset: 0;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
+    display: block;
     object-fit: cover;
-    z-index: 1;
+    object-position: center center;
 }
 
+.copyright-tag-img {
+    position: absolute;
+    right: 16px;
+    bottom: 24px;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 1;
+    z-index: 5;
+    letter-spacing: 0.5px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.copyright-tag---hero {
+    margin-bottom: 0 !important;
+}
 
 /* =========================================
-   4. SEÇÃO DE CONTEÚDO (FUNDO BRANCO)
+   AJUSTE DA ONDA DA IMAGEM HERO
    ========================================= */
+
+.onda-hero {
+    display: block;
+    position: relative;
+    z-index: 2;
+}
+
+.onda-hero .wave-separator {
+    margin-top: -35px !important;
+}
+
+/* =========================================
+   SEÇÃO DE CONTEÚDO
+   ========================================= */
+
 .white-section {
     background-color: #084222;
     width: 100%;
@@ -70,61 +96,6 @@ a:hover {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-}
-
-/*
-.hero-copyright {
-    position: absolute;
-    bottom: 40px;
-    right: 20px;
-    z-index: 5;
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 5px 5px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 500;
-}*/
-
-/*
-.copyright-tag {
-    position: absolute;
-    right: 14px;
-    bottom: 20px;
-    background: rgba(25, 25, 25, 0.82);
-    color: #fff;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1;
-    padding: 7px 10px;
-    border-radius: 6px;
-    z-index: 5;
-    box-shadow: 0 4px 12px rgba(0,0,0,.28);
-    pointer-events: none;
-    white-space: nowrap;
-}
-
-.hero-copyright {
-  right: 14px;
-  bottom: 48px;
-  left: auto;
-  z-index: 3;
-}*/
-
-.copyright-tag-img {
-    position: absolute;
-    right: 14px;
-    bottom: 14px;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 14px;
-    line-height: 1;
-    z-index: 4;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-}
-
-.copyright-tag---hero {
-    margin-bottom: 70px !important;
 }
 
 .text-container {
@@ -155,8 +126,6 @@ a:hover {
     font-size: 26px;
     color: #ffd9a8;
     margin-top: 40px;
-
-
     padding-bottom: 10px;
 }
 
@@ -179,29 +148,261 @@ a:hover {
     color: #ffd9a8;
 }
 
+/* =========================================
+   MAPA
+   ========================================= */
+
+#map {
+    height: 450px;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    border: 2px solid #ffd9a8;
+    margin: 40px auto 20px auto;
+    z-index: 1;
+    overflow: hidden;
+}
 
 /* =========================================
-   6. RESPONSIVIDADE (CELULAR)
+   BUSCA
    ========================================= */
+
+.search-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.search-group input[type="text"] {
+    flex: 1;
+    min-width: 200px;
+    padding: 12px;
+    border: 2px solid #ffd9a8;
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: #084222;
+}
+
+.search-group input[type="text"]:focus {
+    outline: none;
+    border-color: #ffffff;
+}
+
+.search-group button {
+    padding: 12px 22px;
+    background-color: #ffd9a8;
+    color: #084222;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 15px;
+    transition: background 0.3s, transform 0.2s;
+    font-family: 'Inter', sans-serif;
+}
+
+.search-group button:hover {
+    background-color: #f5c989;
+    transform: scale(1.03);
+}
+
+/* =========================================
+   CONTROLES
+   ========================================= */
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+}
+
+.controls p {
+    color: #084222;
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.buttons-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.controls button {
+    padding: 10px 18px;
+    background-color: #084222;
+    color: #ffd9a8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s, transform 0.2s;
+    font-family: 'Inter', sans-serif;
+}
+
+.controls button:hover {
+    background-color: #052c16;
+    transform: scale(1.03);
+}
+
+/* =========================================
+   PAINEL DE ROTA DO LEAFLET
+   ========================================= */
+
+.leaflet-routing-container {
+    display: block !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: 3px solid #084222 !important;
+    border-radius: 10px !important;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.65) !important;
+    padding: 12px !important;
+    font-family: 'Inter', sans-serif !important;
+    max-height: 280px;
+    overflow-y: auto;
+    z-index: 9999 !important;
+}
+
+.leaflet-routing-container,
+.leaflet-routing-container * {
+    color: #000000 !important;
+    text-shadow: none !important;
+}
+
+.leaflet-routing-container h2,
+.leaflet-routing-container h3 {
+    color: #084222 !important;
+    font-weight: 900 !important;
+}
+
+.leaflet-routing-alt {
+    background: #ffffff !important;
+    color: #000000 !important;
+    border-top: 2px solid #084222 !important;
+}
+
+.leaflet-routing-alt h2,
+.leaflet-routing-alt h3 {
+    color: #084222 !important;
+}
+
+.leaflet-routing-alt table {
+    background: #ffffff !important;
+    color: #000000 !important;
+    width: 100% !important;
+}
+
+.leaflet-routing-alt table tbody tr {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+.leaflet-routing-alt table tbody tr:hover {
+    background: #ffd9a8 !important;
+}
+
+.leaflet-routing-alt table tbody tr td {
+    background: transparent !important;
+    color: #000000 !important;
+    padding: 7px !important;
+    font-size: 14px !important;
+    font-weight: 700 !important;
+}
+
+.leaflet-routing-alt-minimized {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+.leaflet-routing-alt-summary,
+.leaflet-routing-alt-summary h2,
+.leaflet-routing-alt-summary h3 {
+    background: #084222 !important;
+    color: #ffd9a8 !important;
+    padding: 8px !important;
+    border-radius: 6px !important;
+    font-weight: 900 !important;
+}
+
+/* =========================================
+   POPUPS E CONTROLES DO MAPA
+   ========================================= */
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+.leaflet-popup-content {
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
+
+.leaflet-tooltip {
+    background: #084222 !important;
+    color: #ffd9a8 !important;
+    border: 1px solid #ffd9a8 !important;
+    font-weight: 800 !important;
+}
+
+.leaflet-control-zoom a,
+.leaflet-control-attribution {
+    color: #084222 !important;
+    font-weight: 800 !important;
+}
+
+.leaflet-control-attribution a {
+    color: #000000 !important;
+    font-weight: 800 !important;
+}
+
+/* =========================================
+   RESPONSIVIDADE
+   ========================================= */
+
 @media (max-width: 768px) {
-    .controls button:hover {
-        transform: none;
-    }
 
     body {
         overflow-x: hidden;
     }
 
     .hero-section {
-        height: 45vh;
-        min-height: 260px;
+        height: 100vh;
+        min-height: 100vh;
+        max-height: none;
+        padding-top: 0;
     }
 
-    .copyright-tag {
-        right: 10px;
-        bottom: 10px;
+    .hero-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+
+    .onda-hero .wave-separator {
+        margin-top: -25px !important;
+    }
+
+    .copyright-tag-img {
         font-size: 10px;
-        padding: 5px 8px;
+        bottom: 12px;
+        right: 8px;
+        max-width: 90%;
+        white-space: normal;
+        text-align: right;
     }
 
     .white-section {
@@ -245,15 +446,13 @@ a:hover {
         gap: 12px;
     }
 
-    .controls button {
+    .controls button,
+    .search-group button {
         width: 100%;
         padding: 14px;
     }
 
-    .buttons-group {
-        flex-direction: column;
-    }
-
+    .buttons-group,
     .search-group {
         flex-direction: column;
     }
@@ -262,109 +461,39 @@ a:hover {
         min-width: 0;
         width: 100%;
     }
+
+    .controls button:hover,
+    .search-group button:hover {
+        transform: none;
+    }
+
+    .leaflet-routing-container {
+        max-height: 220px;
+        font-size: 13px !important;
+    }
+
+    .leaflet-routing-alt table tbody tr td {
+        font-size: 13px !important;
+    }
 }
 
 /* =========================================
-   7. MAPA E CONTROLES DE ROTAS
-   ========================================= */
- 
-#map {
-    height: 450px;
-    width: 100%;
-    max-width: 900px;
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    border: 2px solid #ffd9a8;
-    margin: 40px auto 20px auto;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.controls {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto 40px auto;
-}
-
-.controls p {
-    color: #084222;
-    font-size: 16px;
-    margin-bottom: 5px;
-    text-align: left;
-}
-
-.buttons-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.controls button {
-    padding: 10px 18px;
-    background-color: #084222; 
-    color: #ffd9a8; 
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
-    transition: background 0.3s, transform 0.2s;
-    font-family: 'Inter', sans-serif;
-}
-
-.controls button:hover {
-    background-color: #052c16;
-    transform: scale(1.03);
-}
-
-.search-group {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.search-group input[type="text"] {
-    flex: 1;
-    min-width: 200px;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    color: #333;
-}
-
-.search-group input[type="text"]:focus {
-    outline: none;
-    border-color: #084222;
-}
-
-/* =========================================
-   9. CORREÇÃO DO PAINEL DE ROTA (LEAFLET)
+   PAINEL RESUMO DA ROTA
    ========================================= */
 
-.leaflet-routing-container {
-    background-color: #ffffff !important;
-    color: #333333 !important;
-    margin-bottom: 10px !important;
-    display: none !important;
+.painel-resumo {
+    color: #000000 !important;
+    font-weight: 700;
+    text-shadow: none !important;
 }
 
-.leaflet-routing-container h2,
-.leaflet-routing-container h3 {
-    color: #084222 !important;
-    margin-top: 0px;
-    margin-bottom: 10px;
+.painel-resumo p {
+    color: #000000 !important;
+    margin: 4px 0;
     font-weight: 700;
 }
 
-.leaflet-routing-alt table tbody tr td {
-    color: #333333 !important;
+.painel-resumo strong {
+    color: #000000 !important;
+    font-weight: 800;
 }
