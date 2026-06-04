@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Turístico Oficial - GuiaJanu</title>
+    <link rel="shortcut icon" href="/assets/img/Logo/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
+
+    <!-- Seus arquivos CSS originais -->
+    <link rel="stylesheet" href="../assets/css/emconstrucao.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/wave.css">
+
+    <!-- Apenas a lapidação visual do texto sobre o fundo verde -->
+    <style>
+        .Guia-box-leitura {
+            Max-width: 650px;
+            /* Evita que o texto estique demais nas laterais */
+            Width: 100%;
+            Padding: 0 20px;
+            Color: #ffffff;
+            /* Torna todo o texto perfeitamente legível sobre o verde */
+        }
+
+        .titulo-passeio h3 {
+            Font-size: 28px;
+            Color: #ffd9a8;
+            /* Um tom areia/ouro suave que destaca muito bem no verde escuro */
+            Margin-bottom: 20px;
+        }
+
+        /* Define a cor do link diretamente, já que a variável não existia nesse arquivo */
+        .texto-sobre-guia a {
+            Color: #ffd9a8 !important;
+            Font-weight: 700;
+        }
+    </style>
+
+    <script src="../assets/js/header.js" defer></script>
+    <script src="../assets/js/footer.js" defer></script>
+    <script src="../assets/js/wave.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header"></header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="titulo-passeio margin-top-guia">
+                <h1><strong>Guia Turístico Oficial</strong></h1>
+            </div>
+            <img id="hero-image" src="../assets/img/Parcerias/guiaoficial.webp" alt="Guia Oficial de Januária">
+        </section>
+
+        <wave-separator-component color="#084222"></wave-separator-component>
+        
+        <div class="guia-box-leitura">
+            <div class="texto-sobre-guia">
+                <p>
+                    A <strong>Prefeitura Municipal de Januária</strong> disponibiliza um <strong>guia turístico
+                        oficial</strong> em formato PDF com informações completas sobre <strong>atrativos, cultura,
+                        gastronomia</strong> e <strong>serviços turísticos</strong> do município.
+                </p>
+                <p>
+                    Acesse o PDF <strong><a href="https://q.me-qr.com/f/guia-turistico-januaria"
+                            target="_blank">clicando aqui</a></strong>.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <wave-separator-component color="#222"></wave-separator-component>
+
+    <footer class="site-footer"></footer>
+    <script src="../assets/js/MenuToggle.js"> </script>
+</body>
+
+</html>

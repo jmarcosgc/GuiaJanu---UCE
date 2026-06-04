@@ -17,8 +17,7 @@ const headerHTML = `
                     </div>
 
                     <ul class="dropdown">
-                        <li><a href="../acidade.html">A cidade</a></li>
-                        <li><a href="https://q.me-qr.com/f/guia-turistico-januaria">Guia Oficial</a></li>
+                        <li><a href="../acidade.html">A cidade</a></li
                         <li><a href="../comochegar.html">Como chegar</a></li>
                     </ul>
                 </li>
@@ -37,6 +36,7 @@ const headerHTML = `
 
                     <ul class="dropdown">
                         <li><a href="../cat.html">Atendimento</a></li>
+                        <li><a href="../guiaoficial.html">Guia Oficial</a></li>
                         <li><a href="../aboutUs.html">Sobre nós</a></li>
                     </ul>
                 </li>

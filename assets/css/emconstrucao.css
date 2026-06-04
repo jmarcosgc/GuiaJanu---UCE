@@ -1,6 +1,8 @@
 /* ==========================================================================
-   01. RESET E CONFIGURAÇÕES GERAIS (SEU CSS)
+   01. RESET, TIPOGRAFIA E CONFIGURAÇÕES GERAIS (COMPARTILHADO)
    ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -31,24 +33,27 @@ a:hover {
     text-decoration: underline;
 }
 
-@media (min-width: 992px) {
-}
-
 /* ==========================================================================
-   04. CONTEÚDO DE "EM CONSTRUÇÃO" (UNIFICADO)
+   02. CONTAINER PRINCIPAL (ESTRUTURA BASE PARA AS DUAS PÁGINAS)
    ========================================================================== */
 .main-content {
     flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #084222;
-    padding-top: 150px;
-    padding-bottom: 350px;
+    background-color: #084222; /* Fundo verde padrão do projeto */
+    padding: 150px 20px 130px 20px; /* Mantém o recuo perfeito para o aviso de construção */
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
 }
 
+/* ==========================================================================
+   03. EXCLUSIVO: PÁGINA "EM CONSTRUÇÃO"
+   ========================================================================== */
 .container-aviso {
-    margin-top: 150px;
+    margin-top: 50px; /* Ajustado dinamicamente para equilíbrio visual */
     max-width: 600px;
     width: 90%;
     padding: 40px;
@@ -56,6 +61,7 @@ a:hover {
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     text-align: center;
+    z-index: 5;
 }
 
 .container-aviso h1 {
@@ -72,43 +78,149 @@ a:hover {
 
 .icon-anim {
     font-size: 50px;
-}
-
-/* .loader-custom {
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #3d66bd;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin-anim 1s linear infinite;
-    margin: 20px auto 0;
-} */
-
-@keyframes spin-anim {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    display: inline-block;
+    margin: 10px;
 }
 
 /* ==========================================================================
-   09. RESPONSIVIDADE (MEDIA QUERIES)
+   04. EXCLUSIVO: PÁGINA "GUIA OFICIAL" (IMAGEM HERO E TEXTO)
    ========================================================================== */
 
-/* Bloqueio de transições ao redimensionar (Javascript) */
+/* Faz a seção hero quebrar o preenchimento (padding) do container verde e ocupar 100% da tela */
+.main-content .hero-section {
+    margin-top: -150px;     /* Anula o padding superior do .main-content */
+    margin-left: -20px;     /* Anula o padding esquerdo */
+    margin-right: -20px;    /* Anula o padding direito */
+    margin-bottom: 60px;    /* Cria um espaçamento elegante até o bloco de leitura */
+    width: calc(100% + 40px); /* Expande a largura de ponta a ponta */
+    height: 80vh;           /* Altura idêntica à página de Listagem de Pontos Turísticos */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content wave-separator-component {
+    display: block !important; 
+    width: calc(100% + 40px) !important;
+    margin-left: -20px !important;
+    margin-right: -20px !important;
+    margin-top: -5px;          /* Penetra um pouquinho na imagem para sumir com frestas */
+    margin-bottom: 0 !important; /* ELIMINA qualquer espaço entre a onda e o bloco verde */
+    position: relative;
+    z-index: 10 !important;   
+    line-height: 0;            /* Remove espaçamentos fantasmas de tags de bloco */
+}
+
+/* Comportamento da imagem de fundo idêntico à Listagem */
+.main-content #hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+/* Filtro escurecedor sobreposto idêntico à Listagem para dar contraste ao título */
+.main-content .hero-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 2;
+}
+
+/* Posiciona o título flutuando exatamente a 75% do topo do banner */
+.main-content .hero-section .titulo-passeio {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    z-index: 5;
+    pointer-events: none;
+    padding: 0 20px;
+    margin: 0 !important;
+}
+
+/* Tipografia e sombras idênticas à folha de Pontos Turísticos */
+.main-content .hero-section .titulo-passeio h1 {
+    font-family: 'Rye', serif;
+    font-size: 4vw;
+    line-height: 1.2;
+    letter-spacing: 0.25em; /* Ajuste fluido para comportar o texto maior */
+    color: #ffffff;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.45);
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Ajustes finos do bloco de leitura do Guia */
+.guia-box-leitura {
+    max-width: 800px;
+    width: 100%;
+    padding: 0px 20px;
+    padding-top: 30px;
+    box-sizing: border-box;
+    margin-bottom: 20px; /* Harmoniza com o padding-bottom do container */
+}
+
+.texto-sobre-guia {
+    width: 100%;
+    color: #ffffff;
+}
+
+.texto-sobre-guia p {
+    margin-bottom: 22px; 
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+    text-align: justify;
+}
+
+.texto-sobre-guia a {
+    color: #ffd9a8; /* Tom dourado premium do design system */
+    text-decoration: none;
+    font-weight: 700;
+    border-bottom: 1px dashed #ffd9a8;
+    transition: all 0.2s ease;
+}
+
+.texto-sobre-guia a:hover {
+    color: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-color: #ffffff;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   05. RESPONSIVIDADE E ADAPTAÇÃO MOBILE (HERO BANNER)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .main-content .hero-section {
+        height: 75vh; /* Altura responsiva oficial da listagem */
+    }
+    
+    .main-content .hero-section .titulo-passeio h1 {
+        font-size: 6vw;
+        letter-spacing: 0.15em;
+    }
+}
+
+@media (max-width: 374px) {
+    .main-content .hero-section .titulo-passeio h1 {
+        font-size: 7vw;
+        letter-spacing: 0.10em;
+    }
+}
+
+/* Evita quebras de transição ao redimensionar a tela */
 .resize-transition-stopper .main-nav,
 .resize-transition-stopper .header-right {
     transition: none !important;
-}
-
-/* --- TABLET E CELULAR (Até 768px) --- */
-@media (max-width: 768px) {
-}
-
-/* --- CELULAR PEQUENO (Até 374px) --- */
-@media (max-width: 374px) {
-}
-
-/* =======================================================
-   REGRAS EXCLUSIVAS PARA O SUBMENU NO CELULAR (Até 991px)
-   ======================================================= */
-@media (max-width: 991px) {
 }
