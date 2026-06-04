@@ -53,6 +53,7 @@ const footerHTML = `
           <h4>Mais</h4>
           <ul>
             <li><a href="../../pages/cat.html">Centro deAtendimento<br>ao Turista</a></li>
+            <li><a href="../../pages/guiaoficial.html">Guia Oficial</a></li>
             <li><a href="../../pages/aboutUs.html">Sobre nós</a></li>
           </ul>
         </div>
