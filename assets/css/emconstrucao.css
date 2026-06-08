@@ -86,14 +86,55 @@ a:hover {
    04. EXCLUSIVO: PÁGINA "GUIA OFICIAL" (IMAGEM HERO E TEXTO)
    ========================================================================== */
 
-/* Faz a seção hero quebrar o preenchimento (padding) do container verde e ocupar 100% da tela */
+.copyright-tag,
+.copyright-tag---hero,
+.copyright-tag-gruta,
+.hero-credit {
+  position: absolute;
+
+  z-index: 6;
+
+  color: white;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+
+  pointer-events: none;
+}
+
+.copyright-tag {
+  bottom: 15px;
+  right: 15px;
+}
+
+.copyright-tag---hero {
+  bottom: 40px;
+  right: 15px;
+}
+
+.copyright-tag-gruta {
+  bottom: 200px;
+  right: 20px;
+}
+
+.hero-credit {
+  bottom: 48px;
+  right: 14px;
+
+  z-index: 3;
+}
+
 .main-content .hero-section {
-    margin-top: -150px;     /* Anula o padding superior do .main-content */
-    margin-left: -20px;     /* Anula o padding esquerdo */
-    margin-right: -20px;    /* Anula o padding direito */
-    margin-bottom: 60px;    /* Cria um espaçamento elegante até o bloco de leitura */
-    width: calc(100% + 40px); /* Expande a largura de ponta a ponta */
-    height: 80vh;           /* Altura idêntica à página de Listagem de Pontos Turísticos */
+    margin-top: -150px;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-bottom: 60px;
+    width: calc(100% + 40px);
+    height: 80vh;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -137,7 +178,7 @@ a:hover {
 /* Posiciona o título flutuando exatamente a 75% do topo do banner */
 .main-content .hero-section .titulo-passeio {
     position: absolute;
-    top: 75%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
