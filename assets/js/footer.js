@@ -15,7 +15,7 @@ const footerHTML = `
         <div class="footer-col links-col">
           <h4>Conheça nosso app</h4>
           <ul>
-            <li><a href="../pages/emconstrução.html">JanuTour</a></li>
+            <li><a href="../pages/emconstrucao.html">JanuTour</a></li>
             </ul>
         </div>
 

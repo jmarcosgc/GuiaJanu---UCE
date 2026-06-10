@@ -11,7 +11,7 @@ const headerHTML = `
             <ul class="nav-links">
                 
 
-                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../index.html">Início</a></li>
                 <li>
                     <input type="checkbox" id="drop-1" class="drop-checkbox" hidden>
             

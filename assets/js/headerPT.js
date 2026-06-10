@@ -8,6 +8,8 @@ const headerHTML = `
             <label for="menu-mobile-check" class="menu-close" aria-label="Fechar menu">×</label>
         
             <ul class="nav-links">
+                
+                <li><a href="../../index.html">Início</a></li>
                 <li>
                     <input type="checkbox" id="drop-1" class="drop-checkbox" hidden>
                     
