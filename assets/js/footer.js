@@ -33,7 +33,7 @@ const footerHTML = `
         <div class="footer-col links-col">
           <h4>O que fazer</h4>
           <ul>
-            <li><a href="../pages/ListagemPontosTuristicos.html">Pontos turisticos</a></li>
+            <li><a href="../pages/ListagemPontosTuristicos.html">Pontos Turísticos</a></li>
           </ul>
         </div>
         <div class="footer-col links-col">

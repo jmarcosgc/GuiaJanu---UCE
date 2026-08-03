@@ -66,23 +66,14 @@ a:hover {
     white-space: nowrap;
 }
 
-.copyright-tag---hero {
+/* .copyright-tag---hero {
     margin-bottom: 0 !important;
-}
+} */
 
 /* =========================================
    AJUSTE DA ONDA DA IMAGEM HERO
    ========================================= */
 
-.onda-hero {
-    display: block;
-    position: relative;
-    z-index: 2;
-}
-
-.onda-hero .wave-separator {
-    margin-top: -35px !important;
-}
 
 /* =========================================
    SEÇÃO DE CONTEÚDO

@@ -9,6 +9,11 @@
     }
 }
 
+wave-separator-component {
+    display: block;
+    margin-bottom: -1px;
+}
+
 .wave-separator {
     width: 100%;
     height: 100px;
