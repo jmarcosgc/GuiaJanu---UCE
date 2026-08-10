@@ -117,8 +117,9 @@ const footerHTML = `
                 <img src="../assets/img/Parcerias/SETUR.webp" alt="Setur" class="partner-logo">
               </a>
             </div>
-            
-            <div class="logo-item">
+
+            ${/*
+             <div class="logo-item">
               <a href="https://www.instagram.com/la_belle_janu" target="_blank" class="logo-link">
                 <p>La Belle Janu</p>
                 <img src="../assets/img/Social_Icons/insta_logo.webp" alt="La Belle Janu" class="partner-logo logo-insta">
@@ -130,7 +131,8 @@ const footerHTML = `
                 <p>Canal Sertões Gerais</p>
                 <img src="../assets/img/Parcerias/SERTOESGERAIS.webp" alt="Canal Sertão Mineiro" class="partner-logo">
               </a>
-            </div>
+            </div> 
+           */}
             
           </div>
         </div>
