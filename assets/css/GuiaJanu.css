@@ -53,9 +53,9 @@ a {
     transition: color var(--transition-speed) ease;
 }
 
-a:hover {
+/* a:hover {
     text-decoration: underline;
-}
+} */
 
 /* ==========================================================================
    04. HERO SECTION (VÍDEO)

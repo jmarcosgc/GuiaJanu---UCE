@@ -1,0 +1,84 @@
+/* ==========================================================================
+   01. RESET, TIPOGRAFIA E CONFIGURAÇÕES GERAIS (COMPARTILHADO)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #000;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   02. CONTAINER PRINCIPAL
+   ========================================================================== */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 20px 130px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+h1 {
+    font-size: 46px;
+}
+
+/* ==========================================================================
+   05. RESPONSIVIDADE E ADAPTAÇÃO MOBILE (HERO BANNER)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .main-content .hero-section {
+        height: 75vh; /* Altura responsiva oficial da listagem */
+    }
+    
+    .main-content .hero-section .titulo-passeio h1 {
+        font-size: 6vw;
+        letter-spacing: 0.15em;
+    }
+}
+
+@media (max-width: 374px) {
+    .main-content .hero-section .titulo-passeio h1 {
+        font-size: 7vw;
+        letter-spacing: 0.10em;
+    }
+}
+
+/* Evita quebras de transição ao redimensionar a tela */
+.resize-transition-stopper .main-nav,
+.resize-transition-stopper .header-right {
+    transition: none !important;
+}
+
+* {
+    outline: 1px solid red;
+}
