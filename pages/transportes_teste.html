@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meios de Transporte - Guia Janu</title>
+
+    <link rel="shortcut icon" href="../assets/img/Logo/favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
+
+    <link rel="stylesheet" href="../assets/css/emconstrucao.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/wave.css">
+
+    <style>
+
+        /* Banner */
+
+        .hero-transporte{
+            height: 420px;
+            overflow: hidden;
+        }
+
+        .hero-transporte img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
+        }
+
+        /* Conteúdo */
+
+        .guia-box-leitura{
+            max-width: 1100px;
+            width: 100%;
+            margin: 60px auto;
+            padding: 0 20px;
+            color: #ffffff;
+        }
+
+        .titulo-passeio h2{
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffd9a8;
+        }
+
+        .texto-sobre-guia{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .texto-sobre-guia p{
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Cards */
+
+        .apps-grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .app-card{
+            background: rgba(255,255,255,.08);
+            border-radius: 18px;
+            padding: 30px;
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,.1);
+        }
+
+        .app-card h3{
+            color: #ffd9a8;
+            margin-bottom: 15px;
+            font-size: 28px;
+        }
+
+        .app-card p{
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .btn-loja{
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            padding: 14px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            font-weight: 700;
+            transition: .3s;
+        }
+
+        .android{
+            background: #084222;
+            color: white;
+        }
+
+        .android:hover{
+            background: #0b5a2f;
+        }
+
+        .ios{
+            background: #1f1f1f;
+            color: white;
+        }
+
+        .ios:hover{
+            background: #333;
+        }
+
+        .info-box{
+            margin-top: 60px;
+            background: rgba(255,255,255,.08);
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+        }
+
+        .info-box h3{
+            color: #ffd9a8;
+            margin-bottom: 15px;
+        }
+
+        @media(max-width:768px){
+
+            .hero-transporte{
+                height: 280px;
+            }
+
+            .titulo-passeio h2{
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+    <script src="../assets/js/header.js" defer></script>
+    <script src="../assets/js/footer.js" defer></script>
+    <script src="../assets/js/wave.js" defer></script>
+
+</head>
+
+<body>
+
+<header class="site-header"></header>
+
+<main class="main-content">
+
+    <!-- Banner -->
+
+    <section class="hero-section hero-transporte">
+
+        <img
+            src="../assets/img/meios_de_transporte/imagem principal.png"
+            alt="Meios de Transporte em Januária">
+
+        <div class="copyright-tag hero-copyright copyright-tag---hero">
+            © Guia Janu
+        </div>
+
+    </section>
+
+    <wave-separator-component color="#084222"></wave-separator-component>
+
+    <!-- Conteúdo -->
+
+    <div class="guia-box-leitura">
+
+        <div class="titulo-passeio">
+            <h2>Meios de Transporte</h2>
+        </div>
+
+        <div class="texto-sobre-guia">
+
+            <p>
+                Para facilitar sua locomoção em Januária, reunimos alguns
+                aplicativos de transporte que podem ser utilizados durante
+                sua estadia na cidade.
+            </p>
+
+            <p>
+                Escolha abaixo o aplicativo desejado e faça o download
+                diretamente pela loja do seu celular.
+            </p>
+
+        </div>
+
+        <div class="apps-grid">
+
+            <!-- 99 -->
+
+            <div class="app-card">
+
+                <h3>99</h3>
+
+                <p>
+                    Aplicativo de mobilidade urbana que oferece corridas,
+                    pagamentos digitais e outros serviços.
+                </p>
+
+                <a class="btn-loja android"
+                   href="https://play.google.com/store/apps/details?id=com.taxis99&pcampaignid=web_share"
+                   target="_blank">
+                    Baixar para Android
+                </a>
+
+                <a class="btn-loja ios"
+                   href="https://apps.apple.com/br/app/99-corridas-food-pay/id553663691"
+                   target="_blank">
+                    Baixar para iPhone (iOS)
+                </a>
+
+            </div>
+
+            <!-- Pegue Car -->
+
+            <div class="app-card">
+
+                <h3>Pegue Car</h3>
+
+                <p>
+                    Aplicativo de transporte disponível para usuários de
+                    Android e iOS.
+                </p>
+
+                <a class="btn-loja android"
+                   href="https://play.google.com/store/apps/details?id=br.com.devbase.peguecar&pcampaignid=web_share"
+                   target="_blank">
+                    Baixar para Android
+                </a>
+
+                <a class="btn-loja ios"
+                   href="https://apps.apple.com/br/app/peguecar/id6502292156"
+                   target="_blank">
+                    Baixar para iPhone (iOS)
+                </a>
+
+            </div>
+
+            <!-- Ubiz Car -->
+
+            <div class="app-card">
+
+                <h3>Ubiz Car Brasil</h3>
+
+                <p>
+                    Plataforma de mobilidade urbana disponível para
+                    dispositivos Android e iPhone.
+                </p>
+
+                <a class="btn-loja android"
+                   href="https://play.google.com/store/apps/details?id=br.com.ubizcarbahia.passenger.drivermachine&pcampaignid=web_share"
+                   target="_blank">
+                    Baixar para Android
+                </a>
+
+                <a class="btn-loja ios"
+                   href="https://apps.apple.com/br/app/ubiz-car-brasil/id1486657267"
+                   target="_blank">
+                    Baixar para iPhone (iOS)
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="info-box">
+
+            <h3>Informação Importante</h3>
+
+            <p>
+                Os aplicativos listados nesta página são serviços de terceiros.
+                A disponibilidade de motoristas, preços, formas de pagamento,
+                horários e áreas de atendimento podem variar conforme a região
+                e devem ser consultados diretamente nos aplicativos.
+            </p>
+
+        </div>
+
+    </div>
+
+</main>
+
+<wave-separator-component color="#222"></wave-separator-component>
+
+<footer class="site-footer"></footer>
+
+<script src="../assets/js/MenuToggle.js"></script>
+
+</body>
+</html>
