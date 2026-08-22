@@ -201,20 +201,33 @@
 
     /* Lógica do Checkbox Mobile */
     .drop-icon {
-        display: block; color: #ffffff; font-size: 26px; cursor: pointer;
-        line-height: 1; padding: 0 10px; transition: transform 0.3s ease;
+        display: block; 
+        color: #ffffff; 
+        font-size: 26px; 
+        cursor: pointer;
+        line-height: 1; 
+        padding: 0 10px; 
+        transition: transform 0.3s ease;
     }
     
-    .link-wrapper { justify-content: center; }
+    .link-wrapper { 
+        justify-content: center; 
+    }
     
     .menu-checkbox:checked ~ .main-nav { transform: translateX(0) !important; }
     
     .nav-links > li:hover .dropdown { opacity: 0; visibility: hidden; }
     
     .dropdown {
-        position: static; transform: none; background-color: transparent;
-        box-shadow: none; padding: 0; margin-top: 15px;
-        display: none !important; opacity: 1 !important; visibility: visible !important;
+        position: static; 
+        transform: none; 
+        background-color: transparent;
+        box-shadow: none; 
+        padding: 0; 
+        margin-top: 15px;
+        display: none !important; 
+        opacity: 1 !important; 
+        visibility: visible !important;
     }
     
     .drop-checkbox:checked ~ .dropdown { display: flex !important; flex-direction: column; }
