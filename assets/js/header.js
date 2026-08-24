@@ -6,19 +6,17 @@ const headerHTML = `
         <input type="checkbox" id="menu-mobile-check" class="menu-checkbox" hidden>
 
         <nav class="main-nav">
-            <label for="menu-mobile-check" class="menu-close" aria-label="Fechar menu">×</label>
-        
             <ul class="nav-links">
                 
-
                 <li><a href="../index.html">Início</a></li>
+                
                 <li>
                     <input type="checkbox" id="drop-1" class="drop-checkbox" hidden>
             
-                    <div class="link-wrapper">
-                        <a href="">Descubra Januária</a>
-                        <label for="drop-1" class="drop-icon">▾</label>
-                    </div>
+                    <label for="drop-1" class="link-wrapper">
+                        <span class="drop-text">Descubra Januária</span>
+                        <span class="drop-icon">▾</span>
+                    </label>
 
                     <ul class="dropdown">
                         <li><a href="../pages/acidade.html">A cidade</a></li>
@@ -33,10 +31,10 @@ const headerHTML = `
                 <li>
                     <input type="checkbox" id="drop-2" class="drop-checkbox" hidden>
                     
-                    <div class="link-wrapper">
-                        <a href="">Mais</a>
-                        <label for="drop-2" class="drop-icon">▾</label>
-                    </div>
+                    <label for="drop-2" class="link-wrapper">
+                        <span class="drop-text">Mais</span>
+                        <span class="drop-icon">▾</span>
+                    </label>
 
                     <ul class="dropdown">
                         <li><a href="../pages/cat.html">Atendimento</a></li>
@@ -51,10 +49,10 @@ const headerHTML = `
             <a href="https://www.instagram.com/guia.janu" class="social-icon" target="_blank">
                 <img src="../assets/img/Social_Icons/insta_logo.webp" alt="Instagram">
             </a>
-            <label for="menu-mobile-check" class="menu-toggle" aria-label="Abrir menu">☰</label>
+            <label for="menu-mobile-check" class="menu-toggle" aria-label="Abrir e Fechar menu"></label>
         </div>
 `;
 
 if (headerElement) {
-        headerElement.innerHTML = headerHTML;
-    }
+    headerElement.innerHTML = headerHTML;
+}

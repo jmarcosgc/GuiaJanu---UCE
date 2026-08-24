@@ -37,19 +37,20 @@
     <header class="site-header">
         <a href="./index.html"><img src="./assets/img/Logo/TauriLogo2.webp" alt="Logo GuiaJanu" class="logo-header"></a>
 
+        <!-- Checkbox controlador geral do menu mobile (deve ficar aqui para o CSS funcionar) -->
         <input type="checkbox" id="menu-mobile-check" class="menu-checkbox" hidden>
 
         <nav class="main-nav">
-            <label for="menu-mobile-check" class="menu-close" aria-label="Fechar menu">×</label>
-
             <ul class="nav-links">
+                <!-- ITEM COM DROPDOWN 1 -->
                 <li>
                     <input type="checkbox" id="drop-1" class="drop-checkbox" hidden>
 
-                    <div class="link-wrapper">
-                        <a href="">Descubra Januária</a>
-                        <label for="drop-1" class="drop-icon">▾</label>
-                    </div>
+                    <!-- Transformamos o wrapper na própria Label -->
+                    <label for="drop-1" class="link-wrapper">
+                        <span class="drop-text">Descubra Januária</span>
+                        <span class="drop-icon">▾</span>
+                    </label>
 
                     <ul class="dropdown">
                         <li><a href="./pages/acidade.html">A cidade</a></li>
@@ -61,13 +62,15 @@
                 <li><a href="./pages/emconstrucao.html">Onde comer</a></li>
                 <li><a href="./pages/emconstrucao.html">Onde ficar</a></li>
 
+                <!-- ITEM COM DROPDOWN 2 -->
                 <li>
                     <input type="checkbox" id="drop-2" class="drop-checkbox" hidden>
 
-                    <div class="link-wrapper">
-                        <a href="">Mais</a>
-                        <label for="drop-2" class="drop-icon">▾</label>
-                    </div>
+                    <!-- Transformamos o wrapper na própria Label -->
+                    <label for="drop-2" class="link-wrapper">
+                        <span class="drop-text">Mais</span>
+                        <span class="drop-icon">▾</span>
+                    </label>
 
                     <ul class="dropdown">
                         <li><a href="./pages/cat.html">Atendimento</a></li>
@@ -82,7 +85,8 @@
             <a href="https://www.instagram.com/guia.janu" class="social-icon" target="_blank">
                 <img src="./assets/img/Social_Icons/insta_logo.webp" alt="Instagram">
             </a>
-            <label for="menu-mobile-check" class="menu-toggle" aria-label="Abrir menu">☰</label>
+            <!-- Label vazia: O CSS vai desenhar o ícone de hambúrguer/X dentro dela -->
+            <label for="menu-mobile-check" class="menu-toggle" aria-label="Abrir e Fechar menu"></label>
         </div>
     </header>
 
