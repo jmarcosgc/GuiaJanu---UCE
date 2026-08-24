@@ -1,31 +1,26 @@
 /* ==========================================================================
-   01. RESET, TIPOGRAFIA E CONFIGURAÇÕES GERAIS (COMPARTILHADO)
+   01. RESET E CONFIGURAÇÕES GERAIS
    ========================================================================== */
-@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
+html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     color: #000;
-    width: 100%;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    background-color: #084222;
 }
 
 a {
-    color: #000;
     text-decoration: none;
 }
 
@@ -34,51 +29,252 @@ a:hover {
 }
 
 /* ==========================================================================
-   02. CONTAINER PRINCIPAL
+   02. CONTAINER PRINCIPAL E HERO BANNER
    ========================================================================== */
-.main-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 150px 20px 130px 20px;
+main {
     width: 100%;
-    box-sizing: border-box;
     position: relative;
+    display: block;
 }
 
-h1 {
-    font-size: 46px;
+.hero-section {
+    width: 100%;
+    height: 75vh;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 1;
+}
+
+.hero-section::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
+}
+
+.titulo-passeio {
+    position: absolute;
+    z-index: 5;
+    text-align: center;
+    width: 100%;
+    padding: 0 20px;
+    bottom: 80px;
+}
+
+.titulo-passeio h1 {
+    font-family: 'Rye', serif;
+    font-size: 5vw;
+    color: #ffffff;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.7);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin: 0;
+}
+
+.copyright-tag {
+    position: absolute;
+    z-index: 6;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+    bottom: 100px;
+    right: 20px;
 }
 
 /* ==========================================================================
-   05. RESPONSIVIDADE E ADAPTAÇÃO MOBILE (HERO BANNER)
+   04. SEÇÕES DE CONTEÚDO (VERDE E VINHO)
+   ========================================================================== */
+.content-section {
+    width: 100%;
+    padding: 70px 20px 90px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.green-section {
+    background-color: #084222;
+}
+
+.wine-section {
+    background-color: #8f2317;
+}
+
+.disclaimer-section {
+    padding: 30px 20px 70px;
+}
+
+.text-container {
+    width: 100%;
+    max-width: 900px;
+    color: #ffffff;
+    line-height: 1.8;
+}
+
+.titulo-principal {
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    color: #ffd9a8;
+    margin-bottom: 35px;
+}
+
+.text-container h3 {
+    font-size: 26px;
+    color: #ffd9a8;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.text-container p {
+    margin-bottom: 22px;
+    text-align: justify;
+    font-size: 18px;
+}
+
+.text-container strong {
+    color: #ffd9a8;
+}
+
+/* ==========================================================================
+   05. LISTAS DE ROTEIROS (CARDS)
+   ========================================================================== */
+.passeio-lista {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 35px;
+}
+
+.passeio-lista li {
+    font-size: 17px;
+    margin-bottom: 20px;
+    padding: 20px 25px;
+    background: rgba(255, 255, 255, 0.06);
+    border-left: 5px solid #ffd9a8;
+    border-radius: 0 10px 10px 0;
+    line-height: 1.7;
+    transition: background 0.3s ease;
+}
+
+.passeio-lista li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.passeio-lista li strong {
+    font-size: 19px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* ==========================================================================
+   06. BOX DE DIFERENCIAIS E CONTATO
+   ========================================================================== */
+.diferenciais-box {
+    margin-top: 45px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    border: 1px dashed rgba(255, 217, 168, 0.4);
+}
+
+.contato-info {
+    margin-bottom: 0 !important;
+    margin-top: 20px;
+    font-size: 19px !important;
+    text-align: left !important;
+}
+
+.contato-info a {
+    color: #ffffff;
+    font-weight: 700;
+    transition: color 0.2s;
+    border-bottom: 1px solid transparent;
+}
+
+.contato-info a:hover {
+    color: #ffd9a8;
+    border-bottom: 1px solid #ffd9a8;
+    text-decoration: none;
+}
+
+/* ==========================================================================
+   07. OBSERVAÇÃO (DISCLAIMER)
+   ========================================================================== */
+.observacao {
+    font-size: 15px !important;
+    text-align: center !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-style: italic;
+    background: rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.observacao strong {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ==========================================================================
+   08. RESPONSIVIDADE (MOBILE)
    ========================================================================== */
 @media (max-width: 768px) {
-    .main-content .hero-section {
-        height: 75vh; /* Altura responsiva oficial da listagem */
+    .hero-section {
+        height: 50vh;
     }
-    
-    .main-content .hero-section .titulo-passeio h1 {
-        font-size: 6vw;
-        letter-spacing: 0.15em;
+
+    .titulo-passeio h1 {
+        font-size: 8vw;
     }
-}
 
-@media (max-width: 374px) {
-    .main-content .hero-section .titulo-passeio h1 {
-        font-size: 7vw;
-        letter-spacing: 0.10em;
+    .content-section {
+        padding: 50px 16px 60px;
     }
-}
 
-/* Evita quebras de transição ao redimensionar a tela */
-.resize-transition-stopper .main-nav,
-.resize-transition-stopper .header-right {
-    transition: none !important;
-}
+    .titulo-principal {
+        font-size: 32px;
+        margin-bottom: 25px;
+    }
 
-* {
-    outline: 1px solid red;
+    .text-container h3 {
+        font-size: 22px;
+        margin-top: 35px;
+    }
+
+    .text-container p {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .passeio-lista li {
+        font-size: 16px;
+        padding: 15px 20px;
+        border-left-width: 4px;
+    }
+
+    .passeio-lista li strong {
+        font-size: 17px;
+    }
+
+    .diferenciais-box {
+        padding: 20px;
+    }
 }

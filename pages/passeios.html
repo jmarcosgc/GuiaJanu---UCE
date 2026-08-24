@@ -6,25 +6,25 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXF2E5DVGL"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
 
         gtag('config', 'G-YXF2E5DVGL');
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página em Construção</title>
+    <title>Passeios de Barco - Guia Janu</title>
     <link rel="shortcut icon" href="../assets/img/Logo/favicon.ico">
 
-    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" crossorigin rel="preconnect">
+    <!-- Adicionado a fonte Rye para o título principal do Banner -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Rye&display=swap"
+        rel="stylesheet" />
 
-    <link rel="stylesheet" href="../assets/css/passeios.css">
     <link rel="stylesheet" href="../assets/css/header.css">
     <link rel="stylesheet" href="../assets/css/footer.css">
     <link rel="stylesheet" href="../assets/css/wave.css">
     <link rel="stylesheet" href="../assets/css/cookie.css">
+    <link rel="stylesheet" href="../assets/css/passeios.css">
 
     <script src="../assets/js/header.js" defer></script>
     <script src="../assets/js/footer.js" defer></script>
@@ -34,18 +34,132 @@
 
 <body>
     <header class="site-header"></header>
-    <img src="../assets/img/passeios/chalana_marujo.webp" alt="chalana">
 
-    <main class="main-content">
-        <h1>Passeios de Barco</h1>
-        <!-- <wave-separator-component color="white"></wave-separator-component> -->
+    <!-- Tag main pura (sem classe flexbox) para a onda ocupar 100% da tela naturalmente -->
+    <main>
+        <section class="hero-section">
+            <img id="hero-image" src="../assets/img/passeios/chalana_marujo.webp"
+                alt="Passeios Náuticos no Rio São Francisco">
+            <div class="titulo-passeio">
+                <h1>Passeios de Barco</h1>
+            </div>
+            <div class="copyright-tag">© GuiaJanu</div>
+        </section>
+
+        <!-- Onda separando o banner do conteúdo -->
+        <wave-separator-component color="#084222"></wave-separator-component>
+
+        <!-- SEÇÃO 1: CHALANA E BARCO DO MARUJO (Fundo Verde) -->
+        <section class="content-section green-section">
+            <div class="text-container">
+                <h2 class="titulo-principal">Chalana e Barco do Marujo</h2>
+                <p>Viva uma experiência autêntica pelas águas do Rio São Francisco a bordo da tradicional
+                    <strong>Chalana do Marujo</strong>. Com capacidade para até 30 passageiros, a chalana é ideal para
+                    grupos, famílias e excursões. Para quem busca um passeio mais intimista, o <strong>Barco do
+                        Marujo</strong> atende grupos de até 4 pessoas. Confira as embarcações, roteiros e entre em
+                    contato para uma experiência incrível pelas águas do Velho Chico.</p>
+
+                <h3>Roteiros na Chalana do Marujo</h3>
+                <p>Embarque nas Moradeiras (3 km do centro de Januária) às 10:00 e desembarque às 17:00.</p>
+                <ul class="passeio-lista">
+                    <li><strong>Roteiro 1:</strong> Passeio pela Praia de Januária com retorno pela comunidade de
+                        Laranjeiras. Inclui parada na Ilha do Rodeador, onde os visitantes podem relaxar em uma choupana
+                        de palha, tomar banho de rio e aproveitar a tranquilidade do local.</li>
+                    <li><strong>Roteiro 2:</strong> Navegação até o Cais de Januária, passando pela Praia de Januária.
+                        No retorno, parada na Ilha do Rodeador para lazer, banho e contato com a natureza.</li>
+                    <li><strong>Roteiro 3:</strong> Roteiro até a cidade de Pedras de Maria da Cruz, passando sob a
+                        ponte sobre o Rio São Francisco e realizando uma breve parada na orla da cidade. Na volta,
+                        parada em uma praia fluvial para descanso e mergulho.</li>
+                    <li><strong>Roteiro 4:</strong> Aventura com duração mínima de dois dias até a foz do Rio Pandeiros.
+                        O roteiro inclui pernoite em praia próxima à foz e, no dia seguinte, visita ao famoso "Pantanal
+                        Mineiro" em embarcação de menor porte.</li>
+                </ul>
+
+                <h3>Roteiros no Barco do Marujo</h3>
+                <ul class="passeio-lista">
+                    <li><strong>Pôr do sol no Velho Chico:</strong> Saída das Moradeiras às 16h em direção ao Cais de
+                        Januária, passando pela Praia de Januária. O passeio inclui parada para banho e proporciona um
+                        espetáculo inesquecível ao entardecer. Para quem deseja prolongar a experiência, há a
+                        possibilidade de apreciar o luar e o céu estrelado às margens do rio, com direito a fogueira à
+                        beira do Velho Chico.</li>
+                    <li><strong>Desbravando o Velho Chico:</strong> Passeio de maior duração até Pedras de Maria da
+                        Cruz, passando pela Praia de Januária, Cais de Januária, ponte sobre o Rio São Francisco e orla
+                        da cidade vizinha. Inclui parada para banho em praia fluvial. Há também a opção de estender o
+                        roteiro até o Pantanal Mineiro, nas proximidades da foz do Rio Pandeiros.</li>
+                </ul>
+
+                <div class="diferenciais-box">
+                    <p><strong>Diferenciais do Marujo:</strong> Opção de almoço e porções de peixe frito durante o
+                        passeio. A Chalana do Marujo é equipada com churrasqueira e também oferece pescarias, além de
+                        roteiros personalizados e viagens de maior duração para destinos como Carinhanha e Bom Jesus da
+                        Lapa.</p>
+                    <p class="contato-info">
+                        <strong>Contato:</strong> João Vitor - (38) 99829-4285<br>
+                        <strong>Instagram:</strong> <a href="https://instagram.com/chalana_marujo"
+                            target="_blank">@chalana_marujo</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Onda separando as seções -->
+        <wave-separator-component color="#8f2317"></wave-separator-component>
+
+        <!-- SEÇÃO 2: LANCHA DO VELHO CHICO (Fundo Vinho) -->
+        <section class="content-section wine-section">
+            <div class="text-container">
+                <h2 class="titulo-principal">Lancha do Velho Chico</h2>
+                <p>A <strong>Lancha do Velho Chico</strong> proporciona experiências exclusivas para grupos de até 12
+                    pessoas que desejam explorar as belezas do Rio São Francisco com conforto e sofisticação. Navegue
+                    por cenários encantadores do Velho Chico, desfrute de momentos inesquecíveis e escolha o roteiro que
+                    mais combina com você.</p>
+
+                <p><strong>Locais de embarque:</strong> Praia de Januária, Chiquim das Moradeiras ou Bar do Rogério.</p>
+
+                <h3>Opções de Passeio</h3>
+                <ul class="passeio-lista">
+                    <li>
+                        <strong>Opção 1: Passeio em Grupo - Aventura Compartilhada</strong><br>
+                        Para no mínimo 6 pessoas.<br>
+                        <strong>Duração:</strong> 3 horas de puro contato com a natureza.<br>
+                        <strong>Ideal para:</strong> Viajantes que querem viver a emoção do rio, conhecer novas pessoas
+                        e curtir um passeio incrível com um ótimo custo-benefício.
+                    </li>
+                    <li>
+                        <strong>Opção 2: Lancha Exclusiva - Seu Grupo, Suas Regras!</strong><br>
+                        <strong>Duração:</strong> 5 horas de liberdade total para personalizar seu roteiro.<br>
+                        <strong>Ideal para:</strong> Famílias, grupos de amigos ou equipes que buscam privacidade,
+                        conforto e flexibilidade. Tenha a lancha só para você e decida o ritmo do passeio.
+                    </li>
+                </ul>
+
+                <div class="diferenciais-box">
+                    <p><strong>Diferenciais da Lancha do Velho Chico:</strong> Os roteiros são personalizados de acordo
+                        com os interesses e preferências de cada grupo.</p>
+                    <p class="contato-info">
+                        <strong>Contato:</strong> Gabriel - (38) 99204-5464<br>
+                        <strong>Instagram:</strong> <a href="https://instagram.com/lancha.velhochico"
+                            target="_blank">@lancha.velhochico</a>
+                    </p>
+                </div>
+                <br>
+                <div class="text-container">
+                    <p class="observacao">
+                        <strong>*Observação:</strong> O Guia Janu atua apenas como divulgador dos serviços turísticos e
+                        não se responsabiliza por eventuais intercorrências durante os passeios. Exija o uso de colete
+                        salva-vidas e priorize embarcações e profissionais regularizados junto à Marinha do Brasil.
+                    </p>
+                </div>
+            </div>
+
+
+        </section>
+        <wave-separator-component color="#222"></wave-separator-component>
+
     </main>
 
-    <wave-separator-component color="#222"></wave-separator-component>
-
     <footer class="site-footer"></footer>
-    <script src="../assets/js/MenuToggle.js"> </script>
-
+    <script src="../assets/js/MenuToggle.js"></script>
 </body>
 
 </html>
