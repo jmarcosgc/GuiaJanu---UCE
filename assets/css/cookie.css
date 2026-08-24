@@ -1,0 +1,87 @@
+/* =========================================
+   AVISO DE COOKIES (GUIAJANU)
+   ========================================= */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #084222; /* Cor principal verde do tema */
+    color: #ffffff;
+    z-index: 9999;
+    box-shadow: 0 -6px 15px rgba(0, 0, 0, 0.4); /* Sombra para destacar do fundo */
+    display: none; /* Escondido por padrão */
+    font-family: 'Inter', sans-serif;
+}
+
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.cookie-content p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+}
+
+.cookie-content strong {
+    color: #ffd9a8; /* Cor de destaque */
+}
+
+.cookie-link {
+    color: #ffd9a8;
+    font-weight: 700;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.cookie-link:hover {
+    color: #f5c989;
+}
+
+.cookie-btn {
+    padding: 12px 24px;
+    background-color: #ffd9a8;
+    color: #084222;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 15px;
+    transition: background 0.3s, transform 0.2s;
+    font-family: 'Inter', sans-serif;
+    white-space: nowrap;
+}
+
+.cookie-btn:hover {
+    background-color: #f5c989;
+    transform: scale(1.03);
+    text-decoration: none;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+    
+    .cookie-content p {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .cookie-btn {
+        width: 100%;
+        padding: 14px;
+    }
+}

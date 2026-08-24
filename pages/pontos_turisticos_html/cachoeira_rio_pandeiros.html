@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YXF2E5DVGL"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YXF2E5DVGL');
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cachoeiras do Rio Pandeiros - Guia Janu</title>
   <link rel="shortcut icon" href="../../assets/img/Logo/favicon.ico">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rye&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rye&display=swap">
 
   <link rel="stylesheet" href="../../assets/css/pontos_turisticos_css/pontos_turisticos_base.css">
   <link rel="stylesheet" href="../../assets/css/header.css">
   <link rel="stylesheet" href="../../assets/css/footer.css">
   <link rel="stylesheet" href="../../assets/css/wave.css">
+  <link rel="stylesheet" href="../../assets/css/cookie.css">
+  <!-- <link rel="stylesheet" href="../../assets/css/volume-button.css"> -->
 
   <script src="../../assets/js/headerPT.js" defer></script>
   <script src="../../assets/js/footerPT.js" defer></script>
   <script src="../../assets/js/wave.js" defer></script>
+  <script src="../../assets/js/cookieBanner.js" defer></script>
 </head>
 
 <body>
@@ -24,24 +36,23 @@
 
   <main>
     <section class="hero">
-      <video id="hero-video" class="hero-img" autoplay muted loop playsinline>
-        <source src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/cachoeira.mp4" type="video/mp4">
-        Seu navegador não suporta vídeo em HTML5.
+      <video id="hero-video" autoplay muted playsinline>
+          <source src="../../assets/img/pontos_turisticos_img/Cachoeiras do rio Pandeiros/cachoeira.mp4" type="video/mp4">
       </video>
 
       <div class="video-controls">
-        <button id="volume-toggle" class="video-btn" aria-label="Ativar ou desativar som">
-          <img id="volume-icon" src="../../assets/img/Social Icons/sem_som.webp" alt="Mudo">
-        </button>
+			<button id="volume-toggle" class="video-btn">
+				<img id="volume-icon" src="../../assets/img/Social_Icons/sem_som.webp" alt="Mudo">
+			</button>
 
-        <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0">
+          <input type="range" id="volume-slider" min="0" max="1" step="0.01" value="0">
       </div>
 
       <div class="overlay">
-        <div class="conteudo-hero">
-          <h1>Cachoeiras do Rio Pandeiros</h1>
-        </div>
-         <div class="copyright-tag hero-copyright copyright-tag---hero">© Guia Janu</div>
+          <div class="conteudo-hero">
+            <h1>Cachoeiras do Rio Pandeiros</h1>
+          </div>
+        <div class="copyright-tag hero-copyright copyright-tag---hero">© Guia Janu</div>
       </div>
     </section>
 
@@ -298,45 +309,9 @@
 
       atualizarCarrossel();
     }
-
-    const heroVideo = document.getElementById("hero-video");
-    const volumeToggle = document.getElementById("volume-toggle");
-    const volumeSlider = document.getElementById("volume-slider");
-    const volumeIcon = document.getElementById("volume-icon");
-
-    if (heroVideo && volumeToggle && volumeSlider && volumeIcon) {
-      volumeToggle.addEventListener("click", () => {
-        if (heroVideo.muted || heroVideo.volume === 0) {
-          heroVideo.muted = false;
-          heroVideo.volume = 0.5;
-          volumeSlider.value = 0.5;
-          volumeIcon.src = "../../assets/img/Social Icons/com_som.webp";
-          volumeIcon.alt = "Com som";
-        } else {
-          heroVideo.muted = true;
-          heroVideo.volume = 0;
-          volumeSlider.value = 0;
-          volumeIcon.src = "../../assets/img/Social Icons/sem_som.webp";
-          volumeIcon.alt = "Mudo";
-        }
-      });
-
-      volumeSlider.addEventListener("input", () => {
-        const volume = parseFloat(volumeSlider.value);
-
-        heroVideo.volume = volume;
-        heroVideo.muted = volume === 0;
-
-        if (volume === 0) {
-          volumeIcon.src = "../../assets/img/Social Icons/sem_som.webp";
-          volumeIcon.alt = "Mudo";
-        } else {
-          volumeIcon.src = "../../assets/img/Social Icons/com_som.webp";
-          volumeIcon.alt = "Com som";
-        }
-      });
-    }
   </script>
+
+  <script src="../../assets/js/MenuTogglePT.js"></script>
 
 </body>
 </html>
