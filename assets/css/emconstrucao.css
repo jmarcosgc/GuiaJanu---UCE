@@ -142,17 +142,17 @@ a:hover {
     align-items: center;
 }
 
-.main-content wave-separator-component {
+/* .main-content wave-separator-component {
     display: block !important; 
     width: calc(100% + 40px) !important;
     margin-left: -20px !important;
     margin-right: -20px !important;
-    margin-top: -5px;          /* Penetra um pouquinho na imagem para sumir com frestas */
-    margin-bottom: 0 !important; /* ELIMINA qualquer espaço entre a onda e o bloco verde */
+    margin-top: -5px;        
+    margin-bottom: 0 !important; 
     position: relative;
     z-index: 10 !important;   
-    line-height: 0;            /* Remove espaçamentos fantasmas de tags de bloco */
-}
+    line-height: 0;           
+} */
 
 /* Comportamento da imagem de fundo idêntico à Listagem */
 .main-content #hero-image {
