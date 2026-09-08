@@ -13,7 +13,18 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guia Janu</title>
+    <title>Guia Janu | Turismo, Cultura e Patrimônio de Januária-MG</title>
+    <!-- Metadados para SEO (Google) -->
+    <meta name="description" content="Conheça Januária-MG: Rio São Francisco, Cavernas do Peruaçu, Praia de Minas, Pantanal Mineiro, Cachoeiras de Pandeiros, patrimônio histórico, cultura, gastronomia e muito mais.">
+    <link rel="canonical" href="https://www.guiajanu.com.br/">
+    <!-- Metadados do Open Graph -->
+    <meta property="og:title" content="Guia Janu | Descubra Januária-MG">
+    <meta property="og:description" content="Conheça Januária-MG: Rio São Francisco, Cavernas do Peruaçu, Praia de Minas, Pantanal Mineiro, Cachoeiras de Pandeiros, patrimônio histórico, cultura, gastronomia e muito mais.">
+    <meta property="og:image" content="https://www.guiajanu.com.br/assets/img/img_open_graph/pg_index.webp">
+    <meta property="og:url" content="https://www.guiajanu.com.br/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Guia Janu">
+    <meta property="og:locale" content="pt_BR">
     <link rel="shortcut icon" href="assets/img/Logo/favicon.ico">
 
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
@@ -37,19 +48,20 @@
     <header class="site-header">
         <a href="./index.html"><img src="./assets/img/Logo/TauriLogo2.webp" alt="Logo GuiaJanu" class="logo-header"></a>
 
+        <!-- Checkbox controlador geral do menu mobile (deve ficar aqui para o CSS funcionar) -->
         <input type="checkbox" id="menu-mobile-check" class="menu-checkbox" hidden>
 
         <nav class="main-nav">
-            <label for="menu-mobile-check" class="menu-close" aria-label="Fechar menu">×</label>
-
             <ul class="nav-links">
+                <!-- ITEM COM DROPDOWN 1 -->
                 <li>
                     <input type="checkbox" id="drop-1" class="drop-checkbox" hidden>
 
-                    <div class="link-wrapper">
-                        <a href="">Descubra Januária</a>
-                        <label for="drop-1" class="drop-icon">▾</label>
-                    </div>
+                    <!-- Transformamos o wrapper na própria Label -->
+                    <label for="drop-1" class="link-wrapper">
+                        <span class="drop-text">Descubra Januária</span>
+                        <span class="drop-icon">▾</span>
+                    </label>
 
                     <ul class="dropdown">
                         <li><a href="./pages/acidade.html">A cidade</a></li>
@@ -61,13 +73,15 @@
                 <li><a href="./pages/emconstrucao.html">Onde comer</a></li>
                 <li><a href="./pages/emconstrucao.html">Onde ficar</a></li>
 
+                <!-- ITEM COM DROPDOWN 2 -->
                 <li>
                     <input type="checkbox" id="drop-2" class="drop-checkbox" hidden>
 
-                    <div class="link-wrapper">
-                        <a href="">Mais</a>
-                        <label for="drop-2" class="drop-icon">▾</label>
-                    </div>
+                    <!-- Transformamos o wrapper na própria Label -->
+                    <label for="drop-2" class="link-wrapper">
+                        <span class="drop-text">Mais</span>
+                        <span class="drop-icon">▾</span>
+                    </label>
 
                     <ul class="dropdown">
                         <li><a href="./pages/cat.html">Atendimento</a></li>
@@ -82,13 +96,14 @@
             <a href="https://www.instagram.com/guia.janu" class="social-icon" target="_blank">
                 <img src="./assets/img/Social_Icons/insta_logo.webp" alt="Instagram">
             </a>
-            <label for="menu-mobile-check" class="menu-toggle" aria-label="Abrir menu">☰</label>
+            <!-- Label vazia: O CSS vai desenhar o ícone de hambúrguer/X dentro dela -->
+            <label for="menu-mobile-check" class="menu-toggle" aria-label="Abrir e Fechar menu"></label>
         </div>
     </header>
 
     <main>
         <section class="hero-section">
-            <video id="hero-video" autoplay muted playsinline>
+            <video id="hero-video" autoplay muted playsinline loop>
                 <source src="assets/videos/Clipe Januária Pronto_1.mp4" type="video/mp4">
             </video>
 
